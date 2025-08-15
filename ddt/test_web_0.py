@@ -73,14 +73,31 @@ class Test_Web:
                 params = params[0:index + 1]
 
                 # 这里反射执行
-                with allure.step(c[2]):
-                    # 记录关键字执行的结果
-                    res = self.run_step(params)
+                try:
+                # with allure.step(c[2]):
+                #     # 记录关键字执行的结果
+                #     res = self.run_step(params)
+                    with allure.step(f"{c[2]} (参数: {params})"):  # 步骤描述添加参数
+                        res = self.run_step(params)
+                    # 如果能执行到这里，就说明关键字执行是成功的
+                    ddt.writer.write(ddt.writer.row, 7, 'PASS', 3)
+                    ddt.writer.write(ddt.writer.row, 8, str(res))
+                    ddt.writer.row += 1
+                except AssertionError as e:
+                    # 步骤失败：标记Allure步骤为失败并附加错误信息
+                    allure.dynamic.description(f"步骤失败: {str(e)}")  # 动态更新步骤描述
+                    allure.attach(str(e), "错误详情", allure.attachment_type.TEXT)  # 附加文本信息
+                    # 写入Excel失败结果
+                    ddt.writer.write(ddt.writer.row, 7, 'FAIL', 2)
+                    ddt.writer.write(ddt.writer.row, 8, str(e))  # 写入具体错误信息
+                    ddt.writer.row += 1
+                    # 跳过后续步骤，直接标记用例失败
+                    ddt.writer.row += len(case) - run_rows  # 跳过未执行的步骤
+                    logger.exception(e)
+                    if ddt.obj.driver:
+                        allure.attach(ddt.obj.driver.get_screenshot_as_png(), '失败截图', allure.attachment_type.PNG)
+                    pytest.fail(f"步骤执行失败: {str(e)}")
 
-                # 如果能执行到这里，就说明关键字执行是成功的
-                ddt.writer.write(ddt.writer.row, 7, 'PASS', 3)
-                ddt.writer.write(ddt.writer.row, 8, str(res))
-                ddt.writer.row += 1
 
             # 要求每一步操作均有截图，在run_step做了处理，此处不在重复截图
             # if ddt.obj.driver:

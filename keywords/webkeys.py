@@ -10,7 +10,7 @@ from time import sleep
 
 from selenium import webdriver
 from selenium.common import TimeoutException, NoSuchElementException, ElementNotInteractableException, \
-    StaleElementReferenceException, InvalidElementStateException
+    StaleElementReferenceException, InvalidElementStateException, WebDriverException
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.edge.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
@@ -65,7 +65,7 @@ class Web:
             driver_path = os.path.join(project_root, "lib", "chromedriver.exe")
             self.driver = webdriver.Chrome(options=option, service=Service(driver_path))
         # 隐式等待
-        self.driver.implicitly_wait(5)
+        self.driver.implicitly_wait(2)
         # 最大化
         self.driver.maximize_window()
 
@@ -196,14 +196,15 @@ class Web:
     def assert_element(self, lo: str = ''):
         # 获取定位器元组
         locator = (By.ID, lo)
-        try:
+        # try:
             # 显式等待3秒，直到元素可见
-            WebDriverWait(self.driver, 3).until(
-                EC.visibility_of_element_located(locator)
-            )
-            return True
-        except TimeoutException:
-            raise AssertionError(f"元素 {lo} 在3秒内未可见")
+        WebDriverWait(self.driver, 3).until(
+            EC.visibility_of_element_located(locator)
+        )
+        return True
+
+        # except TimeoutException:
+        #     raise AssertionError(f"元素 {lo} 在3秒内未可见")
 
     def sleep(self, t: str):
         try:
@@ -215,7 +216,7 @@ class Web:
 
         time.sleep(t)
 
-    def wait_for_element(self, lo: str = '', timeout: int = 10):
+    def wait_for_element(self, lo: str = '', timeout: str = ""):
         """
         显式等待元素可见
         :param lo: 定位表达式（xpath/id）
@@ -223,18 +224,22 @@ class Web:
         :return: 元素可见返回True，否则抛TimeoutException
         """
         try:
-            if lo.startswith('/'):
-                locator = (By.XPATH, lo)
-            else:
-                locator = (By.ID, lo)
+            t = float(timeout) if timeout else 1
+        except ValueError:
+            # 如果转失败，就说明输入的不是一个数字
+            # 默认就按等待1s
+            t = 1
+        if lo.startswith('/'):
+            locator = (By.XPATH, lo)
+        else:
+            locator = (By.ID, lo)
+        try:
             # 等待元素可见
-            WebDriverWait(self.driver, timeout).until(
+            WebDriverWait(self.driver, t).until(
                 EC.visibility_of_element_located(locator)
             )
-            return True
-        except TimeoutException:
-            raise TimeoutException(f"元素 {lo} 在 {timeout} 秒内未可见")
-
+        except TimeoutException as e:
+            raise AssertionError(f"TimeoutException: {str(e)}") from e
     def enable_element(self, lo: str = ''):
         """
         启用禁用的元素（适配Test case 3：通过JS移除disabled属性）
@@ -242,6 +247,48 @@ class Web:
         """
         ele = self.__find_ele(lo)
         self.driver.execute_script("arguments[0].removeAttribute('disabled')", ele)
+
+    def refresh(self):
+        """
+        刷新当前页面
+        :return: 无返回值，失败则抛出异常
+        """
+        # 前置检查：确保浏览器实例已初始化
+        if not self.driver:
+            raise AssertionError("【刷新失败】浏览器未打开，请先执行open_browser步骤")
+
+        try:
+            # 执行页面刷新
+            self.driver.refresh()
+            logger.info("页面已成功刷新")  # 记录成功日志
+        except WebDriverException as e:
+            # 捕获Selenium刷新相关异常（如页面崩溃、网络问题等）
+            raise AssertionError(f"【刷新失败】{str(e)}") from e
+
+    def save_element(self,lo:str='',element_sign:str=''):
+        """
+        定位元素并保存引用
+        :param element_sign: 存入字段的key
+        :param lo: 定位表达式
+        :return:
+        """
+        self.relations_dict[element_sign] = self.__find_ele(lo)
+
+
+    def use_element(self,element_sign:str=''):
+        """
+        usr for Test case 4: StaleElementReferenceException
+        :param element_sign:
+        :return:
+        """
+        # for key, element in self.relations_dict.items():
+            # print(f"\n元素标识（key）: {key}")
+            # print(f"元素对象: {element}")
+
+
+        target_element = self.relations_dict[element_sign]  # 获取保存的元素对象
+        target_element.click()
+
 
 
 if __name__ == '__main__':
