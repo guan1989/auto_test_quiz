@@ -18,11 +18,19 @@ class Test_Web:
     def run_step(self, args):
         """反射执行"""
         # 先截图再退出浏览器
-        if args[0] == 'quit':
-            allure.attach(ddt.obj.driver.get_screenshot_as_png(), '成功截图', allure.attachment_type.PNG)
+        # if args[0] == 'quit':
+        #     allure.attach(ddt.obj.driver.get_screenshot_as_png(), '成功截图', allure.attachment_type.PNG)
         # 反射获取函数
         func = getattr(ddt.obj, args[0])
         # 执行函数，并返回结果
+
+
+        if ddt.obj.driver:  # 确保浏览器实例存在
+            allure.attach(
+                ddt.obj.driver.get_screenshot_as_png(),
+                f"步骤[{args[0]}]截图",  # 截图描述（可关联步骤名）
+                allure.attachment_type.PNG
+            )
         return func(*args[1:])
 
     @allure.story(f'#{ddt.s_idx} {ddt.story}')
@@ -74,8 +82,9 @@ class Test_Web:
                 ddt.writer.write(ddt.writer.row, 8, str(res))
                 ddt.writer.row += 1
 
-            if ddt.obj.driver:
-                allure.attach(ddt.obj.driver.get_screenshot_as_png(), '成功截图', allure.attachment_type.PNG)
+            # 要求每一步操作均有截图，在run_step做了处理，此处不在重复截图
+            # if ddt.obj.driver:
+            #     allure.attach(ddt.obj.driver.get_screenshot_as_png(), '成功截图', allure.attachment_type.PNG)
         except Exception as e:
             msg = e.__str__()
             msg = msg[:msg.find('Stacktrace')]

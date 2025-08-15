@@ -9,13 +9,13 @@ import time
 from time import sleep
 
 from selenium import webdriver
-from selenium.common import TimeoutException
+from selenium.common import TimeoutException, NoSuchElementException, ElementNotInteractableException, \
+    StaleElementReferenceException, InvalidElementStateException
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.edge.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-
 
 from common.Logger import logger
 
@@ -88,22 +88,24 @@ class Web:
         :param lo: 定位表达式，支持xpath，id,name
         :return: 返回找到元素，如果没找到就报错
         """
-        if lo.startswith('/'):
-            ele = self.driver.find_element('xpath', lo)
-        elif lo.startswith('$'):
-            name_value = lo[1:]  # 去掉前缀$
-            ele = self.driver.find_element('name', name_value)
-        elif lo.startswith('link_test'):
-            name_value = lo[9:]  # 去掉前缀
-            # ele = self.driver.find_element('LINK_TEXT', name_value)
-            ele=self.driver.find_element(By.LINK_TEXT,name_value)
-        else:
-            ele = self.driver.find_element('id', lo)
-        # 操作元素高亮
-        if ele:
-            self.driver.execute_script("arguments[0].style.background = '#4aff00'", ele)
-
-        return ele
+        try:
+            if lo.startswith('/'):
+                ele = self.driver.find_element('xpath', lo)
+            elif lo.startswith('$'):
+                name_value = lo[1:]  # 去掉前缀$
+                ele = self.driver.find_element('name', name_value)
+            elif lo.startswith('link_test'):
+                name_value = lo[9:]  # 去掉前缀
+                # ele = self.driver.find_element('LINK_TEXT', name_value)
+                ele = self.driver.find_element(By.LINK_TEXT, name_value)
+            else:
+                ele = self.driver.find_element('id', lo)
+            # 操作元素高亮
+            if ele:
+                self.driver.execute_script("arguments[0].style.background = '#4aff00'", ele)
+            return ele
+        except NoSuchElementException as e:
+            raise AssertionError(f"[NoSuchElement] 元素定位失败: {lo}") from e
 
     def input(self, lo: str = '', value: str = "", ):
         """
@@ -112,8 +114,13 @@ class Web:
         :param lo: 定位表达式，支持xpath，id
         :return:
         """
-        ele = self.__find_ele(lo)
-        ele.send_keys(value)
+        try:
+            ele = self.__find_ele(lo)
+            ele.send_keys(value)
+        except InvalidElementStateException as e:
+            raise AssertionError(f"[InvalidState] 元素状态无效: {lo}") from e
+        except ElementNotInteractableException  as e:
+            raise AssertionError(f"[ElementNotInteractable] 元素不可输入: {lo}") from e
 
     def clear(self, lo: str = ''):
         """
@@ -130,8 +137,13 @@ class Web:
         :param lo: 定位表达式，支持xpath，id
         :return:
         """
-        ele = self.__find_ele(lo)
-        ele.click()
+        try:
+            ele = self.__find_ele(lo)
+            ele.click()
+        except ElementNotInteractableException as e:
+            raise AssertionError(f"[ElementNotInteractable] 元素不可交互: {lo}") from e
+        except StaleElementReferenceException as e:
+            raise AssertionError(f"[StaleElement] 元素已失效: {lo}") from e
 
     def quit(self):
         """关闭浏览器"""
@@ -181,7 +193,7 @@ class Web:
         else:
             raise AssertionError(f"按键存但与预期值不符。预期值: {expected_text},实际值：{actual_text}")
 
-    def assert_element(self,lo:str=''):
+    def assert_element(self, lo: str = ''):
         # 获取定位器元组
         locator = (By.ID, lo)
         try:
@@ -193,9 +205,7 @@ class Web:
         except TimeoutException:
             raise AssertionError(f"元素 {lo} 在3秒内未可见")
 
-
-
-    def sleep(self,t:str):
+    def sleep(self, t: str):
         try:
             t = float(t)
         except:
@@ -204,6 +214,34 @@ class Web:
             t = 1
 
         time.sleep(t)
+
+    def wait_for_element(self, lo: str = '', timeout: int = 10):
+        """
+        显式等待元素可见
+        :param lo: 定位表达式（xpath/id）
+        :param timeout: 超时时间（秒）
+        :return: 元素可见返回True，否则抛TimeoutException
+        """
+        try:
+            if lo.startswith('/'):
+                locator = (By.XPATH, lo)
+            else:
+                locator = (By.ID, lo)
+            # 等待元素可见
+            WebDriverWait(self.driver, timeout).until(
+                EC.visibility_of_element_located(locator)
+            )
+            return True
+        except TimeoutException:
+            raise TimeoutException(f"元素 {lo} 在 {timeout} 秒内未可见")
+
+    def enable_element(self, lo: str = ''):
+        """
+        启用禁用的元素（适配Test case 3：通过JS移除disabled属性）
+        :param lo: 定位表达式
+        """
+        ele = self.__find_ele(lo)
+        self.driver.execute_script("arguments[0].removeAttribute('disabled')", ele)
 
 
 if __name__ == '__main__':
