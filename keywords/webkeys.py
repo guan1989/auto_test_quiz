@@ -5,8 +5,11 @@
 @Function ：请输入模块功能描述
 """
 import os
+import time
+from time import sleep
 
 from selenium import webdriver
+from selenium.common import TimeoutException
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.edge.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
@@ -91,7 +94,7 @@ class Web:
             name_value = lo[1:]  # 去掉前缀$
             ele = self.driver.find_element('name', name_value)
         elif lo.startswith('link_test'):
-            name_value = lo[8:]  # 去掉前缀
+            name_value = lo[9:]  # 去掉前缀
             # ele = self.driver.find_element('LINK_TEXT', name_value)
             ele=self.driver.find_element(By.LINK_TEXT,name_value)
         else:
@@ -135,7 +138,7 @@ class Web:
         self.driver.quit()
         self.driver = None
 
-    def assert_text(self, lo: str = '', expected_text: str = '', timeout: int = 10):
+    def assert_text(self, lo: str = '', expected_text: str = ''):
         """
         断言文本
         :param timeout: 等待时间
@@ -146,11 +149,7 @@ class Web:
         try:
             # 获取定位器元组
             loc = self.__find_ele(lo)
-            # 等待元素可见
-            element = WebDriverWait(self.driver, timeout).until(
-                EC.visibility_of_element_located(loc)
-            )
-            actual_text = element.text.strip()
+            actual_text = loc.text
             if expected_text == actual_text:
                 return True
             else:
@@ -172,25 +171,39 @@ class Web:
             assert current_url.__contains__(expected)
 
     def assert_button(self, lo: str = '', expected_text: str = '', timeout: int = 10):
+
+        # 获取定位器元组
+        loc = self.__find_ele(lo)
+        # 校验按键文本
+        actual_text = loc.text
+        if expected_text == actual_text:
+            return True
+        else:
+            raise AssertionError(f"按键存但与预期值不符。预期值: {expected_text},实际值：{actual_text}")
+
+    def assert_element(self,lo:str=''):
+        # 获取定位器元组
+        locator = (By.ID, lo)
         try:
-            # 获取定位器元组
-            loc = self.__find_ele(lo)
-            # 等待元素可见
-            element = WebDriverWait(self.driver, timeout).until(
-                EC.visibility_of_element_located(loc)
+            # 显式等待3秒，直到元素可见
+            WebDriverWait(self.driver, 3).until(
+                EC.visibility_of_element_located(locator)
             )
-            # 额外检查确保元素确实可见（双重保障）
-            assert element.is_displayed(), f"按钮 '{lo}' 存在但不可见"
-            # 校验按键文本
-            actual_text = element.text.strip()
-            if expected_text == actual_text:
-                return True
-            else:
-                raise AssertionError(f"按键存但与预期值不符。预期值: {expected_text},实际值：{actual_text}")
+            return True
+        except TimeoutException:
+            raise AssertionError(f"元素 {lo} 在3秒内未可见")
 
 
-        except Exception as e:
-            raise AssertionError(f"验证按钮失败: {str(e)}")
+
+    def sleep(self,t:str):
+        try:
+            t = float(t)
+        except:
+            # 如果转失败，就说明输入的不是一个数字
+            # 默认就按等待1s
+            t = 1
+
+        time.sleep(t)
 
 
 if __name__ == '__main__':
