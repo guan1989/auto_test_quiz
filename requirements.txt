@@ -1,0 +1,12 @@
+# This is a mirror image of Tsinghua University
+# -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+selenium
+pytest
+allure-pytest
+pyyaml
+openpyxl
+Appium-Python-Client
+requests
+pymysql
+jsonpath
