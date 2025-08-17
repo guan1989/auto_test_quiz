@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Failed: 步骤执行失败: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector",
+      "children" : [ {
+        "name" : "assertion failure",
+        "uid" : "282d11092414ec61",
+        "parentUid" : "4998992a02065ad95be501c4695146b6",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755416803689,
+          "stop" : 1755416807769,
+          "duration" : 4080
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'assertion failure', '', '', '', '', '', '', ''], ['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'hello Word', '', '', '']]" ]
+      } ],
+      "uid" : "4998992a02065ad95be501c4695146b6"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

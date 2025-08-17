@@ -6,16 +6,17 @@
 """
 import os
 import time
-from time import sleep
 
 from selenium import webdriver
 from selenium.common import TimeoutException, NoSuchElementException, ElementNotInteractableException, \
-    StaleElementReferenceException, InvalidElementStateException, WebDriverException
+    StaleElementReferenceException, InvalidElementStateException, WebDriverException, InvalidArgumentException
+from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.edge.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 
 from common.Logger import logger
 
@@ -65,7 +66,7 @@ class Web:
             driver_path = os.path.join(project_root, "lib", "chromedriver.exe")
             self.driver = webdriver.Chrome(options=option, service=Service(driver_path))
         # 隐式等待
-        self.driver.implicitly_wait(2)
+        self.driver.implicitly_wait(4)
         # 最大化
         self.driver.maximize_window()
 
@@ -119,7 +120,7 @@ class Web:
             ele.send_keys(value)
         except InvalidElementStateException as e:
             raise AssertionError(f"[InvalidState] 元素状态无效: {lo}") from e
-        except ElementNotInteractableException  as e:
+        except ElementNotInteractableException as e:
             raise AssertionError(f"[ElementNotInteractable] 元素不可输入: {lo}") from e
 
     def clear(self, lo: str = ''):
@@ -197,7 +198,7 @@ class Web:
         # 获取定位器元组
         locator = (By.ID, lo)
         # try:
-            # 显式等待3秒，直到元素可见
+        # 显式等待3秒，直到元素可见
         WebDriverWait(self.driver, 3).until(
             EC.visibility_of_element_located(locator)
         )
@@ -240,6 +241,7 @@ class Web:
             )
         except TimeoutException as e:
             raise AssertionError(f"TimeoutException: {str(e)}") from e
+
     def enable_element(self, lo: str = ''):
         """
         启用禁用的元素（适配Test case 3：通过JS移除disabled属性）
@@ -265,7 +267,7 @@ class Web:
             # 捕获Selenium刷新相关异常（如页面崩溃、网络问题等）
             raise AssertionError(f"【刷新失败】{str(e)}") from e
 
-    def save_element(self,lo:str='',element_sign:str=''):
+    def save_element(self, lo: str = '', element_sign: str = ''):
         """
         定位元素并保存引用
         :param element_sign: 存入字段的key
@@ -274,21 +276,53 @@ class Web:
         """
         self.relations_dict[element_sign] = self.__find_ele(lo)
 
-
-    def use_element(self,element_sign:str=''):
+    def use_element(self, element_sign: str = ''):
         """
         usr for Test case 4: StaleElementReferenceException
         :param element_sign:
         :return:
         """
         # for key, element in self.relations_dict.items():
-            # print(f"\n元素标识（key）: {key}")
-            # print(f"元素对象: {element}")
-
+        # print(f"\n元素标识（key）: {key}")
+        # print(f"元素对象: {element}")
 
         target_element = self.relations_dict[element_sign]  # 获取保存的元素对象
         target_element.click()
 
+    def select_native(self, lo: str = '', value: str = ''):
+        """
+        下拉框选择
+        :param lo: 定位表达式，支持xpath，id
+        :param value: 选项（输入整数，按下标取；输入字符串，按visible_text取）
+        :return:
+        """
+        ele = self.__find_ele(lo)
+        se = Select(ele)
+        try:
+            # 如果是整数，就按下标取
+            value = int(value)
+            se.select_by_index(value)
+        except:
+            # 如果不是整数就按可见文本取
+            se.select_by_visible_text(value)
+
+
+    def keyboard_navigate(self, direction: str, count: str,flag:str='TRUE'):
+        direction = direction.lower()
+        key_map = {
+            "up": Keys.UP,
+            "down": Keys.DOWN,
+            "left": Keys.LEFT,
+            "right": Keys.RIGHT,
+             "e": "e"
+        }
+        t = int(count)
+        actions = ActionChains(self.driver)
+        for _ in range(t):
+            actions.send_keys(key_map[direction])
+        if flag=="TRUE":
+            actions.send_keys(Keys.ENTER)
+        actions.perform()
 
 
 if __name__ == '__main__':

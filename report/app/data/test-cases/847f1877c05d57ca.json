@@ -1,0 +1,162 @@
+{
+  "uid" : "847f1877c05d57ca",
+  "name" : "Click Email",
+  "fullName" : "ddt.test_app_1.Test_App#test_suite",
+  "historyId" : "c7eacfb13effeec410b80d9ebc8c6a89",
+  "time" : {
+    "start" : 1755416800450,
+    "stop" : 1755416803635,
+    "duration" : 3185
+  },
+  "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+  "descriptionHtml" : "<p>测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click Email",
+      "time" : {
+        "start" : 1755416800450,
+        "stop" : 1755416802065,
+        "duration" : 1615
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755416800450,
+          "stop" : 1755416802065,
+          "duration" : 1615
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "a392cc0eba9dcbfd",
+          "name" : "步骤[click]截图",
+          "source" : "a392cc0eba9dcbfd.png",
+          "type" : "image/png",
+          "size" : 53900
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\"]"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    }, {
+      "name" : "Assert Hello lan",
+      "time" : {
+        "start" : 1755416802065,
+        "stop" : 1755416803635,
+        "duration" : 1570
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755416802065,
+          "stop" : 1755416803635,
+          "duration" : 1570
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "ac562f03e9076106",
+          "name" : "步骤[assert_text]截图",
+          "source" : "ac562f03e9076106.png",
+          "type" : "image/png",
+          "size" : 64458
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'This is a demo for Appium Inspector']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    } ],
+    "attachments" : [ {
+      "uid" : "befa7b13647f18a4",
+      "name" : "log",
+      "source" : "befa7b13647f18a4.txt",
+      "type" : "text/plain",
+      "size" : 138
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 4,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 3
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "#1 APPdemo"
+  }, {
+    "name" : "story",
+    "value" : "#1 Click_button"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ddt"
+  }, {
+    "name" : "suite",
+    "value" : "test_app_1"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_App"
+  }, {
+    "name" : "host",
+    "value" : "Lydia"
+  }, {
+    "name" : "thread",
+    "value" : "28616-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "ddt.test_app_1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "[['', 'Click Email', '', '', '', '', '', '', ''], ['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'This is a demo for Appium Inspector', '', '', '']]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "847f1877c05d57ca.json",
+  "parameterValues" : [ "[['', 'Click Email', '', '', '', '', '', '', ''], ['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'This is a demo for Appium Inspector', '', '', '']]" ]
+}

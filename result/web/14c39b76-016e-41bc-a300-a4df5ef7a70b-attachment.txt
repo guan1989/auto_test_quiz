@@ -1,0 +1,54 @@
+ERROR    root:test_web_2.py:96 [NoSuchElement] 元素定位失败: //div[@id='row2']/input
+Traceback (most recent call last):
+  File "D:\PythonStoreHouse\auto_test_quiz\keywords\webkeys.py", line 94, in __find_ele
+    ele = self.driver.find_element('xpath', lo)
+  File "D:\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 926, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='row2']/input"}
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff77403e7c5+22117]
+	(No symbol) [0x0x7ff773f8ee40]
+	GetHandleVerifier [0x0x7ff7742c4c6c+2669324]
+	(No symbol) [0x0x7ff773da928b]
+	(No symbol) [0x0x7ff773da957b]
+	(No symbol) [0x0x7ff773de9b47]
+	(No symbol) [0x0x7ff773dca82f]
+	(No symbol) [0x0x7ff773d9f68d]
+	(No symbol) [0x0x7ff773de762f]
+	(No symbol) [0x0x7ff773dca553]
+	(No symbol) [0x0x7ff773d9eb86]
+	(No symbol) [0x0x7ff773d9de11]
+	(No symbol) [0x0x7ff773d9e9b3]
+	(No symbol) [0x0x7ff773e9907d]
+	(No symbol) [0x0x7ff773ea5fe8]
+	GetHandleVerifier [0x0x7ff77411f2b7+942423]
+	GetHandleVerifier [0x0x7ff774128261+979201]
+	(No symbol) [0x0x7ff773f9c3f1]
+	(No symbol) [0x0x7ff773f94da4]
+	(No symbol) [0x0x7ff773f94ef3]
+	(No symbol) [0x0x7ff773f87056]
+	BaseThreadInitThunk [0x0x7fff1474259d+29]
+	RtlUserThreadStart [0x0x7fff14b4af38+40]
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PythonStoreHouse\auto_test_quiz\ddt\test_web_2.py", line 81, in test_suite
+    res = self.run_step(params)
+  File "D:\Python313\Lib\site-packages\allure_commons\_allure.py", line 202, in impl
+    return func(*a, **kw)
+  File "D:\PythonStoreHouse\auto_test_quiz\ddt\test_web_2.py", line 34, in run_step
+    return func(*args[1:])
+  File "D:\PythonStoreHouse\auto_test_quiz\keywords\webkeys.py", line 119, in input
+    ele = self.__find_ele(lo)
+  File "D:\PythonStoreHouse\auto_test_quiz\keywords\webkeys.py", line 109, in __find_ele
+    raise AssertionError(f"[NoSuchElement] 元素定位失败: {lo}") from e
+AssertionError: [NoSuchElement] 元素定位失败: //div[@id='row2']/input

@@ -1,0 +1,99 @@
+INFO     root:webkeys.py:265 页面已成功刷新
+ERROR    root:test_web_2.py:96 TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff77403e7c5+22117]
+	(No symbol) [0x0x7ff773f8ee40]
+	GetHandleVerifier [0x0x7ff7742c4c6c+2669324]
+	(No symbol) [0x0x7ff773da928b]
+	(No symbol) [0x0x7ff773da957b]
+	(No symbol) [0x0x7ff773de9b47]
+	(No symbol) [0x0x7ff773dca82f]
+	(No symbol) [0x0x7ff773d9f68d]
+	(No symbol) [0x0x7ff773de762f]
+	(No symbol) [0x0x7ff773dca553]
+	(No symbol) [0x0x7ff773d9eb86]
+	(No symbol) [0x0x7ff773d9de11]
+	(No symbol) [0x0x7ff773d9e9b3]
+	(No symbol) [0x0x7ff773e9907d]
+	(No symbol) [0x0x7ff773ea5fe8]
+	GetHandleVerifier [0x0x7ff77411f2b7+942423]
+	GetHandleVerifier [0x0x7ff774128261+979201]
+	(No symbol) [0x0x7ff773f9c3f1]
+	(No symbol) [0x0x7ff773f94da4]
+	(No symbol) [0x0x7ff773f94ef3]
+	(No symbol) [0x0x7ff773f87056]
+	BaseThreadInitThunk [0x0x7fff1474259d+29]
+	RtlUserThreadStart [0x0x7fff14b4af38+40]
+Traceback (most recent call last):
+  File "D:\PythonStoreHouse\auto_test_quiz\keywords\webkeys.py", line 239, in wait_for_element
+    WebDriverWait(self.driver, t).until(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        EC.visibility_of_element_located(locator)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Python313\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff77403e7c5+22117]
+	(No symbol) [0x0x7ff773f8ee40]
+	GetHandleVerifier [0x0x7ff7742c4c6c+2669324]
+	(No symbol) [0x0x7ff773da928b]
+	(No symbol) [0x0x7ff773da957b]
+	(No symbol) [0x0x7ff773de9b47]
+	(No symbol) [0x0x7ff773dca82f]
+	(No symbol) [0x0x7ff773d9f68d]
+	(No symbol) [0x0x7ff773de762f]
+	(No symbol) [0x0x7ff773dca553]
+	(No symbol) [0x0x7ff773d9eb86]
+	(No symbol) [0x0x7ff773d9de11]
+	(No symbol) [0x0x7ff773d9e9b3]
+	(No symbol) [0x0x7ff773e9907d]
+	(No symbol) [0x0x7ff773ea5fe8]
+	GetHandleVerifier [0x0x7ff77411f2b7+942423]
+	GetHandleVerifier [0x0x7ff774128261+979201]
+	(No symbol) [0x0x7ff773f9c3f1]
+	(No symbol) [0x0x7ff773f94da4]
+	(No symbol) [0x0x7ff773f94ef3]
+	(No symbol) [0x0x7ff773f87056]
+	BaseThreadInitThunk [0x0x7fff1474259d+29]
+	RtlUserThreadStart [0x0x7fff14b4af38+40]
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PythonStoreHouse\auto_test_quiz\ddt\test_web_2.py", line 81, in test_suite
+    res = self.run_step(params)
+  File "D:\Python313\Lib\site-packages\allure_commons\_allure.py", line 202, in impl
+    return func(*a, **kw)
+  File "D:\PythonStoreHouse\auto_test_quiz\ddt\test_web_2.py", line 34, in run_step
+    return func(*args[1:])
+  File "D:\PythonStoreHouse\auto_test_quiz\keywords\webkeys.py", line 243, in wait_for_element
+    raise AssertionError(f"TimeoutException: {str(e)}") from e
+AssertionError: TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff77403e7c5+22117]
+	(No symbol) [0x0x7ff773f8ee40]
+	GetHandleVerifier [0x0x7ff7742c4c6c+2669324]
+	(No symbol) [0x0x7ff773da928b]
+	(No symbol) [0x0x7ff773da957b]
+	(No symbol) [0x0x7ff773de9b47]
+	(No symbol) [0x0x7ff773dca82f]
+	(No symbol) [0x0x7ff773d9f68d]
+	(No symbol) [0x0x7ff773de762f]
+	(No symbol) [0x0x7ff773dca553]
+	(No symbol) [0x0x7ff773d9eb86]
+	(No symbol) [0x0x7ff773d9de11]
+	(No symbol) [0x0x7ff773d9e9b3]
+	(No symbol) [0x0x7ff773e9907d]
+	(No symbol) [0x0x7ff773ea5fe8]
+	GetHandleVerifier [0x0x7ff77411f2b7+942423]
+	GetHandleVerifier [0x0x7ff774128261+979201]
+	(No symbol) [0x0x7ff773f9c3f1]
+	(No symbol) [0x0x7ff773f94da4]
+	(No symbol) [0x0x7ff773f94ef3]
+	(No symbol) [0x0x7ff773f87056]
+	BaseThreadInitThunk [0x0x7fff1474259d+29]
+	RtlUserThreadStart [0x0x7fff14b4af38+40]

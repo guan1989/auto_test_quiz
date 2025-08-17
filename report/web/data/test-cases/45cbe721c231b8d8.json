@@ -1,0 +1,349 @@
+{
+  "uid" : "45cbe721c231b8d8",
+  "name" : "Negative password test",
+  "fullName" : "ddt.test_web_1.Test_Web#test_suite",
+  "historyId" : "dd0f18a1676274b11b31d2cca223cdaa",
+  "time" : {
+    "start" : 1755418718089,
+    "stop" : 1755418720778,
+    "duration" : 2689
+  },
+  "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+  "descriptionHtml" : "<p>测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Get url (参数: ['geturl', 'https://practicetestautomation.com/practice/'])",
+      "time" : {
+        "start" : 1755418718089,
+        "stop" : 1755418718874,
+        "duration" : 785
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755418718089,
+          "stop" : 1755418718874,
+          "duration" : 785
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "7c265c57e8e90a3b",
+          "name" : "步骤[geturl]截图",
+          "source" : "7c265c57e8e90a3b.png",
+          "type" : "image/png",
+          "size" : 77782
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['geturl', 'https://practicetestautomation.com/practice/']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Open page (参数: ['click', 'link_testTest Login Page'])",
+      "time" : {
+        "start" : 1755418718874,
+        "stop" : 1755418719638,
+        "duration" : 764
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755418718874,
+          "stop" : 1755418719638,
+          "duration" : 764
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "4152393e5820e4c",
+          "name" : "步骤[click]截图",
+          "source" : "4152393e5820e4c.png",
+          "type" : "image/png",
+          "size" : 47555
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', 'link_testTest Login Page']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Type username (参数: ['input', 'username', 'student'])",
+      "time" : {
+        "start" : 1755418719638,
+        "stop" : 1755418719844,
+        "duration" : 206
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755418719638,
+          "stop" : 1755418719844,
+          "duration" : 206
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "8972307bf42c9afb",
+          "name" : "步骤[input]截图",
+          "source" : "8972307bf42c9afb.png",
+          "type" : "image/png",
+          "size" : 76203
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['input', 'username', 'student']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Type error password (参数: ['input', 'password', 'Password1231'])",
+      "time" : {
+        "start" : 1755418719845,
+        "stop" : 1755418720136,
+        "duration" : 291
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755418719845,
+          "stop" : 1755418720136,
+          "duration" : 291
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "6945ef88967967b3",
+          "name" : "步骤[input]截图",
+          "source" : "6945ef88967967b3.png",
+          "type" : "image/png",
+          "size" : 77182
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['input', 'password', 'Password1231']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Push Submit button (参数: ['click', 'submit'])",
+      "time" : {
+        "start" : 1755418720137,
+        "stop" : 1755418720374,
+        "duration" : 237
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755418720137,
+          "stop" : 1755418720374,
+          "duration" : 237
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "c3aa1ec9437ef342",
+          "name" : "步骤[click]截图",
+          "source" : "c3aa1ec9437ef342.png",
+          "type" : "image/png",
+          "size" : 77689
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', 'submit']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Verify error message is displayed (参数: ['assert_element', 'error'])",
+      "time" : {
+        "start" : 1755418720374,
+        "stop" : 1755418720586,
+        "duration" : 212
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755418720374,
+          "stop" : 1755418720586,
+          "duration" : 212
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "d671efba514a9197",
+          "name" : "步骤[assert_element]截图",
+          "source" : "d671efba514a9197.png",
+          "type" : "image/png",
+          "size" : 78287
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['assert_element', 'error']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Verify error message text (参数: ['assert_text', 'error', 'Your password is invalid!'])",
+      "time" : {
+        "start" : 1755418720586,
+        "stop" : 1755418720778,
+        "duration" : 192
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755418720586,
+          "stop" : 1755418720778,
+          "duration" : 192
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "55c30526bb3a8bb3",
+          "name" : "步骤[assert_text]截图",
+          "source" : "55c30526bb3a8bb3.png",
+          "type" : "image/png",
+          "size" : 78215
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['assert_text', 'error', 'Your password is invalid!']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 14,
+    "attachmentsCount" : 7,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "#1 practice test automation"
+  }, {
+    "name" : "story",
+    "value" : "#1 Test_Login"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ddt"
+  }, {
+    "name" : "suite",
+    "value" : "test_web_1"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Web"
+  }, {
+    "name" : "host",
+    "value" : "Lydia"
+  }, {
+    "name" : "thread",
+    "value" : "3840-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "ddt.test_web_1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "[['', 'Negative password test', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type error password', 'input', 'password', 'Password1231', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify error message is displayed', 'assert_element', 'error', '', '', '', ''], ['', '', 'Verify error message text', 'assert_text', 'error', 'Your password is invalid!', '', '', '']]"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "45cbe721c231b8d8.json",
+  "parameterValues" : [ "[['', 'Negative password test', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type error password', 'input', 'password', 'Password1231', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify error message is displayed', 'assert_element', 'error', '', '', '', ''], ['', '', 'Verify error message text', 'assert_text', 'error', 'Your password is invalid!', '', '', '']]" ]
+}

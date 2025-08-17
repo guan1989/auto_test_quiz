@@ -1,0 +1,56 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "ddt",
+    "children" : [ {
+      "name" : "test_app_1",
+      "children" : [ {
+        "name" : "Click Next",
+        "uid" : "cbd99834dbfa4dc0",
+        "parentUid" : "84dcd51b9854b99362e9b76cc886496a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755416778687,
+          "stop" : 1755416800447,
+          "duration" : 21760
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Click Next', '', ' ', '', '', '', '', ''], ['', '', 'Open Appium', 'run_appium', '', '', '', '', ''], ['', '', 'Run APP', 'run_app', '{\\n  \"platformName\": \"Android\",\\n  \"deviceName\": \"3607f24a\",\\n  \"appPackage\": \"cn.ianzhang.android\",\\n  \"appActivity\": \".MainActivity\",\\n  \"noReset\": \"true\"\\n}', '', '', '', ''], ['', '', 'Click First', 'click', \"//*[@resource-id='cn.ianzhang.android:id/button_first']\", '', '', '', ''], ['', '', 'Click Second', 'click', \"//*[@resource-id='cn.ianzhang.android:id/button_second']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/textview_first']\", 'Hello Ian', '', '', '']]" ]
+      }, {
+        "name" : "Click Email",
+        "uid" : "847f1877c05d57ca",
+        "parentUid" : "84dcd51b9854b99362e9b76cc886496a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755416800450,
+          "stop" : 1755416803635,
+          "duration" : 3185
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Click Email', '', '', '', '', '', '', ''], ['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'This is a demo for Appium Inspector', '', '', '']]" ]
+      } ],
+      "uid" : "84dcd51b9854b99362e9b76cc886496a"
+    }, {
+      "name" : "test_app_2",
+      "children" : [ {
+        "name" : "assertion failure",
+        "uid" : "282d11092414ec61",
+        "parentUid" : "d20be38680dddc648caad9b678411cf1",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755416803689,
+          "stop" : 1755416807769,
+          "duration" : 4080
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'assertion failure', '', '', '', '', '', '', ''], ['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'hello Word', '', '', '']]" ]
+      } ],
+      "uid" : "d20be38680dddc648caad9b678411cf1"
+    } ],
+    "uid" : "96b36cb794029e5dfd8c0e81890e720c"
+  } ]
+}

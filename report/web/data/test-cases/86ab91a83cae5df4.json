@@ -1,0 +1,622 @@
+{
+  "uid" : "86ab91a83cae5df4",
+  "name" : "Positive LogIn test",
+  "fullName" : "ddt.test_web_3.Test_Web#test_suite",
+  "historyId" : "df7c76b69014160f1bbb62208136c80a",
+  "time" : {
+    "start" : 1755417761270,
+    "stop" : 1755417784886,
+    "duration" : 23616
+  },
+  "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+  "descriptionHtml" : "<p>测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Get url (参数: ['geturl', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'])",
+      "time" : {
+        "start" : 1755417761270,
+        "stop" : 1755417770629,
+        "duration" : 9359
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417761270,
+          "stop" : 1755417770629,
+          "duration" : 9359
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "dd7f9e8de58f5203",
+          "name" : "步骤[geturl]截图",
+          "source" : "dd7f9e8de58f5203.png",
+          "type" : "image/png",
+          "size" : 81425
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['geturl', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Input username (参数: ['input', \"//input[@name='username']\", 'Admin'])",
+      "time" : {
+        "start" : 1755417770629,
+        "stop" : 1755417773800,
+        "duration" : 3171
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417770629,
+          "stop" : 1755417773800,
+          "duration" : 3171
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "c599c037584e8682",
+          "name" : "步骤[input]截图",
+          "source" : "c599c037584e8682.png",
+          "type" : "image/png",
+          "size" : 12802
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['input', \"//input[@name='username']\", 'Admin']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Input pwd (参数: ['input', \"//input[@name='password']\", 'admin123'])",
+      "time" : {
+        "start" : 1755417773801,
+        "stop" : 1755417774149,
+        "duration" : 348
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417773801,
+          "stop" : 1755417774149,
+          "duration" : 348
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "c93ee1b4a253c9bc",
+          "name" : "步骤[input]截图",
+          "source" : "c93ee1b4a253c9bc.png",
+          "type" : "image/png",
+          "size" : 38649
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['input', \"//input[@name='password']\", 'admin123']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Push  button (参数: ['click', '//button'])",
+      "time" : {
+        "start" : 1755417774149,
+        "stop" : 1755417774362,
+        "duration" : 213
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417774149,
+          "stop" : 1755417774362,
+          "duration" : 213
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "adfa172c21268d9b",
+          "name" : "步骤[click]截图",
+          "source" : "adfa172c21268d9b.png",
+          "type" : "image/png",
+          "size" : 48549
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', '//button']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : " (参数: ['click', \"//span[text()='Claim']\"])",
+      "time" : {
+        "start" : 1755417774362,
+        "stop" : 1755417777363,
+        "duration" : 3001
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417774362,
+          "stop" : 1755417777363,
+          "duration" : 3001
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "e2b6d95062c00480",
+          "name" : "步骤[click]截图",
+          "source" : "e2b6d95062c00480.png",
+          "type" : "image/png",
+          "size" : 55574
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', \"//span[text()='Claim']\"]"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : " (参数: ['click', \"//a[text()='Employee Claims']\"])",
+      "time" : {
+        "start" : 1755417777363,
+        "stop" : 1755417779772,
+        "duration" : 2409
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417777363,
+          "stop" : 1755417779772,
+          "duration" : 2409
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "e01137bf3b433e6",
+          "name" : "步骤[click]截图",
+          "source" : "e01137bf3b433e6.png",
+          "type" : "image/png",
+          "size" : 12802
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', \"//a[text()='Employee Claims']\"]"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : " (参数: ['click', \"//button[text()=' Assign Claim ']\"])",
+      "time" : {
+        "start" : 1755417779772,
+        "stop" : 1755417780911,
+        "duration" : 1139
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417779772,
+          "stop" : 1755417780911,
+          "duration" : 1139
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "f6519aa28987b7f",
+          "name" : "步骤[click]截图",
+          "source" : "f6519aa28987b7f.png",
+          "type" : "image/png",
+          "size" : 12802
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', \"//button[text()=' Assign Claim ']\"]"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : " (参数: ['input', \"//input[@placeholder='Type for hints...']\", 'Amelia  Brown'])",
+      "time" : {
+        "start" : 1755417780911,
+        "stop" : 1755417781337,
+        "duration" : 426
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417780911,
+          "stop" : 1755417781337,
+          "duration" : 426
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "1bf2b6c61e9e1a44",
+          "name" : "步骤[input]截图",
+          "source" : "1bf2b6c61e9e1a44.png",
+          "type" : "image/png",
+          "size" : 12802
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['input', \"//input[@placeholder='Type for hints...']\", 'Amelia  Brown']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : " (参数: ['click', \"//label[text()='Event']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\"])",
+      "time" : {
+        "start" : 1755417781337,
+        "stop" : 1755417781625,
+        "duration" : 288
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417781337,
+          "stop" : 1755417781625,
+          "duration" : 288
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "78e2ac7bd8ba56f6",
+          "name" : "步骤[click]截图",
+          "source" : "78e2ac7bd8ba56f6.png",
+          "type" : "image/png",
+          "size" : 115741
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', \"//label[text()='Event']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\"]"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : " (参数: ['keyboard_navigate', 'down', '3'])",
+      "time" : {
+        "start" : 1755417781625,
+        "stop" : 1755417781834,
+        "duration" : 209
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417781626,
+          "stop" : 1755417781834,
+          "duration" : 208
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "3a56dcf7ee048b2b",
+          "name" : "步骤[keyboard_navigate]截图",
+          "source" : "3a56dcf7ee048b2b.png",
+          "type" : "image/png",
+          "size" : 121672
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['keyboard_navigate', 'down', '3']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : " (参数: ['click', \"//label[text()='Currency']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\"])",
+      "time" : {
+        "start" : 1755417781835,
+        "stop" : 1755417782078,
+        "duration" : 243
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417781835,
+          "stop" : 1755417782078,
+          "duration" : 243
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "640cafb8a78eb86c",
+          "name" : "步骤[click]截图",
+          "source" : "640cafb8a78eb86c.png",
+          "type" : "image/png",
+          "size" : 117612
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', \"//label[text()='Currency']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\"]"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : " (参数: ['keyboard_navigate', 'e', '1', 'FALSE'])",
+      "time" : {
+        "start" : 1755417782078,
+        "stop" : 1755417782281,
+        "duration" : 203
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417782078,
+          "stop" : 1755417782281,
+          "duration" : 203
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "f2ea8b0c7018ed9d",
+          "name" : "步骤[keyboard_navigate]截图",
+          "source" : "f2ea8b0c7018ed9d.png",
+          "type" : "image/png",
+          "size" : 125871
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['keyboard_navigate', 'e', '1', 'FALSE']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : " (参数: ['keyboard_navigate', 'down', '6'])",
+      "time" : {
+        "start" : 1755417782282,
+        "stop" : 1755417782496,
+        "duration" : 214
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417782282,
+          "stop" : 1755417782496,
+          "duration" : 214
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "a483fa8e7095eca8",
+          "name" : "步骤[keyboard_navigate]截图",
+          "source" : "a483fa8e7095eca8.png",
+          "type" : "image/png",
+          "size" : 126618
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['keyboard_navigate', 'down', '6']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : " (参数: ['quit'])",
+      "time" : {
+        "start" : 1755417782496,
+        "stop" : 1755417784886,
+        "duration" : 2390
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417782496,
+          "stop" : 1755417784886,
+          "duration" : 2390
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "e9f0b4c380567ec1",
+          "name" : "步骤[quit]截图",
+          "source" : "e9f0b4c380567ec1.png",
+          "type" : "image/png",
+          "size" : 117207
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['quit']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 28,
+    "attachmentsCount" : 14,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "#2 OrangeHRM"
+  }, {
+    "name" : "story",
+    "value" : "#1 Test_Login"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ddt"
+  }, {
+    "name" : "suite",
+    "value" : "test_web_3"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Web"
+  }, {
+    "name" : "host",
+    "value" : "Lydia"
+  }, {
+    "name" : "thread",
+    "value" : "24036-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "ddt.test_web_3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', '', '', '', ''], ['', '', 'Input username', 'input', \"//input[@name='username']\", 'Admin', '', '', ''], ['', '', 'Input pwd', 'input', \"//input[@name='password']\", 'admin123', '', '', ''], ['', '', 'Push  button', 'click', '//button', '', '', '', ''], ['', '', '', 'click', \"//span[text()='Claim']\", '', '', '', ''], ['', '', '', 'click', \"//a[text()='Employee Claims']\", '', '', '', ''], ['', '', '', 'click', \"//button[text()=' Assign Claim ']\", '', '', '', ''], ['', '', '', 'input', \"//input[@placeholder='Type for hints...']\", 'Amelia  Brown', '', '', ''], ['', '', '', 'click', \"//label[text()='Event']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'down', '3', '', '', ''], ['', '', '', 'click', \"//label[text()='Currency']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'e', 1, 'FALSE', '', ''], ['', '', '', 'keyboard_navigate', 'down', '6', '', '', ''], ['', '', '', 'quit', '', '', '', '', '']]"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "86ab91a83cae5df4.json",
+  "parameterValues" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', '', '', '', ''], ['', '', 'Input username', 'input', \"//input[@name='username']\", 'Admin', '', '', ''], ['', '', 'Input pwd', 'input', \"//input[@name='password']\", 'admin123', '', '', ''], ['', '', 'Push  button', 'click', '//button', '', '', '', ''], ['', '', '', 'click', \"//span[text()='Claim']\", '', '', '', ''], ['', '', '', 'click', \"//a[text()='Employee Claims']\", '', '', '', ''], ['', '', '', 'click', \"//button[text()=' Assign Claim ']\", '', '', '', ''], ['', '', '', 'input', \"//input[@placeholder='Type for hints...']\", 'Amelia  Brown', '', '', ''], ['', '', '', 'click', \"//label[text()='Event']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'down', '3', '', '', ''], ['', '', '', 'click', \"//label[text()='Currency']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'e', 1, 'FALSE', '', ''], ['', '', '', 'keyboard_navigate', 'down', '6', '', '', ''], ['', '', '', 'quit', '', '', '', '', '']]" ]
+}

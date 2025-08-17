@@ -1,0 +1,1 @@
+INFO     root:appkeys.py:175 文本断言成功！预期: This is a demo for Appium Inspector, 实际: This is a demo for Appium Inspector

@@ -1,0 +1,64 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "ddt",
+    "children" : [ {
+      "name" : "test_app_1",
+      "children" : [ {
+        "name" : "Test_App",
+        "children" : [ {
+          "name" : "Click Next",
+          "uid" : "cbd99834dbfa4dc0",
+          "parentUid" : "5be29045b138c8ccb26e06f4e9e2055f",
+          "status" : "passed",
+          "time" : {
+            "start" : 1755416778687,
+            "stop" : 1755416800447,
+            "duration" : 21760
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "[['', 'Click Next', '', ' ', '', '', '', '', ''], ['', '', 'Open Appium', 'run_appium', '', '', '', '', ''], ['', '', 'Run APP', 'run_app', '{\\n  \"platformName\": \"Android\",\\n  \"deviceName\": \"3607f24a\",\\n  \"appPackage\": \"cn.ianzhang.android\",\\n  \"appActivity\": \".MainActivity\",\\n  \"noReset\": \"true\"\\n}', '', '', '', ''], ['', '', 'Click First', 'click', \"//*[@resource-id='cn.ianzhang.android:id/button_first']\", '', '', '', ''], ['', '', 'Click Second', 'click', \"//*[@resource-id='cn.ianzhang.android:id/button_second']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/textview_first']\", 'Hello Ian', '', '', '']]" ]
+        }, {
+          "name" : "Click Email",
+          "uid" : "847f1877c05d57ca",
+          "parentUid" : "5be29045b138c8ccb26e06f4e9e2055f",
+          "status" : "passed",
+          "time" : {
+            "start" : 1755416800450,
+            "stop" : 1755416803635,
+            "duration" : 3185
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "[['', 'Click Email', '', '', '', '', '', '', ''], ['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'This is a demo for Appium Inspector', '', '', '']]" ]
+        } ],
+        "uid" : "5be29045b138c8ccb26e06f4e9e2055f"
+      } ],
+      "uid" : "ebe7a83b0dce728bff903237266d6c2e"
+    }, {
+      "name" : "test_app_2",
+      "children" : [ {
+        "name" : "Test_App",
+        "children" : [ {
+          "name" : "assertion failure",
+          "uid" : "282d11092414ec61",
+          "parentUid" : "2b691d9f87062aa319a23ff1a89376b2",
+          "status" : "failed",
+          "time" : {
+            "start" : 1755416803689,
+            "stop" : 1755416807769,
+            "duration" : 4080
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "[['', 'assertion failure', '', '', '', '', '', '', ''], ['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'hello Word', '', '', '']]" ]
+        } ],
+        "uid" : "2b691d9f87062aa319a23ff1a89376b2"
+      } ],
+      "uid" : "6afd278af47891771359f6d823826227"
+    } ],
+    "uid" : "c89bb59eb3116fa65be52387c9b08d60"
+  } ]
+}

@@ -1,0 +1,709 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "Lydia",
+    "children" : [ {
+      "name" : "16416-MainThread",
+      "children" : [ {
+        "name" : "Positive LogIn test",
+        "uid" : "8460ecce5b5cf4a",
+        "parentUid" : "e6f5599f8d57c8cd3885315fabd2b556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755417203340,
+          "stop" : 1755417227614,
+          "duration" : 24274
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', '', '', '', ''], ['', '', 'Input username', 'input', \"//input[@name='username']\", 'Admin', '', '', ''], ['', '', 'Input pwd', 'input', \"//input[@name='password']\", 'admin123', '', '', ''], ['', '', 'Push  button', 'click', '//button', '', '', '', ''], ['', '', '', 'click', \"//span[text()='Claim']\", '', '', '', ''], ['', '', '', 'click', \"//a[text()='Employee Claims']\", '', '', '', ''], ['', '', '', 'click', \"//button[text()=' Assign Claim ']\", '', '', '', ''], ['', '', '', 'input', \"//input[@placeholder='Type for hints...']\", 'Amelia  Brown', '', '', ''], ['', '', '', 'click', \"//label[text()='Event']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'down', '3', '', '', ''], ['', '', '', 'click', \"//label[text()='Currency']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'e', 1, 'FALSE', '', ''], ['', '', '', 'keyboard_navigate', 'down', '6', '', '', ''], ['', '', '', 'quit', '', '', '', '', '']]" ]
+      }, {
+        "name" : "TimeoutException",
+        "uid" : "5e5394bac64ab87b",
+        "parentUid" : "e6f5599f8d57c8cd3885315fabd2b556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755417197406,
+          "stop" : 1755417203272,
+          "duration" : 5866
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'TimeoutException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '2', '', '', '']]" ]
+      }, {
+        "name" : "Positive LogIn test",
+        "uid" : "81a53b19335a50d8",
+        "parentUid" : "e6f5599f8d57c8cd3885315fabd2b556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755417153699,
+          "stop" : 1755417164584,
+          "duration" : 10885
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Open browser', 'open_browser', 'edge', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify new page URL', 'assert_url', 'practicetestautomation.com/logged-in-successfully/', '', '', '', ''], ['', '', 'Verify new page contains expected text', 'assert_text', \"//h1[@class='post-title']\", 'Logged In Successfully', '', '', ''], ['', '', 'Verify button Log out', 'assert_button', \"//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']\", 'Log out', '', '', '']]" ]
+      }, {
+        "name" : "ElementNotInteractableException",
+        "uid" : "2668237d17383fc9",
+        "parentUid" : "e6f5599f8d57c8cd3885315fabd2b556",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755417177471,
+          "stop" : 1755417194014,
+          "duration" : 16543
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'ElementNotInteractableException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '6', '', '', ''], ['', '', 'Push Save button', 'click', '$Save', '', '', '', ''], ['', '', 'Verify text saved', 'assert_text', 'confirmation', 'Row 2 was saved', '', '', '']]" ]
+      }, {
+        "name" : "Negative password test",
+        "uid" : "d799f406de9ec845",
+        "parentUid" : "e6f5599f8d57c8cd3885315fabd2b556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755417167186,
+          "stop" : 1755417169825,
+          "duration" : 2639
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Negative password test', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type error password', 'input', 'password', 'Password1231', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify error message is displayed', 'assert_element', 'error', '', '', '', ''], ['', '', 'Verify error message text', 'assert_text', 'error', 'Your password is invalid!', '', '', '']]" ]
+      }, {
+        "name" : "StaleElementReferenceException",
+        "uid" : "f31e33ec4270efc7",
+        "parentUid" : "e6f5599f8d57c8cd3885315fabd2b556",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755417196052,
+          "stop" : 1755417197369,
+          "duration" : 1317
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'StaleElementReferenceException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Find the instructions text element', 'save_element', 'instructions', 'instructions', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', '', '', '']]" ]
+      }, {
+        "name" : "NoSuchElementException",
+        "uid" : "f3d2bd340ddc44c2",
+        "parentUid" : "e6f5599f8d57c8cd3885315fabd2b556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755417169879,
+          "stop" : 1755417177468,
+          "duration" : 7589
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'NoSuchElementException', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Exceptions', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Verify Row 2 input field is displayed', 'input', \"//div[@id='row2']/input\", 'Verify Row 2 input field is displayed', '', '', '']]" ]
+      }, {
+        "name" : "Negative username test",
+        "uid" : "b62ad9c473cf8b0",
+        "parentUid" : "e6f5599f8d57c8cd3885315fabd2b556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755417164589,
+          "stop" : 1755417167184,
+          "duration" : 2595
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Negative username test', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'incorrectUser ', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify error message is displayed', 'assert_element', 'error', '', '', '', ''], ['', '', 'Verify error message text', 'assert_text', 'error', 'Your username is invalid!', '', '', '']]" ]
+      }, {
+        "name" : "InvalidElementStateException",
+        "uid" : "f5685d665c7d4fae",
+        "parentUid" : "e6f5599f8d57c8cd3885315fabd2b556",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755417194380,
+          "stop" : 1755417196015,
+          "duration" : 1635
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'InvalidElementStateException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Clear input field', 'clear', \"//div[@id='row1']/input\", '', '', '', '']]" ]
+      } ],
+      "uid" : "e6f5599f8d57c8cd3885315fabd2b556"
+    }, {
+      "name" : "24036-MainThread",
+      "children" : [ {
+        "name" : "TimeoutException",
+        "uid" : "5d2b911425410c29",
+        "parentUid" : "d7e2e5fc1fbbaa5a9e433e048fb77a3b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755417755289,
+          "stop" : 1755417761111,
+          "duration" : 5822
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'TimeoutException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '0.1', '', '', '']]" ]
+      }, {
+        "name" : "InvalidElementStateException",
+        "uid" : "45198fc94387aaa2",
+        "parentUid" : "d7e2e5fc1fbbaa5a9e433e048fb77a3b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755417752147,
+          "stop" : 1755417753861,
+          "duration" : 1714
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'InvalidElementStateException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Clear input field', 'clear', \"//div[@id='row1']/input\", '', '', '', '']]" ]
+      }, {
+        "name" : "ElementNotInteractableException",
+        "uid" : "f619641d1377d0c5",
+        "parentUid" : "d7e2e5fc1fbbaa5a9e433e048fb77a3b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755417734833,
+          "stop" : 1755417751758,
+          "duration" : 16925
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'ElementNotInteractableException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '6', '', '', ''], ['', '', 'Push Save button', 'click', '$Save', '', '', '', ''], ['', '', 'Verify text saved', 'assert_text', 'confirmation', 'Row 2 was saved', '', '', '']]" ]
+      }, {
+        "name" : "StaleElementReferenceException",
+        "uid" : "1edbe8002d968c14",
+        "parentUid" : "d7e2e5fc1fbbaa5a9e433e048fb77a3b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755417753896,
+          "stop" : 1755417755245,
+          "duration" : 1349
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'StaleElementReferenceException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Find the instructions text element', 'save_element', 'instructions', 'instructions', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', '', '', '']]" ]
+      }, {
+        "name" : "Positive LogIn test",
+        "uid" : "cd0b2353f6b03b75",
+        "parentUid" : "d7e2e5fc1fbbaa5a9e433e048fb77a3b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755417712022,
+          "stop" : 1755417722759,
+          "duration" : 10737
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Open browser', 'open_browser', 'edge', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify new page URL', 'assert_url', 'practicetestautomation.com/logged-in-successfully/', '', '', '', ''], ['', '', 'Verify new page contains expected text', 'assert_text', \"//h1[@class='post-title']\", 'Logged In Successfully', '', '', ''], ['', '', 'Verify button Log out', 'assert_button', \"//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']\", 'Log out', '', '', '']]" ]
+      }, {
+        "name" : "Positive LogIn test",
+        "uid" : "86ab91a83cae5df4",
+        "parentUid" : "d7e2e5fc1fbbaa5a9e433e048fb77a3b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755417761270,
+          "stop" : 1755417784886,
+          "duration" : 23616
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', '', '', '', ''], ['', '', 'Input username', 'input', \"//input[@name='username']\", 'Admin', '', '', ''], ['', '', 'Input pwd', 'input', \"//input[@name='password']\", 'admin123', '', '', ''], ['', '', 'Push  button', 'click', '//button', '', '', '', ''], ['', '', '', 'click', \"//span[text()='Claim']\", '', '', '', ''], ['', '', '', 'click', \"//a[text()='Employee Claims']\", '', '', '', ''], ['', '', '', 'click', \"//button[text()=' Assign Claim ']\", '', '', '', ''], ['', '', '', 'input', \"//input[@placeholder='Type for hints...']\", 'Amelia  Brown', '', '', ''], ['', '', '', 'click', \"//label[text()='Event']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'down', '3', '', '', ''], ['', '', '', 'click', \"//label[text()='Currency']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'e', 1, 'FALSE', '', ''], ['', '', '', 'keyboard_navigate', 'down', '6', '', '', ''], ['', '', '', 'quit', '', '', '', '', '']]" ]
+      }, {
+        "name" : "Negative username test",
+        "uid" : "b6e594ea17ac03cf",
+        "parentUid" : "d7e2e5fc1fbbaa5a9e433e048fb77a3b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755417722762,
+          "stop" : 1755417725311,
+          "duration" : 2549
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Negative username test', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'incorrectUser ', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify error message is displayed', 'assert_element', 'error', '', '', '', ''], ['', '', 'Verify error message text', 'assert_text', 'error', 'Your username is invalid!', '', '', '']]" ]
+      }, {
+        "name" : "NoSuchElementException",
+        "uid" : "cc60847f1240c70e",
+        "parentUid" : "d7e2e5fc1fbbaa5a9e433e048fb77a3b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755417727764,
+          "stop" : 1755417734831,
+          "duration" : 7067
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'NoSuchElementException', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Exceptions', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Verify Row 2 input field is displayed', 'input', \"//div[@id='row2']/input\", 'Verify Row 2 input field is displayed', '', '', '']]" ]
+      }, {
+        "name" : "Negative password test",
+        "uid" : "fa0b3649b7c11305",
+        "parentUid" : "d7e2e5fc1fbbaa5a9e433e048fb77a3b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755417725313,
+          "stop" : 1755417727701,
+          "duration" : 2388
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Negative password test', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type error password', 'input', 'password', 'Password1231', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify error message is displayed', 'assert_element', 'error', '', '', '', ''], ['', '', 'Verify error message text', 'assert_text', 'error', 'Your password is invalid!', '', '', '']]" ]
+      } ],
+      "uid" : "d7e2e5fc1fbbaa5a9e433e048fb77a3b"
+    }, {
+      "name" : "38560-MainThread",
+      "children" : [ {
+        "name" : "Negative username test",
+        "uid" : "acede59cd937626c",
+        "parentUid" : "4c4a3e37513efabad235f8efc227ea13",
+        "status" : "broken",
+        "time" : {
+          "start" : 1755418822770,
+          "stop" : 1755418822776,
+          "duration" : 6
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Negative username test', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'incorrectUser ', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify error message is displayed', 'assert_element', 'error', '', '', '', ''], ['', '', 'Verify error message text', 'assert_text', 'error', 'Your username is invalid!', '', '', '']]" ]
+      }, {
+        "name" : "InvalidElementStateException",
+        "uid" : "29b4eb7f704a134c",
+        "parentUid" : "4c4a3e37513efabad235f8efc227ea13",
+        "status" : "broken",
+        "time" : {
+          "start" : 1755418823126,
+          "stop" : 1755418823132,
+          "duration" : 6
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'InvalidElementStateException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Clear input field', 'clear', \"//div[@id='row1']/input\", '', '', '', '']]" ]
+      }, {
+        "name" : "Negative password test",
+        "uid" : "8fa8aab8861fbf14",
+        "parentUid" : "4c4a3e37513efabad235f8efc227ea13",
+        "status" : "broken",
+        "time" : {
+          "start" : 1755418822835,
+          "stop" : 1755418822842,
+          "duration" : 7
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Negative password test', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type error password', 'input', 'password', 'Password1231', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify error message is displayed', 'assert_element', 'error', '', '', '', ''], ['', '', 'Verify error message text', 'assert_text', 'error', 'Your password is invalid!', '', '', '']]" ]
+      }, {
+        "name" : "Positive LogIn test",
+        "uid" : "ca3d9acb85d34d59",
+        "parentUid" : "4c4a3e37513efabad235f8efc227ea13",
+        "status" : "broken",
+        "time" : {
+          "start" : 1755418823386,
+          "stop" : 1755418823392,
+          "duration" : 6
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', '', '', '', ''], ['', '', 'Input username', 'input', \"//input[@name='username']\", 'Admin', '', '', ''], ['', '', 'Input pwd', 'input', \"//input[@name='password']\", 'admin123', '', '', ''], ['', '', 'Push  button', 'click', '//button', '', '', '', ''], ['', '', '', 'click', \"//span[text()='Claim']\", '', '', '', ''], ['', '', '', 'click', \"//a[text()='Employee Claims']\", '', '', '', ''], ['', '', '', 'click', \"//button[text()=' Assign Claim ']\", '', '', '', ''], ['', '', '', 'input', \"//input[@placeholder='Type for hints...']\", 'Amelia  Brown', '', '', ''], ['', '', '', 'click', \"//label[text()='Event']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'down', '3', '', '', ''], ['', '', '', 'click', \"//label[text()='Currency']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'e', 1, 'FALSE', '', ''], ['', '', '', 'keyboard_navigate', 'down', '6', '', '', ''], ['', '', '', 'quit', '', '', '', '', '']]" ]
+      }, {
+        "name" : "NoSuchElementException",
+        "uid" : "a3e3f22b7cffb142",
+        "parentUid" : "4c4a3e37513efabad235f8efc227ea13",
+        "status" : "broken",
+        "time" : {
+          "start" : 1755418822974,
+          "stop" : 1755418822979,
+          "duration" : 5
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'NoSuchElementException', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Exceptions', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Verify Row 2 input field is displayed', 'input', \"//div[@id='row2']/input\", 'Verify Row 2 input field is displayed', '', '', '']]" ]
+      }, {
+        "name" : "Positive LogIn test",
+        "uid" : "d30f596528ad7b2b",
+        "parentUid" : "4c4a3e37513efabad235f8efc227ea13",
+        "status" : "broken",
+        "time" : {
+          "start" : 1755418819540,
+          "stop" : 1755418822430,
+          "duration" : 2890
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Open browser', 'open_browser', 'edge', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify new page URL', 'assert_url', 'practicetestautomation.com/logged-in-successfully/', '', '', '', ''], ['', '', 'Verify new page contains expected text', 'assert_text', \"//h1[@class='post-title']\", 'Logged In Successfully', '', '', ''], ['', '', 'Verify button Log out', 'assert_button', \"//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']\", 'Log out', '', '', '']]" ]
+      }, {
+        "name" : "StaleElementReferenceException",
+        "uid" : "c845331754e4c2d0",
+        "parentUid" : "4c4a3e37513efabad235f8efc227ea13",
+        "status" : "broken",
+        "time" : {
+          "start" : 1755418823187,
+          "stop" : 1755418823191,
+          "duration" : 4
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'StaleElementReferenceException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Find the instructions text element', 'save_element', 'instructions', 'instructions', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', '', '', '']]" ]
+      }, {
+        "name" : "TimeoutException",
+        "uid" : "a8d6ac26619064ea",
+        "parentUid" : "4c4a3e37513efabad235f8efc227ea13",
+        "status" : "broken",
+        "time" : {
+          "start" : 1755418823247,
+          "stop" : 1755418823252,
+          "duration" : 5
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'TimeoutException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '', '', '', '']]" ]
+      }, {
+        "name" : "ElementNotInteractableException",
+        "uid" : "6e17cd1b143bce23",
+        "parentUid" : "4c4a3e37513efabad235f8efc227ea13",
+        "status" : "broken",
+        "time" : {
+          "start" : 1755418823037,
+          "stop" : 1755418823042,
+          "duration" : 5
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'ElementNotInteractableException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '6', '', '', ''], ['', '', 'Push Save button', 'click', '$Save', '', '', '', ''], ['', '', 'Verify text saved', 'assert_text', 'confirmation', 'Row 2 was saved', '', '', '']]" ]
+      } ],
+      "uid" : "4c4a3e37513efabad235f8efc227ea13"
+    }, {
+      "name" : "28168-MainThread",
+      "children" : [ {
+        "name" : "Positive LogIn test",
+        "uid" : "91600f83b8aafbc0",
+        "parentUid" : "aece1fea0ff356e0c04b3b5e7205061d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755419039488,
+          "stop" : 1755419057326,
+          "duration" : 17838
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', '', '', '', ''], ['', '', 'Input username', 'input', \"//input[@name='username']\", 'Admin', '', '', ''], ['', '', 'Input pwd', 'input', \"//input[@name='password']\", 'admin123', '', '', ''], ['', '', 'Push  button', 'click', '//button', '', '', '', ''], ['', '', '', 'click', \"//span[text()='Claim']\", '', '', '', ''], ['', '', '', 'click', \"//a[text()='Employee Claims']\", '', '', '', ''], ['', '', '', 'click', \"//button[text()=' Assign Claim ']\", '', '', '', ''], ['', '', '', 'input', \"//input[@placeholder='Type for hints...']\", 'Amelia  Brown', '', '', ''], ['', '', '', 'click', \"//label[text()='Event']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'down', '3', '', '', ''], ['', '', '', 'click', \"//label[text()='Currency']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'e', 1, 'FALSE', '', ''], ['', '', '', 'keyboard_navigate', 'down', '6', '', '', ''], ['', '', '', 'quit', '', '', '', '', '']]" ]
+      }, {
+        "name" : "TimeoutException",
+        "uid" : "7bc3f9645ec6e42f",
+        "parentUid" : "aece1fea0ff356e0c04b3b5e7205061d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755419033922,
+          "stop" : 1755419039153,
+          "duration" : 5231
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'TimeoutException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '', '', '', '']]" ]
+      }, {
+        "name" : "Positive LogIn test",
+        "uid" : "217eeb35d1b15505",
+        "parentUid" : "aece1fea0ff356e0c04b3b5e7205061d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755418999951,
+          "stop" : 1755419008130,
+          "duration" : 8179
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Open browser', 'open_browser', 'edge', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify new page URL', 'assert_url', 'practicetestautomation.com/logged-in-successfully/', '', '', '', ''], ['', '', 'Verify new page contains expected text', 'assert_text', \"//h1[@class='post-title']\", 'Logged In Successfully', '', '', ''], ['', '', 'Verify button Log out', 'assert_button', \"//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']\", 'Log out', '', '', '']]" ]
+      }, {
+        "name" : "NoSuchElementException",
+        "uid" : "a2980ee98ea34d44",
+        "parentUid" : "aece1fea0ff356e0c04b3b5e7205061d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755419013647,
+          "stop" : 1755419019842,
+          "duration" : 6195
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'NoSuchElementException', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Exceptions', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Verify Row 2 input field is displayed', 'input', \"//div[@id='row2']/input\", 'Verify Row 2 input field is displayed', '', '', '']]" ]
+      }, {
+        "name" : "ElementNotInteractableException",
+        "uid" : "316f932afaf75001",
+        "parentUid" : "aece1fea0ff356e0c04b3b5e7205061d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755419020225,
+          "stop" : 1755419031028,
+          "duration" : 10803
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'ElementNotInteractableException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '6', '', '', ''], ['', '', 'Push Save button', 'click', '$Save', '', '', '', ''], ['', '', 'Verify text saved', 'assert_text', 'confirmation', 'Row 2 was saved', '', '', '']]" ]
+      }, {
+        "name" : "Negative password test",
+        "uid" : "6da994b7c0cb176c",
+        "parentUid" : "aece1fea0ff356e0c04b3b5e7205061d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755419010880,
+          "stop" : 1755419013596,
+          "duration" : 2716
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Negative password test', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type error password', 'input', 'password', 'Password1231', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify error message is displayed', 'assert_element', 'error', '', '', '', ''], ['', '', 'Verify error message text', 'assert_text', 'error', 'Your password is invalid!', '', '', '']]" ]
+      }, {
+        "name" : "InvalidElementStateException",
+        "uid" : "5e3fa5f32f158e6d",
+        "parentUid" : "aece1fea0ff356e0c04b3b5e7205061d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755419031077,
+          "stop" : 1755419032537,
+          "duration" : 1460
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'InvalidElementStateException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Clear input field', 'clear', \"//div[@id='row1']/input\", '', '', '', '']]" ]
+      }, {
+        "name" : "StaleElementReferenceException",
+        "uid" : "99ef7cef1c0a99bc",
+        "parentUid" : "aece1fea0ff356e0c04b3b5e7205061d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755419032574,
+          "stop" : 1755419033883,
+          "duration" : 1309
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'StaleElementReferenceException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Find the instructions text element', 'save_element', 'instructions', 'instructions', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', '', '', '']]" ]
+      }, {
+        "name" : "Negative username test",
+        "uid" : "97188a458058a1b8",
+        "parentUid" : "aece1fea0ff356e0c04b3b5e7205061d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755419008134,
+          "stop" : 1755419010877,
+          "duration" : 2743
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Negative username test', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'incorrectUser ', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify error message is displayed', 'assert_element', 'error', '', '', '', ''], ['', '', 'Verify error message text', 'assert_text', 'error', 'Your username is invalid!', '', '', '']]" ]
+      } ],
+      "uid" : "aece1fea0ff356e0c04b3b5e7205061d"
+    }, {
+      "name" : "22124-MainThread",
+      "children" : [ {
+        "name" : "InvalidElementStateException",
+        "uid" : "781307021f3a988d",
+        "parentUid" : "607ff057b14f9c252000dbac061f7258",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755418975098,
+          "stop" : 1755418975101,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'InvalidElementStateException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Clear input field', 'clear', \"//div[@id='row1']/input\", '', '', '', '']]" ]
+      }, {
+        "name" : "Positive LogIn test",
+        "uid" : "f89619efaf102830",
+        "parentUid" : "607ff057b14f9c252000dbac061f7258",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755418975211,
+          "stop" : 1755418975213,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', '', '', '', ''], ['', '', 'Input username', 'input', \"//input[@name='username']\", 'Admin', '', '', ''], ['', '', 'Input pwd', 'input', \"//input[@name='password']\", 'admin123', '', '', ''], ['', '', 'Push  button', 'click', '//button', '', '', '', ''], ['', '', '', 'click', \"//span[text()='Claim']\", '', '', '', ''], ['', '', '', 'click', \"//a[text()='Employee Claims']\", '', '', '', ''], ['', '', '', 'click', \"//button[text()=' Assign Claim ']\", '', '', '', ''], ['', '', '', 'input', \"//input[@placeholder='Type for hints...']\", 'Amelia  Brown', '', '', ''], ['', '', '', 'click', \"//label[text()='Event']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'down', '3', '', '', ''], ['', '', '', 'click', \"//label[text()='Currency']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'e', 1, 'FALSE', '', ''], ['', '', '', 'keyboard_navigate', 'down', '6', '', '', ''], ['', '', '', 'quit', '', '', '', '', '']]" ]
+      }, {
+        "name" : "StaleElementReferenceException",
+        "uid" : "4c133c675064a923",
+        "parentUid" : "607ff057b14f9c252000dbac061f7258",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755418975114,
+          "stop" : 1755418975117,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'StaleElementReferenceException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Find the instructions text element', 'save_element', 'instructions', 'instructions', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', '', '', '']]" ]
+      }, {
+        "name" : "TimeoutException",
+        "uid" : "6f6d505811a48136",
+        "parentUid" : "607ff057b14f9c252000dbac061f7258",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755418975131,
+          "stop" : 1755418975133,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'TimeoutException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '', '', '', '']]" ]
+      }, {
+        "name" : "NoSuchElementException",
+        "uid" : "1a10c131dc7fa655",
+        "parentUid" : "607ff057b14f9c252000dbac061f7258",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755418975063,
+          "stop" : 1755418975066,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'NoSuchElementException', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Exceptions', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Verify Row 2 input field is displayed', 'input', \"//div[@id='row2']/input\", 'Verify Row 2 input field is displayed', '', '', '']]" ]
+      }, {
+        "name" : "ElementNotInteractableException",
+        "uid" : "28431474e33487ce",
+        "parentUid" : "607ff057b14f9c252000dbac061f7258",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755418975081,
+          "stop" : 1755418975084,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'ElementNotInteractableException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '6', '', '', ''], ['', '', 'Push Save button', 'click', '$Save', '', '', '', ''], ['', '', 'Verify text saved', 'assert_text', 'confirmation', 'Row 2 was saved', '', '', '']]" ]
+      } ],
+      "uid" : "607ff057b14f9c252000dbac061f7258"
+    }, {
+      "name" : "3840-MainThread",
+      "children" : [ {
+        "name" : "StaleElementReferenceException",
+        "uid" : "c0833272d16822c4",
+        "parentUid" : "fe4c3d2944d2758719f847c7a0e9ec4f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755418762675,
+          "stop" : 1755418764914,
+          "duration" : 2239
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'StaleElementReferenceException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Find the instructions text element', 'save_element', 'instructions', 'instructions', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', '', '', '']]" ]
+      }, {
+        "name" : "Positive LogIn test",
+        "uid" : "381d362488f3336d",
+        "parentUid" : "fe4c3d2944d2758719f847c7a0e9ec4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755418771051,
+          "stop" : 1755418795264,
+          "duration" : 24213
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', '', '', '', ''], ['', '', 'Input username', 'input', \"//input[@name='username']\", 'Admin', '', '', ''], ['', '', 'Input pwd', 'input', \"//input[@name='password']\", 'admin123', '', '', ''], ['', '', 'Push  button', 'click', '//button', '', '', '', ''], ['', '', '', 'click', \"//span[text()='Claim']\", '', '', '', ''], ['', '', '', 'click', \"//a[text()='Employee Claims']\", '', '', '', ''], ['', '', '', 'click', \"//button[text()=' Assign Claim ']\", '', '', '', ''], ['', '', '', 'input', \"//input[@placeholder='Type for hints...']\", 'Amelia  Brown', '', '', ''], ['', '', '', 'click', \"//label[text()='Event']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'down', '3', '', '', ''], ['', '', '', 'click', \"//label[text()='Currency']/ancestor::div[contains(@class, 'oxd-input-group')]//div[@class='oxd-select-wrapper']\", '', '', '', ''], ['', '', '', 'keyboard_navigate', 'e', 1, 'FALSE', '', ''], ['', '', '', 'keyboard_navigate', 'down', '6', '', '', ''], ['', '', '', 'quit', '', '', '', '', '']]" ]
+      }, {
+        "name" : "ElementNotInteractableException",
+        "uid" : "e3f092437defb567",
+        "parentUid" : "fe4c3d2944d2758719f847c7a0e9ec4f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755418727700,
+          "stop" : 1755418744879,
+          "duration" : 17179
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'ElementNotInteractableException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '6', '', '', ''], ['', '', 'Push Save button', 'click', '$Save', '', '', '', ''], ['', '', 'Verify text saved', 'assert_text', 'confirmation', 'Row 2 was saved', '', '', '']]" ]
+      }, {
+        "name" : "TimeoutException",
+        "uid" : "afb641699a5cb33c",
+        "parentUid" : "fe4c3d2944d2758719f847c7a0e9ec4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755418764959,
+          "stop" : 1755418770861,
+          "duration" : 5902
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'TimeoutException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '', '', '', '']]" ]
+      }, {
+        "name" : "Positive LogIn test",
+        "uid" : "3f4e492605387935",
+        "parentUid" : "fe4c3d2944d2758719f847c7a0e9ec4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755418698886,
+          "stop" : 1755418715107,
+          "duration" : 16221
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Open browser', 'open_browser', 'edge', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify new page URL', 'assert_url', 'practicetestautomation.com/logged-in-successfully/', '', '', '', ''], ['', '', 'Verify new page contains expected text', 'assert_text', \"//h1[@class='post-title']\", 'Logged In Successfully', '', '', ''], ['', '', 'Verify button Log out', 'assert_button', \"//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']\", 'Log out', '', '', '']]" ]
+      }, {
+        "name" : "NoSuchElementException",
+        "uid" : "e0507cdf57337505",
+        "parentUid" : "fe4c3d2944d2758719f847c7a0e9ec4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755418720850,
+          "stop" : 1755418727697,
+          "duration" : 6847
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'NoSuchElementException', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Exceptions', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Verify Row 2 input field is displayed', 'input', \"//div[@id='row2']/input\", 'Verify Row 2 input field is displayed', '', '', '']]" ]
+      }, {
+        "name" : "Negative username test",
+        "uid" : "e1c824ec74a7db44",
+        "parentUid" : "fe4c3d2944d2758719f847c7a0e9ec4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755418715110,
+          "stop" : 1755418718086,
+          "duration" : 2976
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Negative username test', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'incorrectUser ', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify error message is displayed', 'assert_element', 'error', '', '', '', ''], ['', '', 'Verify error message text', 'assert_text', 'error', 'Your username is invalid!', '', '', '']]" ]
+      }, {
+        "name" : "InvalidElementStateException",
+        "uid" : "7c0307ac8ee63bad",
+        "parentUid" : "fe4c3d2944d2758719f847c7a0e9ec4f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755418745272,
+          "stop" : 1755418762632,
+          "duration" : 17360
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'InvalidElementStateException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Clear input field', 'clear', \"//div[@id='row1']/input\", '', '', '', '']]" ]
+      }, {
+        "name" : "Negative password test",
+        "uid" : "45cbe721c231b8d8",
+        "parentUid" : "fe4c3d2944d2758719f847c7a0e9ec4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755418718089,
+          "stop" : 1755418720778,
+          "duration" : 2689
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'Negative password test', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type error password', 'input', 'password', 'Password1231', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify error message is displayed', 'assert_element', 'error', '', '', '', ''], ['', '', 'Verify error message text', 'assert_text', 'error', 'Your password is invalid!', '', '', '']]" ]
+      } ],
+      "uid" : "fe4c3d2944d2758719f847c7a0e9ec4f"
+    } ],
+    "uid" : "da730ec41d507033e2b0a0bd3e226c6d"
+  }, {
+    "name" : "Positive LogIn test",
+    "uid" : "8ab8a382393f5b3c",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1755418910142,
+      "stop" : 1755418974526,
+      "duration" : 64384
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Open browser', 'open_browser', 'edge', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify new page URL', 'assert_url', 'practicetestautomation.com/logged-in-successfully/', '', '', '', ''], ['', '', 'Verify new page contains expected text', 'assert_text', \"//h1[@class='post-title']\", 'Logged In Successfully', '', '', ''], ['', '', 'Verify button Log out', 'assert_button', \"//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']\", 'Log out', '', '', '']]" ]
+  } ]
+}

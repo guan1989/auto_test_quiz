@@ -1,0 +1,252 @@
+{
+  "uid" : "f31e33ec4270efc7",
+  "name" : "StaleElementReferenceException",
+  "fullName" : "ddt.test_web_2.Test_Web#test_suite",
+  "historyId" : "b0e190eaac4a357a761747a0c3ff65ba",
+  "time" : {
+    "start" : 1755417196052,
+    "stop" : 1755417197369,
+    "duration" : 1317
+  },
+  "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+  "descriptionHtml" : "<p>测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤</p>\n",
+  "status" : "failed",
+  "statusMessage" : "Failed: Message: stale element reference: stale element not found in the current frame\n  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception",
+  "statusTrace" : "self = <test_web_2.Test_Web object at 0x000001B63D00A9E0>\ncase = [['', '', 'Open page', 'refresh', '', '', ...], ['', '', 'Find the instructions text element', 'save_element', 'instru...', 'click', 'add_btn', '', ...], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', ...]]\n\n    @allure.story(f'#{ddt.s_idx} {ddt.story}')\n    @pytest.mark.parametrize('case', ddt.testsuite)\n    def test_suite(self, case):\n        \"\"\"\n        测试用例集，执行函数\n        每次参数化执行一条用例\n        :param case: 整条用例的步骤\n        \"\"\"\n        # print(case)\n        # 所以步骤的第一行的第二个单元格就是title\n        allure.dynamic.title(case[0][1])\n        # 因为不执行，所以也不写入\n        ddt.writer.row += 1\n    \n        # 剩下的都是步骤，都是需要执行的\n        case = case[1:]\n    \n        # 记录跑了多少行\n        run_rows = 0\n    \n        try:\n            # 使用try执行用例，一旦用例执行报错，就停止，并开始截图\n            for c in case:\n                # 每跑一行run_rows + 1\n                run_rows += 1\n    \n                # 先获取参数，再反射执行\n                # 获取参数，是一行里面4~6这三个元素\n                params = [str(p) for p in c[3:7]]\n                # 对参数从右往左找，找最后一个不为空的，然后把所有空的全部截掉\n                # 兼容都是空的情况\n                index = -1\n                for i in range(3, -1, -1):\n                    if len(params[i]) > 0:\n                        index = i\n                        break\n    \n                params = params[0:index + 1]\n    \n                # 这里反射执行\n                try:\n                # with allure.step(c[2]):\n                #     # 记录关键字执行的结果\n                #     res = self.run_step(params)\n                    with allure.step(f\"{c[2]} (参数: {params})\"):  # 步骤描述添加参数\n>                       res = self.run_step(params)\n\nddt\\test_web_2.py:81: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nddt\\test_web_2.py:34: in run_step\n    return func(*args[1:])\nkeywords\\webkeys.py:290: in use_element\n    target_element.click()\nD:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py:120: in click\n    self._execute(Command.CLICK_ELEMENT)\nD:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py:573: in _execute\n    return self._parent.execute(command, params)\nD:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:458: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001B63D039E80>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"stale element reference\",\"message\":\"stale element reference: stale elemen...[0x0x7ff702de7016]\\\\n\\\\tBaseThreadInitThunk [0x0x7fff1474259d+29]\\\\n\\\\tRtlUserThreadStart [0x0x7fff14b4af38+40]\\\\n\"}}'}\n\n    def check_response(self, response: dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                try:\n                    value = json.loads(value_json)\n                    if isinstance(value, dict):\n                        if len(value) == 1:\n                            value = value[\"value\"]\n                        status = value.get(\"error\", None)\n                        if not status:\n                            status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                            message = value.get(\"value\") or value.get(\"message\")\n                            if not isinstance(message, str):\n                                value = message\n                                message = message.get(\"message\")\n                        else:\n                            message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame\nE         (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception\nE       Stacktrace:\nE       \tGetHandleVerifier [0x0x7ff702e9e785+22117]\nE       \t(No symbol) [0x0x7ff702deee00]\nE       \tGetHandleVerifier [0x0x7ff703124c2c+2669324]\nE       \t(No symbol) [0x0x7ff702bc3794]\nE       \t(No symbol) [0x0x7ff702bc602c]\nE       \t(No symbol) [0x0x7ff702bc60ff]\nE       \t(No symbol) [0x0x7ff702c0b0a1]\nE       \t(No symbol) [0x0x7ff702bffc66]\nE       \t(No symbol) [0x0x7ff702c2a7ea]\nE       \t(No symbol) [0x0x7ff702bff68d]\nE       \t(No symbol) [0x0x7ff702bff54d]\nE       \t(No symbol) [0x0x7ff702c2aab0]\nE       \t(No symbol) [0x0x7ff702bff68d]\nE       \t(No symbol) [0x0x7ff702c4762f]\nE       \t(No symbol) [0x0x7ff702c2a553]\nE       \t(No symbol) [0x0x7ff702bfeb86]\nE       \t(No symbol) [0x0x7ff702bfde11]\nE       \t(No symbol) [0x0x7ff702bfe9b3]\nE       \t(No symbol) [0x0x7ff702cf907d]\nE       \t(No symbol) [0x0x7ff702d05fe8]\nE       \tGetHandleVerifier [0x0x7ff702f7f277+942423]\nE       \tGetHandleVerifier [0x0x7ff702f88221+979201]\nE       \t(No symbol) [0x0x7ff702dfc3b1]\nE       \t(No symbol) [0x0x7ff702df4d64]\nE       \t(No symbol) [0x0x7ff702df4eb3]\nE       \t(No symbol) [0x0x7ff702de7016]\nE       \tBaseThreadInitThunk [0x0x7fff1474259d+29]\nE       \tRtlUserThreadStart [0x0x7fff14b4af38+40]\n\nD:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:232: StaleElementReferenceException\n\nDuring handling of the above exception, another exception occurred:\n\nself = <test_web_2.Test_Web object at 0x000001B63D00A9E0>\ncase = [['', '', 'Open page', 'refresh', '', '', ...], ['', '', 'Find the instructions text element', 'save_element', 'instru...', 'click', 'add_btn', '', ...], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', ...]]\n\n    @allure.story(f'#{ddt.s_idx} {ddt.story}')\n    @pytest.mark.parametrize('case', ddt.testsuite)\n    def test_suite(self, case):\n        \"\"\"\n        测试用例集，执行函数\n        每次参数化执行一条用例\n        :param case: 整条用例的步骤\n        \"\"\"\n        # print(case)\n        # 所以步骤的第一行的第二个单元格就是title\n        allure.dynamic.title(case[0][1])\n        # 因为不执行，所以也不写入\n        ddt.writer.row += 1\n    \n        # 剩下的都是步骤，都是需要执行的\n        case = case[1:]\n    \n        # 记录跑了多少行\n        run_rows = 0\n    \n        try:\n            # 使用try执行用例，一旦用例执行报错，就停止，并开始截图\n            for c in case:\n                # 每跑一行run_rows + 1\n                run_rows += 1\n    \n                # 先获取参数，再反射执行\n                # 获取参数，是一行里面4~6这三个元素\n                params = [str(p) for p in c[3:7]]\n                # 对参数从右往左找，找最后一个不为空的，然后把所有空的全部截掉\n                # 兼容都是空的情况\n                index = -1\n                for i in range(3, -1, -1):\n                    if len(params[i]) > 0:\n                        index = i\n                        break\n    \n                params = params[0:index + 1]\n    \n                # 这里反射执行\n                try:\n                # with allure.step(c[2]):\n                #     # 记录关键字执行的结果\n                #     res = self.run_step(params)\n                    with allure.step(f\"{c[2]} (参数: {params})\"):  # 步骤描述添加参数\n                        res = self.run_step(params)\n                    # 如果能执行到这里，就说明关键字执行是成功的\n                    ddt.writer.write(ddt.writer.row, 7, 'PASS', 3)\n                    ddt.writer.write(ddt.writer.row, 8, str(res))\n                    ddt.writer.row += 1\n                except AssertionError as e:\n                    # 步骤失败：标记Allure步骤为失败并附加错误信息\n                    allure.dynamic.description(f\"步骤失败: {str(e)}\")  # 动态更新步骤描述\n                    allure.attach(str(e), \"错误详情\", allure.attachment_type.TEXT)  # 附加文本信息\n                    # 写入Excel失败结果\n                    ddt.writer.write(ddt.writer.row, 7, 'FAIL', 2)\n                    ddt.writer.write(ddt.writer.row, 8, str(e))  # 写入具体错误信息\n                    ddt.writer.row += 1\n                    # 跳过后续步骤，直接标记用例失败\n                    ddt.writer.row += len(case) - run_rows  # 跳过未执行的步骤\n                    logger.exception(e)\n                    if ddt.obj.driver:\n                        allure.attach(ddt.obj.driver.get_screenshot_as_png(), '失败截图', allure.attachment_type.PNG)\n                    pytest.fail(f\"步骤执行失败: {str(e)}\")\n    \n    \n            # 要求每一步操作均有截图，在run_step做了处理，此处不在重复截图\n            # if ddt.obj.driver:\n            #     allure.attach(ddt.obj.driver.get_screenshot_as_png(), '成功截图', allure.attachment_type.PNG)\n        except Exception as e:\n            msg = e.__str__()\n            msg = msg[:msg.find('Stacktrace')]\n    \n            # 如果执行失败，就写入失败的结果\n            ddt.writer.write(ddt.writer.row, 7, 'FAIL', 2)\n            ddt.writer.write(ddt.writer.row, 8, msg)\n            # ddt.writer.write(ddt.writer.row, 8, traceback.format_exc())\n            # 剩下的步骤，在写入结果的时候需要跳过\n            ddt.writer.row += len(case) + 1 - run_rows\n    \n            logger.exception(e)\n            if ddt.obj.driver:\n                allure.attach(ddt.obj.driver.get_screenshot_as_png(), '失败', allure.attachment_type.PNG)\n            # 让用例主动失败\n>           pytest.fail(msg)\nE           Failed: Message: stale element reference: stale element not found in the current frame\nE             (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception\n\nddt\\test_web_2.py:120: Failed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+    "status" : "failed",
+    "statusMessage" : "Failed: Message: stale element reference: stale element not found in the current frame\n  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception",
+    "statusTrace" : "self = <test_web_2.Test_Web object at 0x000001B63D00A9E0>\ncase = [['', '', 'Open page', 'refresh', '', '', ...], ['', '', 'Find the instructions text element', 'save_element', 'instru...', 'click', 'add_btn', '', ...], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', ...]]\n\n    @allure.story(f'#{ddt.s_idx} {ddt.story}')\n    @pytest.mark.parametrize('case', ddt.testsuite)\n    def test_suite(self, case):\n        \"\"\"\n        测试用例集，执行函数\n        每次参数化执行一条用例\n        :param case: 整条用例的步骤\n        \"\"\"\n        # print(case)\n        # 所以步骤的第一行的第二个单元格就是title\n        allure.dynamic.title(case[0][1])\n        # 因为不执行，所以也不写入\n        ddt.writer.row += 1\n    \n        # 剩下的都是步骤，都是需要执行的\n        case = case[1:]\n    \n        # 记录跑了多少行\n        run_rows = 0\n    \n        try:\n            # 使用try执行用例，一旦用例执行报错，就停止，并开始截图\n            for c in case:\n                # 每跑一行run_rows + 1\n                run_rows += 1\n    \n                # 先获取参数，再反射执行\n                # 获取参数，是一行里面4~6这三个元素\n                params = [str(p) for p in c[3:7]]\n                # 对参数从右往左找，找最后一个不为空的，然后把所有空的全部截掉\n                # 兼容都是空的情况\n                index = -1\n                for i in range(3, -1, -1):\n                    if len(params[i]) > 0:\n                        index = i\n                        break\n    \n                params = params[0:index + 1]\n    \n                # 这里反射执行\n                try:\n                # with allure.step(c[2]):\n                #     # 记录关键字执行的结果\n                #     res = self.run_step(params)\n                    with allure.step(f\"{c[2]} (参数: {params})\"):  # 步骤描述添加参数\n>                       res = self.run_step(params)\n\nddt\\test_web_2.py:81: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nddt\\test_web_2.py:34: in run_step\n    return func(*args[1:])\nkeywords\\webkeys.py:290: in use_element\n    target_element.click()\nD:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py:120: in click\n    self._execute(Command.CLICK_ELEMENT)\nD:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py:573: in _execute\n    return self._parent.execute(command, params)\nD:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:458: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001B63D039E80>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"stale element reference\",\"message\":\"stale element reference: stale elemen...[0x0x7ff702de7016]\\\\n\\\\tBaseThreadInitThunk [0x0x7fff1474259d+29]\\\\n\\\\tRtlUserThreadStart [0x0x7fff14b4af38+40]\\\\n\"}}'}\n\n    def check_response(self, response: dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                try:\n                    value = json.loads(value_json)\n                    if isinstance(value, dict):\n                        if len(value) == 1:\n                            value = value[\"value\"]\n                        status = value.get(\"error\", None)\n                        if not status:\n                            status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                            message = value.get(\"value\") or value.get(\"message\")\n                            if not isinstance(message, str):\n                                value = message\n                                message = message.get(\"message\")\n                        else:\n                            message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame\nE         (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception\nE       Stacktrace:\nE       \tGetHandleVerifier [0x0x7ff702e9e785+22117]\nE       \t(No symbol) [0x0x7ff702deee00]\nE       \tGetHandleVerifier [0x0x7ff703124c2c+2669324]\nE       \t(No symbol) [0x0x7ff702bc3794]\nE       \t(No symbol) [0x0x7ff702bc602c]\nE       \t(No symbol) [0x0x7ff702bc60ff]\nE       \t(No symbol) [0x0x7ff702c0b0a1]\nE       \t(No symbol) [0x0x7ff702bffc66]\nE       \t(No symbol) [0x0x7ff702c2a7ea]\nE       \t(No symbol) [0x0x7ff702bff68d]\nE       \t(No symbol) [0x0x7ff702bff54d]\nE       \t(No symbol) [0x0x7ff702c2aab0]\nE       \t(No symbol) [0x0x7ff702bff68d]\nE       \t(No symbol) [0x0x7ff702c4762f]\nE       \t(No symbol) [0x0x7ff702c2a553]\nE       \t(No symbol) [0x0x7ff702bfeb86]\nE       \t(No symbol) [0x0x7ff702bfde11]\nE       \t(No symbol) [0x0x7ff702bfe9b3]\nE       \t(No symbol) [0x0x7ff702cf907d]\nE       \t(No symbol) [0x0x7ff702d05fe8]\nE       \tGetHandleVerifier [0x0x7ff702f7f277+942423]\nE       \tGetHandleVerifier [0x0x7ff702f88221+979201]\nE       \t(No symbol) [0x0x7ff702dfc3b1]\nE       \t(No symbol) [0x0x7ff702df4d64]\nE       \t(No symbol) [0x0x7ff702df4eb3]\nE       \t(No symbol) [0x0x7ff702de7016]\nE       \tBaseThreadInitThunk [0x0x7fff1474259d+29]\nE       \tRtlUserThreadStart [0x0x7fff14b4af38+40]\n\nD:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:232: StaleElementReferenceException\n\nDuring handling of the above exception, another exception occurred:\n\nself = <test_web_2.Test_Web object at 0x000001B63D00A9E0>\ncase = [['', '', 'Open page', 'refresh', '', '', ...], ['', '', 'Find the instructions text element', 'save_element', 'instru...', 'click', 'add_btn', '', ...], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', ...]]\n\n    @allure.story(f'#{ddt.s_idx} {ddt.story}')\n    @pytest.mark.parametrize('case', ddt.testsuite)\n    def test_suite(self, case):\n        \"\"\"\n        测试用例集，执行函数\n        每次参数化执行一条用例\n        :param case: 整条用例的步骤\n        \"\"\"\n        # print(case)\n        # 所以步骤的第一行的第二个单元格就是title\n        allure.dynamic.title(case[0][1])\n        # 因为不执行，所以也不写入\n        ddt.writer.row += 1\n    \n        # 剩下的都是步骤，都是需要执行的\n        case = case[1:]\n    \n        # 记录跑了多少行\n        run_rows = 0\n    \n        try:\n            # 使用try执行用例，一旦用例执行报错，就停止，并开始截图\n            for c in case:\n                # 每跑一行run_rows + 1\n                run_rows += 1\n    \n                # 先获取参数，再反射执行\n                # 获取参数，是一行里面4~6这三个元素\n                params = [str(p) for p in c[3:7]]\n                # 对参数从右往左找，找最后一个不为空的，然后把所有空的全部截掉\n                # 兼容都是空的情况\n                index = -1\n                for i in range(3, -1, -1):\n                    if len(params[i]) > 0:\n                        index = i\n                        break\n    \n                params = params[0:index + 1]\n    \n                # 这里反射执行\n                try:\n                # with allure.step(c[2]):\n                #     # 记录关键字执行的结果\n                #     res = self.run_step(params)\n                    with allure.step(f\"{c[2]} (参数: {params})\"):  # 步骤描述添加参数\n                        res = self.run_step(params)\n                    # 如果能执行到这里，就说明关键字执行是成功的\n                    ddt.writer.write(ddt.writer.row, 7, 'PASS', 3)\n                    ddt.writer.write(ddt.writer.row, 8, str(res))\n                    ddt.writer.row += 1\n                except AssertionError as e:\n                    # 步骤失败：标记Allure步骤为失败并附加错误信息\n                    allure.dynamic.description(f\"步骤失败: {str(e)}\")  # 动态更新步骤描述\n                    allure.attach(str(e), \"错误详情\", allure.attachment_type.TEXT)  # 附加文本信息\n                    # 写入Excel失败结果\n                    ddt.writer.write(ddt.writer.row, 7, 'FAIL', 2)\n                    ddt.writer.write(ddt.writer.row, 8, str(e))  # 写入具体错误信息\n                    ddt.writer.row += 1\n                    # 跳过后续步骤，直接标记用例失败\n                    ddt.writer.row += len(case) - run_rows  # 跳过未执行的步骤\n                    logger.exception(e)\n                    if ddt.obj.driver:\n                        allure.attach(ddt.obj.driver.get_screenshot_as_png(), '失败截图', allure.attachment_type.PNG)\n                    pytest.fail(f\"步骤执行失败: {str(e)}\")\n    \n    \n            # 要求每一步操作均有截图，在run_step做了处理，此处不在重复截图\n            # if ddt.obj.driver:\n            #     allure.attach(ddt.obj.driver.get_screenshot_as_png(), '成功截图', allure.attachment_type.PNG)\n        except Exception as e:\n            msg = e.__str__()\n            msg = msg[:msg.find('Stacktrace')]\n    \n            # 如果执行失败，就写入失败的结果\n            ddt.writer.write(ddt.writer.row, 7, 'FAIL', 2)\n            ddt.writer.write(ddt.writer.row, 8, msg)\n            # ddt.writer.write(ddt.writer.row, 8, traceback.format_exc())\n            # 剩下的步骤，在写入结果的时候需要跳过\n            ddt.writer.row += len(case) + 1 - run_rows\n    \n            logger.exception(e)\n            if ddt.obj.driver:\n                allure.attach(ddt.obj.driver.get_screenshot_as_png(), '失败', allure.attachment_type.PNG)\n            # 让用例主动失败\n>           pytest.fail(msg)\nE           Failed: Message: stale element reference: stale element not found in the current frame\nE             (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception\n\nddt\\test_web_2.py:120: Failed",
+    "steps" : [ {
+      "name" : "Open page (参数: ['refresh'])",
+      "time" : {
+        "start" : 1755417196053,
+        "stop" : 1755417196573,
+        "duration" : 520
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417196053,
+          "stop" : 1755417196573,
+          "duration" : 520
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "1c66e9c82be75773",
+          "name" : "步骤[refresh]截图",
+          "source" : "1c66e9c82be75773.png",
+          "type" : "image/png",
+          "size" : 83368
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['refresh']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Find the instructions text element (参数: ['save_element', 'instructions', 'instructions'])",
+      "time" : {
+        "start" : 1755417196574,
+        "stop" : 1755417196774,
+        "duration" : 200
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417196574,
+          "stop" : 1755417196774,
+          "duration" : 200
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "a3d381d003afd15",
+          "name" : "步骤[save_element]截图",
+          "source" : "a3d381d003afd15.png",
+          "type" : "image/png",
+          "size" : 83414
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['save_element', 'instructions', 'instructions']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Click Add button (参数: ['click', 'add_btn'])",
+      "time" : {
+        "start" : 1755417196774,
+        "stop" : 1755417196995,
+        "duration" : 221
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417196774,
+          "stop" : 1755417196995,
+          "duration" : 221
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "ba3e52aa49f920d3",
+          "name" : "步骤[click]截图",
+          "source" : "ba3e52aa49f920d3.png",
+          "type" : "image/png",
+          "size" : 83562
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', 'add_btn']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Use the instructions text element (参数: ['use_element', 'instructions'])",
+      "time" : {
+        "start" : 1755417196996,
+        "stop" : 1755417197187,
+        "duration" : 191
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame\n  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff702e9e785+22117]\n\t(No symbol) [0x0x7ff702deee00]\n\tGetHandleVerifier [0x0x7ff703124c2c+2669324]\n\t(No symbol) [0x0x7ff702bc3794]\n\t(No symbol) [0x0x7ff702bc602c]\n\t(No symbol) [0x0x7ff702bc60ff]\n\t(No symbol) [0x0x7ff702c0b0a1]\n\t(No symbol) [0x0x7ff702bffc66]\n\t(No symbol) [0x0x7ff702c2a7ea]\n\t(No symbol) [0x0x7ff702bff68d]\n\t(No symbol) [0x0x7ff702bff54d]\n\t(No symbol) [0x0x7ff702c2aab0]\n\t(No symbol) [0x0x7ff702bff68d]\n\t(No symbol) [0x0x7ff702c4762f]\n\t(No symbol) [0x0x7ff702c2a553]\n\t(No symbol) [0x0x7ff702bfeb86]\n\t(No symbol) [0x0x7ff702bfde11]\n\t(No symbol) [0x0x7ff702bfe9b3]\n\t(No symbol) [0x0x7ff702cf907d]\n\t(No symbol) [0x0x7ff702d05fe8]\n\tGetHandleVerifier [0x0x7ff702f7f277+942423]\n\tGetHandleVerifier [0x0x7ff702f88221+979201]\n\t(No symbol) [0x0x7ff702dfc3b1]\n\t(No symbol) [0x0x7ff702df4d64]\n\t(No symbol) [0x0x7ff702df4eb3]\n\t(No symbol) [0x0x7ff702de7016]\n\tBaseThreadInitThunk [0x0x7fff1474259d+29]\n\tRtlUserThreadStart [0x0x7fff14b4af38+40]\n\n",
+      "statusTrace" : "  File \"D:\\PythonStoreHouse\\auto_test_quiz\\ddt\\test_web_2.py\", line 81, in test_suite\n    res = self.run_step(params)\n  File \"D:\\Python313\\Lib\\site-packages\\allure_commons\\_allure.py\", line 202, in impl\n    return func(*a, **kw)\n  File \"D:\\PythonStoreHouse\\auto_test_quiz\\ddt\\test_web_2.py\", line 34, in run_step\n    return func(*args[1:])\n  File \"D:\\PythonStoreHouse\\auto_test_quiz\\keywords\\webkeys.py\", line 290, in use_element\n    target_element.click()\n    ~~~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py\", line 120, in click\n    self._execute(Command.CLICK_ELEMENT)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py\", line 573, in _execute\n    return self._parent.execute(command, params)\n           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"D:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py\", line 458, in execute\n    self.error_handler.check_response(response)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"D:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py\", line 232, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417196996,
+          "stop" : 1755417197186,
+          "duration" : 190
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame\n  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff702e9e785+22117]\n\t(No symbol) [0x0x7ff702deee00]\n\tGetHandleVerifier [0x0x7ff703124c2c+2669324]\n\t(No symbol) [0x0x7ff702bc3794]\n\t(No symbol) [0x0x7ff702bc602c]\n\t(No symbol) [0x0x7ff702bc60ff]\n\t(No symbol) [0x0x7ff702c0b0a1]\n\t(No symbol) [0x0x7ff702bffc66]\n\t(No symbol) [0x0x7ff702c2a7ea]\n\t(No symbol) [0x0x7ff702bff68d]\n\t(No symbol) [0x0x7ff702bff54d]\n\t(No symbol) [0x0x7ff702c2aab0]\n\t(No symbol) [0x0x7ff702bff68d]\n\t(No symbol) [0x0x7ff702c4762f]\n\t(No symbol) [0x0x7ff702c2a553]\n\t(No symbol) [0x0x7ff702bfeb86]\n\t(No symbol) [0x0x7ff702bfde11]\n\t(No symbol) [0x0x7ff702bfe9b3]\n\t(No symbol) [0x0x7ff702cf907d]\n\t(No symbol) [0x0x7ff702d05fe8]\n\tGetHandleVerifier [0x0x7ff702f7f277+942423]\n\tGetHandleVerifier [0x0x7ff702f88221+979201]\n\t(No symbol) [0x0x7ff702dfc3b1]\n\t(No symbol) [0x0x7ff702df4d64]\n\t(No symbol) [0x0x7ff702df4eb3]\n\t(No symbol) [0x0x7ff702de7016]\n\tBaseThreadInitThunk [0x0x7fff1474259d+29]\n\tRtlUserThreadStart [0x0x7fff14b4af38+40]\n\n",
+        "statusTrace" : "  File \"D:\\Python313\\Lib\\site-packages\\allure_commons\\_allure.py\", line 202, in impl\n    return func(*a, **kw)\n  File \"D:\\PythonStoreHouse\\auto_test_quiz\\ddt\\test_web_2.py\", line 34, in run_step\n    return func(*args[1:])\n  File \"D:\\PythonStoreHouse\\auto_test_quiz\\keywords\\webkeys.py\", line 290, in use_element\n    target_element.click()\n    ~~~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py\", line 120, in click\n    self._execute(Command.CLICK_ELEMENT)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py\", line 573, in _execute\n    return self._parent.execute(command, params)\n           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"D:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py\", line 458, in execute\n    self.error_handler.check_response(response)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"D:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py\", line 232, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "981da97ff2ef74e0",
+          "name" : "步骤[use_element]截图",
+          "source" : "981da97ff2ef74e0.png",
+          "type" : "image/png",
+          "size" : 81110
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['use_element', 'instructions']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "b1fac1f8b7a296cb",
+      "name" : "失败",
+      "source" : "b1fac1f8b7a296cb.png",
+      "type" : "image/png",
+      "size" : 81209
+    }, {
+      "uid" : "b37189e44f20969",
+      "name" : "log",
+      "source" : "b37189e44f20969.txt",
+      "type" : "text/plain",
+      "size" : 3920
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 8,
+    "attachmentsCount" : 6,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "#1 practice test automation"
+  }, {
+    "name" : "story",
+    "value" : "#2 Test Exceptions"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ddt"
+  }, {
+    "name" : "suite",
+    "value" : "test_web_2"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Web"
+  }, {
+    "name" : "host",
+    "value" : "Lydia"
+  }, {
+    "name" : "thread",
+    "value" : "16416-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "ddt.test_web_2"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "[['', 'StaleElementReferenceException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Find the instructions text element', 'save_element', 'instructions', 'instructions', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', '', '', '']]"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f31e33ec4270efc7.json",
+  "parameterValues" : [ "[['', 'StaleElementReferenceException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Find the instructions text element', 'save_element', 'instructions', 'instructions', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', '', '', '']]" ]
+}

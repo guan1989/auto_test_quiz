@@ -1,0 +1,186 @@
+{
+  "uid" : "282d11092414ec61",
+  "name" : "assertion failure",
+  "fullName" : "ddt.test_app_2.Test_App#test_suite",
+  "historyId" : "67a533bc830e0436d61f28a85c66e523",
+  "time" : {
+    "start" : 1755416803689,
+    "stop" : 1755416807769,
+    "duration" : 4080
+  },
+  "description" : "步骤失败: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector",
+  "descriptionHtml" : "<p>步骤失败: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector</p>\n",
+  "status" : "failed",
+  "statusMessage" : "Failed: 步骤执行失败: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector",
+  "statusTrace" : "self = <test_app_2.Test_App object at 0x00000276F2FBEC10>\ncase = [['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', ...], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'hello Word', ...]]\n\n    @allure.story(f'#{ddt.s_idx} {ddt.story}')\n    @pytest.mark.parametrize('case', ddt.testsuite)\n    def test_suite(self, case):\n        \"\"\"\n        测试用例集，执行函数\n        每次参数化执行一条用例\n        :param case: 整条用例的步骤\n        \"\"\"\n        # print(case)\n        # 所以步骤的第一行的第二个单元格就是title\n        allure.dynamic.title(case[0][1])\n        # 因为不执行，所以也不写入\n        ddt.writer.row += 1\n    \n        # 剩下的都是步骤，都是需要执行的\n        case = case[1:]\n    \n        # 记录跑了多少行\n        run_rows = 0\n    \n        try:\n            # 使用try执行用例，一旦用例执行报错，就停止，并开始截图\n            for c in case:\n                # 每跑一行run_rows + 1\n                run_rows += 1\n    \n                # 先获取参数，再反射执行\n                # 获取参数，是一行里面4~6这三个元素\n                params = [str(p) for p in c[3:7]]\n                # 对参数从右往左找，找最后一个不为空的，然后把所有空的全部截掉\n                # 兼容都是空的情况\n                index = -1\n                for i in range(3, -1, -1):\n                    if len(params[i]) > 0:\n                        index = i\n                        break\n    \n                params = params[0:index + 1]\n    \n                try:\n                    # 这里反射执行\n                    with allure.step(c[2]):\n                        # 记录关键字执行的结果\n>                       res = self.run_step(params)\n\nddt\\test_app_2.py:82: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nddt\\test_app_2.py:37: in run_step\n    return func(*args[1:])\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <keywords.appkeys.App object at 0x00000276CF9A7230>\nxpath = \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\"\nexpected_text = 'hello Word'\n\n    def assert_text(self, xpath: str, expected_text: str):\n        \"\"\"\n        断言页面元素的文本内容是否符合预期\n        :param xpath: xpath定位表达式\n        :param expected_text: 预期的文本结果\n        :raises AssertionError: 当实际文本与预期文本不一致时抛出断言错误\n        \"\"\"\n        try:\n            # 通过xpath定位元素\n            ele = self.driver.find_element('xpath', xpath)\n            # 获取元素实际文本\n            actual_text = ele.text\n            # 断言实际文本与预期文本一致\n>           assert actual_text == expected_text, \\\n                f\"文本断言失败！预期: {expected_text}, 实际: {actual_text}\"\nE               AssertionError: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector\n\nkeywords\\appkeys.py:173: AssertionError\n\nDuring handling of the above exception, another exception occurred:\n\nself = <test_app_2.Test_App object at 0x00000276F2FBEC10>\ncase = [['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', ...], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'hello Word', ...]]\n\n    @allure.story(f'#{ddt.s_idx} {ddt.story}')\n    @pytest.mark.parametrize('case', ddt.testsuite)\n    def test_suite(self, case):\n        \"\"\"\n        测试用例集，执行函数\n        每次参数化执行一条用例\n        :param case: 整条用例的步骤\n        \"\"\"\n        # print(case)\n        # 所以步骤的第一行的第二个单元格就是title\n        allure.dynamic.title(case[0][1])\n        # 因为不执行，所以也不写入\n        ddt.writer.row += 1\n    \n        # 剩下的都是步骤，都是需要执行的\n        case = case[1:]\n    \n        # 记录跑了多少行\n        run_rows = 0\n    \n        try:\n            # 使用try执行用例，一旦用例执行报错，就停止，并开始截图\n            for c in case:\n                # 每跑一行run_rows + 1\n                run_rows += 1\n    \n                # 先获取参数，再反射执行\n                # 获取参数，是一行里面4~6这三个元素\n                params = [str(p) for p in c[3:7]]\n                # 对参数从右往左找，找最后一个不为空的，然后把所有空的全部截掉\n                # 兼容都是空的情况\n                index = -1\n                for i in range(3, -1, -1):\n                    if len(params[i]) > 0:\n                        index = i\n                        break\n    \n                params = params[0:index + 1]\n    \n                try:\n                    # 这里反射执行\n                    with allure.step(c[2]):\n                        # 记录关键字执行的结果\n                        res = self.run_step(params)\n    \n                    # 如果能执行到这里，就说明关键字执行是成功的\n                    ddt.writer.write(ddt.writer.row, 7, 'PASS', 3)\n                    ddt.writer.write(ddt.writer.row, 8, str(res))\n                    ddt.writer.row += 1\n                except AssertionError as e:\n                    # 步骤失败处理\n                    allure.dynamic.description(f\"步骤失败: {str(e)}\")\n                    allure.attach(str(e), \"错误详情\", allure.attachment_type.TEXT)\n    \n                    # 写入Excel失败记录\n                    ddt.writer.write(ddt.writer.row, 7, 'FAIL', 2)\n                    ddt.writer.write(ddt.writer.row, 8, str(e))\n                    ddt.writer.row += 1\n    \n                    # 跳过剩余未执行步骤\n                    ddt.writer.row += len(case) - run_rows\n    \n                    logger.exception(e)\n                    if ddt.obj.driver:\n                        allure.attach(ddt.obj.driver.get_screenshot_as_png(), '失败截图', allure.attachment_type.PNG)\n    \n>                   pytest.fail(f\"步骤执行失败: {str(e)}\")\nE                   Failed: 步骤执行失败: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector\n\nddt\\test_app_2.py:105: Failed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "步骤失败: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector",
+    "status" : "failed",
+    "statusMessage" : "Failed: 步骤执行失败: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector",
+    "statusTrace" : "self = <test_app_2.Test_App object at 0x00000276F2FBEC10>\ncase = [['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', ...], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'hello Word', ...]]\n\n    @allure.story(f'#{ddt.s_idx} {ddt.story}')\n    @pytest.mark.parametrize('case', ddt.testsuite)\n    def test_suite(self, case):\n        \"\"\"\n        测试用例集，执行函数\n        每次参数化执行一条用例\n        :param case: 整条用例的步骤\n        \"\"\"\n        # print(case)\n        # 所以步骤的第一行的第二个单元格就是title\n        allure.dynamic.title(case[0][1])\n        # 因为不执行，所以也不写入\n        ddt.writer.row += 1\n    \n        # 剩下的都是步骤，都是需要执行的\n        case = case[1:]\n    \n        # 记录跑了多少行\n        run_rows = 0\n    \n        try:\n            # 使用try执行用例，一旦用例执行报错，就停止，并开始截图\n            for c in case:\n                # 每跑一行run_rows + 1\n                run_rows += 1\n    \n                # 先获取参数，再反射执行\n                # 获取参数，是一行里面4~6这三个元素\n                params = [str(p) for p in c[3:7]]\n                # 对参数从右往左找，找最后一个不为空的，然后把所有空的全部截掉\n                # 兼容都是空的情况\n                index = -1\n                for i in range(3, -1, -1):\n                    if len(params[i]) > 0:\n                        index = i\n                        break\n    \n                params = params[0:index + 1]\n    \n                try:\n                    # 这里反射执行\n                    with allure.step(c[2]):\n                        # 记录关键字执行的结果\n>                       res = self.run_step(params)\n\nddt\\test_app_2.py:82: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nddt\\test_app_2.py:37: in run_step\n    return func(*args[1:])\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <keywords.appkeys.App object at 0x00000276CF9A7230>\nxpath = \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\"\nexpected_text = 'hello Word'\n\n    def assert_text(self, xpath: str, expected_text: str):\n        \"\"\"\n        断言页面元素的文本内容是否符合预期\n        :param xpath: xpath定位表达式\n        :param expected_text: 预期的文本结果\n        :raises AssertionError: 当实际文本与预期文本不一致时抛出断言错误\n        \"\"\"\n        try:\n            # 通过xpath定位元素\n            ele = self.driver.find_element('xpath', xpath)\n            # 获取元素实际文本\n            actual_text = ele.text\n            # 断言实际文本与预期文本一致\n>           assert actual_text == expected_text, \\\n                f\"文本断言失败！预期: {expected_text}, 实际: {actual_text}\"\nE               AssertionError: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector\n\nkeywords\\appkeys.py:173: AssertionError\n\nDuring handling of the above exception, another exception occurred:\n\nself = <test_app_2.Test_App object at 0x00000276F2FBEC10>\ncase = [['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', ...], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'hello Word', ...]]\n\n    @allure.story(f'#{ddt.s_idx} {ddt.story}')\n    @pytest.mark.parametrize('case', ddt.testsuite)\n    def test_suite(self, case):\n        \"\"\"\n        测试用例集，执行函数\n        每次参数化执行一条用例\n        :param case: 整条用例的步骤\n        \"\"\"\n        # print(case)\n        # 所以步骤的第一行的第二个单元格就是title\n        allure.dynamic.title(case[0][1])\n        # 因为不执行，所以也不写入\n        ddt.writer.row += 1\n    \n        # 剩下的都是步骤，都是需要执行的\n        case = case[1:]\n    \n        # 记录跑了多少行\n        run_rows = 0\n    \n        try:\n            # 使用try执行用例，一旦用例执行报错，就停止，并开始截图\n            for c in case:\n                # 每跑一行run_rows + 1\n                run_rows += 1\n    \n                # 先获取参数，再反射执行\n                # 获取参数，是一行里面4~6这三个元素\n                params = [str(p) for p in c[3:7]]\n                # 对参数从右往左找，找最后一个不为空的，然后把所有空的全部截掉\n                # 兼容都是空的情况\n                index = -1\n                for i in range(3, -1, -1):\n                    if len(params[i]) > 0:\n                        index = i\n                        break\n    \n                params = params[0:index + 1]\n    \n                try:\n                    # 这里反射执行\n                    with allure.step(c[2]):\n                        # 记录关键字执行的结果\n                        res = self.run_step(params)\n    \n                    # 如果能执行到这里，就说明关键字执行是成功的\n                    ddt.writer.write(ddt.writer.row, 7, 'PASS', 3)\n                    ddt.writer.write(ddt.writer.row, 8, str(res))\n                    ddt.writer.row += 1\n                except AssertionError as e:\n                    # 步骤失败处理\n                    allure.dynamic.description(f\"步骤失败: {str(e)}\")\n                    allure.attach(str(e), \"错误详情\", allure.attachment_type.TEXT)\n    \n                    # 写入Excel失败记录\n                    ddt.writer.write(ddt.writer.row, 7, 'FAIL', 2)\n                    ddt.writer.write(ddt.writer.row, 8, str(e))\n                    ddt.writer.row += 1\n    \n                    # 跳过剩余未执行步骤\n                    ddt.writer.row += len(case) - run_rows\n    \n                    logger.exception(e)\n                    if ddt.obj.driver:\n                        allure.attach(ddt.obj.driver.get_screenshot_as_png(), '失败截图', allure.attachment_type.PNG)\n    \n>                   pytest.fail(f\"步骤执行失败: {str(e)}\")\nE                   Failed: 步骤执行失败: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector\n\nddt\\test_app_2.py:105: Failed",
+    "steps" : [ {
+      "name" : "Click Email",
+      "time" : {
+        "start" : 1755416803689,
+        "stop" : 1755416805814,
+        "duration" : 2125
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755416803689,
+          "stop" : 1755416805814,
+          "duration" : 2125
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "589f4b8b488627bb",
+          "name" : "步骤[click]截图",
+          "source" : "589f4b8b488627bb.png",
+          "type" : "image/png",
+          "size" : 64458
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\"]"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    }, {
+      "name" : "Assert Hello lan",
+      "time" : {
+        "start" : 1755416805814,
+        "stop" : 1755416807341,
+        "duration" : 1527
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector\n",
+      "statusTrace" : "  File \"D:\\PythonStoreHouse\\auto_test_quiz\\ddt\\test_app_2.py\", line 82, in test_suite\n    res = self.run_step(params)\n  File \"D:\\Python313\\Lib\\site-packages\\allure_commons\\_allure.py\", line 202, in impl\n    return func(*a, **kw)\n  File \"D:\\PythonStoreHouse\\auto_test_quiz\\ddt\\test_app_2.py\", line 37, in run_step\n    return func(*args[1:])\n  File \"D:\\PythonStoreHouse\\auto_test_quiz\\keywords\\appkeys.py\", line 173, in assert_text\n    assert actual_text == expected_text, \\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755416805814,
+          "stop" : 1755416807339,
+          "duration" : 1525
+        },
+        "status" : "failed",
+        "statusMessage" : "AssertionError: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector\n",
+        "statusTrace" : "  File \"D:\\Python313\\Lib\\site-packages\\allure_commons\\_allure.py\", line 202, in impl\n    return func(*a, **kw)\n  File \"D:\\PythonStoreHouse\\auto_test_quiz\\ddt\\test_app_2.py\", line 37, in run_step\n    return func(*args[1:])\n  File \"D:\\PythonStoreHouse\\auto_test_quiz\\keywords\\appkeys.py\", line 173, in assert_text\n    assert actual_text == expected_text, \\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "73d622c331be224a",
+          "name" : "步骤[assert_text]截图",
+          "source" : "73d622c331be224a.png",
+          "type" : "image/png",
+          "size" : 64458
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'hello Word']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "attachmentsCount" : 1
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    } ],
+    "attachments" : [ {
+      "uid" : "8c046ea454357d8d",
+      "name" : "错误详情",
+      "source" : "8c046ea454357d8d.txt",
+      "type" : "text/plain",
+      "size" : 84
+    }, {
+      "uid" : "55b2b557a2e8fa32",
+      "name" : "失败截图",
+      "source" : "55b2b557a2e8fa32.png",
+      "type" : "image/png",
+      "size" : 64458
+    }, {
+      "uid" : "e8a49f46c357a6e5",
+      "name" : "log",
+      "source" : "e8a49f46c357a6e5.txt",
+      "type" : "text/plain",
+      "size" : 899
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 4,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 5
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "#1 APPdemo"
+  }, {
+    "name" : "story",
+    "value" : "#2 Abnormal use case"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ddt"
+  }, {
+    "name" : "suite",
+    "value" : "test_app_2"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_App"
+  }, {
+    "name" : "host",
+    "value" : "Lydia"
+  }, {
+    "name" : "thread",
+    "value" : "28616-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "ddt.test_app_2"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "[['', 'assertion failure', '', '', '', '', '', '', ''], ['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'hello Word', '', '', '']]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "282d11092414ec61.json",
+  "parameterValues" : [ "[['', 'assertion failure', '', '', '', '', '', '', ''], ['', '', 'Click Email', 'click', \"//*[@resource-id='cn.ianzhang.android:id/fab']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/snackbar_text']\", 'hello Word', '', '', '']]" ]
+}

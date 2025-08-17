@@ -1,0 +1,31 @@
+[ {
+  "uid" : "282d11092414ec61",
+  "name" : "assertion failure",
+  "time" : {
+    "start" : 1755416803689,
+    "stop" : 1755416807769,
+    "duration" : 4080
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "cbd99834dbfa4dc0",
+  "name" : "Click Next",
+  "time" : {
+    "start" : 1755416778687,
+    "stop" : 1755416800447,
+    "duration" : 21760
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "847f1877c05d57ca",
+  "name" : "Click Email",
+  "time" : {
+    "start" : 1755416800450,
+    "stop" : 1755416803635,
+    "duration" : 3185
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

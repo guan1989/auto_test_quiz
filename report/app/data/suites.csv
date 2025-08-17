@@ -1,0 +1,12 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Sun Aug 17 15:46:43 CST 2025","Sun Aug 17 15:46:47 CST 2025","4080","ddt","test_app_2","Test_App","","","assertion failure","步骤失败: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector"
+"passed","Sun Aug 17 15:46:18 CST 2025","Sun Aug 17 15:46:40 CST 2025","21760","ddt","test_app_1","Test_App","","","Click Next","
+测试用例集，执行函数
+每次参数化执行一条用例
+:param case: 整条用例的步骤
+"
+"passed","Sun Aug 17 15:46:40 CST 2025","Sun Aug 17 15:46:43 CST 2025","3185","ddt","test_app_1","Test_App","","","Click Email","
+测试用例集，执行函数
+每次参数化执行一条用例
+:param case: 整条用例的步骤
+"

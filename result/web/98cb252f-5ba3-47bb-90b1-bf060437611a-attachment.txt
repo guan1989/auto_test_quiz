@@ -1,0 +1,84 @@
+INFO     root:webkeys.py:265 页面已成功刷新
+ERROR    root:test_web_2.py:116 Message: stale element reference: stale element not found in the current frame
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff77403e7c5+22117]
+	(No symbol) [0x0x7ff773f8ee40]
+	GetHandleVerifier [0x0x7ff7742c4c6c+2669324]
+	(No symbol) [0x0x7ff773d63794]
+	(No symbol) [0x0x7ff773d6602c]
+	(No symbol) [0x0x7ff773d660ff]
+	(No symbol) [0x0x7ff773dab0a1]
+	(No symbol) [0x0x7ff773d9fc66]
+	(No symbol) [0x0x7ff773dca7ea]
+	(No symbol) [0x0x7ff773d9f68d]
+	(No symbol) [0x0x7ff773d9f54d]
+	(No symbol) [0x0x7ff773dcaab0]
+	(No symbol) [0x0x7ff773d9f68d]
+	(No symbol) [0x0x7ff773de762f]
+	(No symbol) [0x0x7ff773dca553]
+	(No symbol) [0x0x7ff773d9eb86]
+	(No symbol) [0x0x7ff773d9de11]
+	(No symbol) [0x0x7ff773d9e9b3]
+	(No symbol) [0x0x7ff773e9907d]
+	(No symbol) [0x0x7ff773ea5fe8]
+	GetHandleVerifier [0x0x7ff77411f2b7+942423]
+	GetHandleVerifier [0x0x7ff774128261+979201]
+	(No symbol) [0x0x7ff773f9c3f1]
+	(No symbol) [0x0x7ff773f94da4]
+	(No symbol) [0x0x7ff773f94ef3]
+	(No symbol) [0x0x7ff773f87056]
+	BaseThreadInitThunk [0x0x7fff1474259d+29]
+	RtlUserThreadStart [0x0x7fff14b4af38+40]
+Traceback (most recent call last):
+  File "D:\PythonStoreHouse\auto_test_quiz\ddt\test_web_2.py", line 81, in test_suite
+    res = self.run_step(params)
+  File "D:\Python313\Lib\site-packages\allure_commons\_allure.py", line 202, in impl
+    return func(*a, **kw)
+  File "D:\PythonStoreHouse\auto_test_quiz\ddt\test_web_2.py", line 34, in run_step
+    return func(*args[1:])
+  File "D:\PythonStoreHouse\auto_test_quiz\keywords\webkeys.py", line 290, in use_element
+    target_element.click()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Python313\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 120, in click
+    self._execute(Command.CLICK_ELEMENT)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python313\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 573, in _execute
+    return self._parent.execute(command, params)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff77403e7c5+22117]
+	(No symbol) [0x0x7ff773f8ee40]
+	GetHandleVerifier [0x0x7ff7742c4c6c+2669324]
+	(No symbol) [0x0x7ff773d63794]
+	(No symbol) [0x0x7ff773d6602c]
+	(No symbol) [0x0x7ff773d660ff]
+	(No symbol) [0x0x7ff773dab0a1]
+	(No symbol) [0x0x7ff773d9fc66]
+	(No symbol) [0x0x7ff773dca7ea]
+	(No symbol) [0x0x7ff773d9f68d]
+	(No symbol) [0x0x7ff773d9f54d]
+	(No symbol) [0x0x7ff773dcaab0]
+	(No symbol) [0x0x7ff773d9f68d]
+	(No symbol) [0x0x7ff773de762f]
+	(No symbol) [0x0x7ff773dca553]
+	(No symbol) [0x0x7ff773d9eb86]
+	(No symbol) [0x0x7ff773d9de11]
+	(No symbol) [0x0x7ff773d9e9b3]
+	(No symbol) [0x0x7ff773e9907d]
+	(No symbol) [0x0x7ff773ea5fe8]
+	GetHandleVerifier [0x0x7ff77411f2b7+942423]
+	GetHandleVerifier [0x0x7ff774128261+979201]
+	(No symbol) [0x0x7ff773f9c3f1]
+	(No symbol) [0x0x7ff773f94da4]
+	(No symbol) [0x0x7ff773f94ef3]
+	(No symbol) [0x0x7ff773f87056]
+	BaseThreadInitThunk [0x0x7fff1474259d+29]
+	RtlUserThreadStart [0x0x7fff14b4af38+40]

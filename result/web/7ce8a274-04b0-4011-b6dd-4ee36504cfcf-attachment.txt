@@ -1,0 +1,67 @@
+ERROR    root:test_web_3.py:116 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=139.0.3405.86)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff702e9e785+22117]
+	(No symbol) [0x0x7ff702deee00]
+	GetHandleVerifier [0x0x7ff703124c2c+2669324]
+	(No symbol) [0x0x7ff702b9d29f]
+	(No symbol) [0x0x7ff702c2fbf4]
+	(No symbol) [0x0x7ff702c46f3a]
+	(No symbol) [0x0x7ff702c2a553]
+	(No symbol) [0x0x7ff702bfeb86]
+	(No symbol) [0x0x7ff702bfde11]
+	(No symbol) [0x0x7ff702bfe9b3]
+	(No symbol) [0x0x7ff702cf907d]
+	(No symbol) [0x0x7ff702d05fe8]
+	GetHandleVerifier [0x0x7ff702f7f277+942423]
+	GetHandleVerifier [0x0x7ff702f88221+979201]
+	(No symbol) [0x0x7ff702dfc3b1]
+	(No symbol) [0x0x7ff702df4d64]
+	(No symbol) [0x0x7ff702df4eb3]
+	(No symbol) [0x0x7ff702de7016]
+	BaseThreadInitThunk [0x0x7fff1474259d+29]
+	RtlUserThreadStart [0x0x7fff14b4af38+40]
+Traceback (most recent call last):
+  File "D:\PythonStoreHouse\auto_test_quiz\ddt\test_web_3.py", line 81, in test_suite
+    res = self.run_step(params)
+  File "D:\Python313\Lib\site-packages\allure_commons\_allure.py", line 202, in impl
+    return func(*a, **kw)
+  File "D:\PythonStoreHouse\auto_test_quiz\ddt\test_web_3.py", line 30, in run_step
+    ddt.obj.driver.get_screenshot_as_png(),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1034, in get_screenshot_as_png
+    return b64decode(self.get_screenshot_as_base64().encode("ascii"))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1044, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=139.0.3405.86)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff702e9e785+22117]
+	(No symbol) [0x0x7ff702deee00]
+	GetHandleVerifier [0x0x7ff703124c2c+2669324]
+	(No symbol) [0x0x7ff702b9d29f]
+	(No symbol) [0x0x7ff702c2fbf4]
+	(No symbol) [0x0x7ff702c46f3a]
+	(No symbol) [0x0x7ff702c2a553]
+	(No symbol) [0x0x7ff702bfeb86]
+	(No symbol) [0x0x7ff702bfde11]
+	(No symbol) [0x0x7ff702bfe9b3]
+	(No symbol) [0x0x7ff702cf907d]
+	(No symbol) [0x0x7ff702d05fe8]
+	GetHandleVerifier [0x0x7ff702f7f277+942423]
+	GetHandleVerifier [0x0x7ff702f88221+979201]
+	(No symbol) [0x0x7ff702dfc3b1]
+	(No symbol) [0x0x7ff702df4d64]
+	(No symbol) [0x0x7ff702df4eb3]
+	(No symbol) [0x0x7ff702de7016]
+	BaseThreadInitThunk [0x0x7fff1474259d+29]
+	RtlUserThreadStart [0x0x7fff14b4af38+40]

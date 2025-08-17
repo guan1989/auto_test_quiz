@@ -1,0 +1,3 @@
+INFO     root:appkeys.py:47 已经结束appium进程
+INFO     root:appkeys.py:69 appium服务正在启动...
+INFO     root:appkeys.py:175 文本断言成功！预期: Hello Ian, 实际: Hello Ian

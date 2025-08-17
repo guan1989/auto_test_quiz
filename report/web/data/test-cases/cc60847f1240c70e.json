@@ -1,0 +1,232 @@
+{
+  "uid" : "cc60847f1240c70e",
+  "name" : "NoSuchElementException",
+  "fullName" : "ddt.test_web_2.Test_Web#test_suite",
+  "historyId" : "873bbbf643986513521508c0e918f73e",
+  "time" : {
+    "start" : 1755417727764,
+    "stop" : 1755417734831,
+    "duration" : 7067
+  },
+  "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+  "descriptionHtml" : "<p>测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Get url (参数: ['geturl', 'https://practicetestautomation.com/practice/'])",
+      "time" : {
+        "start" : 1755417727764,
+        "stop" : 1755417728507,
+        "duration" : 743
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417727764,
+          "stop" : 1755417728507,
+          "duration" : 743
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "daa7b5e81c7f6ba3",
+          "name" : "步骤[geturl]截图",
+          "source" : "daa7b5e81c7f6ba3.png",
+          "type" : "image/png",
+          "size" : 77833
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['geturl', 'https://practicetestautomation.com/practice/']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Open page (参数: ['click', 'link_testTest Exceptions'])",
+      "time" : {
+        "start" : 1755417728507,
+        "stop" : 1755417729516,
+        "duration" : 1009
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417728507,
+          "stop" : 1755417729516,
+          "duration" : 1009
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "8c41edb0e07feac",
+          "name" : "步骤[click]截图",
+          "source" : "8c41edb0e07feac.png",
+          "type" : "image/png",
+          "size" : 47555
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', 'link_testTest Exceptions']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Click Add button (参数: ['click', 'add_btn'])",
+      "time" : {
+        "start" : 1755417729516,
+        "stop" : 1755417729732,
+        "duration" : 216
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417729516,
+          "stop" : 1755417729732,
+          "duration" : 216
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "473dbece6a600123",
+          "name" : "步骤[click]截图",
+          "source" : "473dbece6a600123.png",
+          "type" : "image/png",
+          "size" : 83168
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', 'add_btn']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Verify Row 2 input field is displayed (参数: ['input', \"//div[@id='row2']/input\", 'Verify Row 2 input field is displayed'])",
+      "time" : {
+        "start" : 1755417729733,
+        "stop" : 1755417734830,
+        "duration" : 5097
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755417729733,
+          "stop" : 1755417734830,
+          "duration" : 5097
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "655f8b34fd54088b",
+          "name" : "步骤[input]截图",
+          "source" : "655f8b34fd54088b.png",
+          "type" : "image/png",
+          "size" : 81110
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['input', \"//div[@id='row2']/input\", 'Verify Row 2 input field is displayed']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 8,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "#2 Test Exceptions"
+  }, {
+    "name" : "feature",
+    "value" : "#1 practice test automation"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ddt"
+  }, {
+    "name" : "suite",
+    "value" : "test_web_2"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Web"
+  }, {
+    "name" : "host",
+    "value" : "Lydia"
+  }, {
+    "name" : "thread",
+    "value" : "24036-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "ddt.test_web_2"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "[['', 'NoSuchElementException', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Exceptions', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Verify Row 2 input field is displayed', 'input', \"//div[@id='row2']/input\", 'Verify Row 2 input field is displayed', '', '', '']]"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cc60847f1240c70e.json",
+  "parameterValues" : [ "[['', 'NoSuchElementException', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Exceptions', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Verify Row 2 input field is displayed', 'input', \"//div[@id='row2']/input\", 'Verify Row 2 input field is displayed', '', '', '']]" ]
+}

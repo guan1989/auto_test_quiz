@@ -1,0 +1,121 @@
+[ {
+  "uid" : "5d2b911425410c29",
+  "name" : "TimeoutException",
+  "time" : {
+    "start" : 1755417755289,
+    "stop" : 1755417761111,
+    "duration" : 5822
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5e5394bac64ab87b",
+  "name" : "TimeoutException",
+  "time" : {
+    "start" : 1755417197406,
+    "stop" : 1755417203272,
+    "duration" : 5866
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7bc3f9645ec6e42f",
+  "name" : "TimeoutException",
+  "time" : {
+    "start" : 1755419033922,
+    "stop" : 1755419039153,
+    "duration" : 5231
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "91600f83b8aafbc0",
+  "name" : "Positive LogIn test",
+  "time" : {
+    "start" : 1755419039488,
+    "stop" : 1755419057326,
+    "duration" : 17838
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "97188a458058a1b8",
+  "name" : "Negative username test",
+  "time" : {
+    "start" : 1755419008134,
+    "stop" : 1755419010877,
+    "duration" : 2743
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a2980ee98ea34d44",
+  "name" : "NoSuchElementException",
+  "time" : {
+    "start" : 1755419013647,
+    "stop" : 1755419019842,
+    "duration" : 6195
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "316f932afaf75001",
+  "name" : "ElementNotInteractableException",
+  "time" : {
+    "start" : 1755419020225,
+    "stop" : 1755419031028,
+    "duration" : 10803
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8ab8a382393f5b3c",
+  "name" : "Positive LogIn test",
+  "time" : {
+    "start" : 1755418910142,
+    "stop" : 1755418974526,
+    "duration" : 64384
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "217eeb35d1b15505",
+  "name" : "Positive LogIn test",
+  "time" : {
+    "start" : 1755418999951,
+    "stop" : 1755419008130,
+    "duration" : 8179
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5e3fa5f32f158e6d",
+  "name" : "InvalidElementStateException",
+  "time" : {
+    "start" : 1755419031077,
+    "stop" : 1755419032537,
+    "duration" : 1460
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "99ef7cef1c0a99bc",
+  "name" : "StaleElementReferenceException",
+  "time" : {
+    "start" : 1755419032574,
+    "stop" : 1755419033883,
+    "duration" : 1309
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "6da994b7c0cb176c",
+  "name" : "Negative password test",
+  "time" : {
+    "start" : 1755419010880,
+    "stop" : 1755419013596,
+    "duration" : 2716
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

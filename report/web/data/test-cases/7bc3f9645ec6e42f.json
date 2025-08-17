@@ -1,0 +1,251 @@
+{
+  "uid" : "7bc3f9645ec6e42f",
+  "name" : "TimeoutException",
+  "fullName" : "ddt.test_web_2.Test_Web#test_suite",
+  "historyId" : "0bd05efde401a44b189b4d511f6aa355",
+  "time" : {
+    "start" : 1755419033922,
+    "stop" : 1755419039153,
+    "duration" : 5231
+  },
+  "description" : "步骤失败: TimeoutException: Message: \nStacktrace:\n\tGetHandleVerifier [0x0x7ff77403e7c5+22117]\n\t(No symbol) [0x0x7ff773f8ee40]\n\tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\n\t(No symbol) [0x0x7ff773da928b]\n\t(No symbol) [0x0x7ff773da957b]\n\t(No symbol) [0x0x7ff773de9b47]\n\t(No symbol) [0x0x7ff773dca82f]\n\t(No symbol) [0x0x7ff773d9f68d]\n\t(No symbol) [0x0x7ff773de762f]\n\t(No symbol) [0x0x7ff773dca553]\n\t(No symbol) [0x0x7ff773d9eb86]\n\t(No symbol) [0x0x7ff773d9de11]\n\t(No symbol) [0x0x7ff773d9e9b3]\n\t(No symbol) [0x0x7ff773e9907d]\n\t(No symbol) [0x0x7ff773ea5fe8]\n\tGetHandleVerifier [0x0x7ff77411f2b7+942423]\n\tGetHandleVerifier [0x0x7ff774128261+979201]\n\t(No symbol) [0x0x7ff773f9c3f1]\n\t(No symbol) [0x0x7ff773f94da4]\n\t(No symbol) [0x0x7ff773f94ef3]\n\t(No symbol) [0x0x7ff773f87056]\n\tBaseThreadInitThunk [0x0x7fff1474259d+29]\n\tRtlUserThreadStart [0x0x7fff14b4af38+40]\n",
+  "descriptionHtml" : "<p>步骤失败: TimeoutException: Message:\nStacktrace:\nGetHandleVerifier [0x0x7ff77403e7c5+22117]\n(No symbol) [0x0x7ff773f8ee40]\nGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\n(No symbol) [0x0x7ff773da928b]\n(No symbol) [0x0x7ff773da957b]\n(No symbol) [0x0x7ff773de9b47]\n(No symbol) [0x0x7ff773dca82f]\n(No symbol) [0x0x7ff773d9f68d]\n(No symbol) [0x0x7ff773de762f]\n(No symbol) [0x0x7ff773dca553]\n(No symbol) [0x0x7ff773d9eb86]\n(No symbol) [0x0x7ff773d9de11]\n(No symbol) [0x0x7ff773d9e9b3]\n(No symbol) [0x0x7ff773e9907d]\n(No symbol) [0x0x7ff773ea5fe8]\nGetHandleVerifier [0x0x7ff77411f2b7+942423]\nGetHandleVerifier [0x0x7ff774128261+979201]\n(No symbol) [0x0x7ff773f9c3f1]\n(No symbol) [0x0x7ff773f94da4]\n(No symbol) [0x0x7ff773f94ef3]\n(No symbol) [0x0x7ff773f87056]\nBaseThreadInitThunk [0x0x7fff1474259d+29]\nRtlUserThreadStart [0x0x7fff14b4af38+40]</p>\n",
+  "status" : "failed",
+  "statusMessage" : "Failed: 步骤执行失败: TimeoutException: Message: \nStacktrace:\n\tGetHandleVerifier [0x0x7ff77403e7c5+22117]\n\t(No symbol) [0x0x7ff773f8ee40]\n\tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\n\t(No symbol) [0x0x7ff773da928b]\n\t(No symbol) [0x0x7ff773da957b]\n\t(No symbol) [0x0x7ff773de9b47]\n\t(No symbol) [0x0x7ff773dca82f]\n\t(No symbol) [0x0x7ff773d9f68d]\n\t(No symbol) [0x0x7ff773de762f]\n\t(No symbol) [0x0x7ff773dca553]\n\t(No symbol) [0x0x7ff773d9eb86]\n\t(No symbol) [0x0x7ff773d9de11]\n\t(No symbol) [0x0x7ff773d9e9b3]\n\t(No symbol) [0x0x7ff773e9907d]\n\t(No symbol) [0x0x7ff773ea5fe8]\n\tGetHandleVerifier [0x0x7ff77411f2b7+942423]\n\tGetHandleVerifier [0x0x7ff774128261+979201]\n\t(No symbol) [0x0x7ff773f9c3f1]\n\t(No symbol) [0x0x7ff773f94da4]\n\t(No symbol) [0x0x7ff773f94ef3]\n\t(No symbol) [0x0x7ff773f87056]\n\tBaseThreadInitThunk [0x0x7fff1474259d+29]\n\tRtlUserThreadStart [0x0x7fff14b4af38+40]",
+  "statusTrace" : "self = <keywords.webkeys.Web object at 0x000001CD7BC57230>\nlo = \"//div[@id='row2']/input\", timeout = ''\n\n    def wait_for_element(self, lo: str = '', timeout: str = \"\"):\n        \"\"\"\n        显式等待元素可见\n        :param lo: 定位表达式（xpath/id）\n        :param timeout: 超时时间（秒）\n        :return: 元素可见返回True，否则抛TimeoutException\n        \"\"\"\n        try:\n            t = float(timeout) if timeout else 1\n        except ValueError:\n            # 如果转失败，就说明输入的不是一个数字\n            # 默认就按等待1s\n            t = 1\n        if lo.startswith('/'):\n            locator = (By.XPATH, lo)\n        else:\n            locator = (By.ID, lo)\n        try:\n            # 等待元素可见\n>           WebDriverWait(self.driver, t).until(\n                EC.visibility_of_element_located(locator)\n            )\n\nkeywords\\webkeys.py:239: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"9fda19d65507dd3fb95bc57ed64f40dd\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x000001CD1F20FCE0>\nmessage = ''\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Wait until the method returns a value that is not False.\n    \n        Calls the method provided with the driver as an argument until the\n        return value does not evaluate to ``False``.\n    \n        Parameters:\n        -----------\n        method: callable(WebDriver)\n            - A callable object that takes a WebDriver instance as an argument.\n    \n        message: str\n            - Optional message for :exc:`TimeoutException`\n    \n        Return:\n        -------\n        object: T\n            - The result of the last call to `method`\n    \n        Raises:\n        -------\n        TimeoutException\n            - If 'method' does not return a truthy value within the WebDriverWait\n            object's timeout\n    \n        Example:\n        --------\n        >>> from selenium.webdriver.common.by import By\n        >>> from selenium.webdriver.support.ui import WebDriverWait\n        >>> from selenium.webdriver.support import expected_conditions as EC\n    \n        # Wait until an element is visible on the page\n        >>> wait = WebDriverWait(driver, 10)\n        >>> element = wait.until(EC.visibility_of_element_located((By.ID, \"exampleId\")))\n        >>> print(element.text)\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       \tGetHandleVerifier [0x0x7ff77403e7c5+22117]\nE       \t(No symbol) [0x0x7ff773f8ee40]\nE       \tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\nE       \t(No symbol) [0x0x7ff773da928b]\nE       \t(No symbol) [0x0x7ff773da957b]\nE       \t(No symbol) [0x0x7ff773de9b47]\nE       \t(No symbol) [0x0x7ff773dca82f]\nE       \t(No symbol) [0x0x7ff773d9f68d]\nE       \t(No symbol) [0x0x7ff773de762f]\nE       \t(No symbol) [0x0x7ff773dca553]\nE       \t(No symbol) [0x0x7ff773d9eb86]\nE       \t(No symbol) [0x0x7ff773d9de11]\nE       \t(No symbol) [0x0x7ff773d9e9b3]\nE       \t(No symbol) [0x0x7ff773e9907d]\nE       \t(No symbol) [0x0x7ff773ea5fe8]\nE       \tGetHandleVerifier [0x0x7ff77411f2b7+942423]\nE       \tGetHandleVerifier [0x0x7ff774128261+979201]\nE       \t(No symbol) [0x0x7ff773f9c3f1]\nE       \t(No symbol) [0x0x7ff773f94da4]\nE       \t(No symbol) [0x0x7ff773f94ef3]\nE       \t(No symbol) [0x0x7ff773f87056]\nE       \tBaseThreadInitThunk [0x0x7fff1474259d+29]\nE       \tRtlUserThreadStart [0x0x7fff14b4af38+40]\n\nD:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\support\\wait.py:138: TimeoutException\n\nThe above exception was the direct cause of the following exception:\n\nself = <test_web_2.Test_Web object at 0x000001CD1F23C830>\ncase = [['', '', 'Open page', 'refresh', '', '', ...], ['', '', 'Click Add button', 'click', 'add_btn', '', ...], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '', ...]]\n\n    @allure.story(f'#{ddt.s_idx} {ddt.story}')\n    @pytest.mark.parametrize('case', ddt.testsuite)\n    def test_suite(self, case):\n        \"\"\"\n        测试用例集，执行函数\n        每次参数化执行一条用例\n        :param case: 整条用例的步骤\n        \"\"\"\n        # print(case)\n        # 所以步骤的第一行的第二个单元格就是title\n        allure.dynamic.title(case[0][1])\n        # 因为不执行，所以也不写入\n        ddt.writer.row += 1\n    \n        # 剩下的都是步骤，都是需要执行的\n        case = case[1:]\n    \n        # 记录跑了多少行\n        run_rows = 0\n    \n        try:\n            # 使用try执行用例，一旦用例执行报错，就停止，并开始截图\n            for c in case:\n                # 每跑一行run_rows + 1\n                run_rows += 1\n    \n                # 先获取参数，再反射执行\n                # 获取参数，是一行里面4~6这三个元素\n                params = [str(p) for p in c[3:7]]\n                # 对参数从右往左找，找最后一个不为空的，然后把所有空的全部截掉\n                # 兼容都是空的情况\n                index = -1\n                for i in range(3, -1, -1):\n                    if len(params[i]) > 0:\n                        index = i\n                        break\n    \n                params = params[0:index + 1]\n    \n                # 这里反射执行\n                try:\n                # with allure.step(c[2]):\n                #     # 记录关键字执行的结果\n                #     res = self.run_step(params)\n                    with allure.step(f\"{c[2]} (参数: {params})\"):  # 步骤描述添加参数\n>                       res = self.run_step(params)\n\nddt\\test_web_2.py:81: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nddt\\test_web_2.py:34: in run_step\n    return func(*args[1:])\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <keywords.webkeys.Web object at 0x000001CD7BC57230>\nlo = \"//div[@id='row2']/input\", timeout = ''\n\n    def wait_for_element(self, lo: str = '', timeout: str = \"\"):\n        \"\"\"\n        显式等待元素可见\n        :param lo: 定位表达式（xpath/id）\n        :param timeout: 超时时间（秒）\n        :return: 元素可见返回True，否则抛TimeoutException\n        \"\"\"\n        try:\n            t = float(timeout) if timeout else 1\n        except ValueError:\n            # 如果转失败，就说明输入的不是一个数字\n            # 默认就按等待1s\n            t = 1\n        if lo.startswith('/'):\n            locator = (By.XPATH, lo)\n        else:\n            locator = (By.ID, lo)\n        try:\n            # 等待元素可见\n            WebDriverWait(self.driver, t).until(\n                EC.visibility_of_element_located(locator)\n            )\n        except TimeoutException as e:\n>           raise AssertionError(f\"TimeoutException: {str(e)}\") from e\nE           AssertionError: TimeoutException: Message: \nE           Stacktrace:\nE           \tGetHandleVerifier [0x0x7ff77403e7c5+22117]\nE           \t(No symbol) [0x0x7ff773f8ee40]\nE           \tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\nE           \t(No symbol) [0x0x7ff773da928b]\nE           \t(No symbol) [0x0x7ff773da957b]\nE           \t(No symbol) [0x0x7ff773de9b47]\nE           \t(No symbol) [0x0x7ff773dca82f]\nE           \t(No symbol) [0x0x7ff773d9f68d]\nE           \t(No symbol) [0x0x7ff773de762f]\nE           \t(No symbol) [0x0x7ff773dca553]\nE           \t(No symbol) [0x0x7ff773d9eb86]\nE           \t(No symbol) [0x0x7ff773d9de11]\nE           \t(No symbol) [0x0x7ff773d9e9b3]\nE           \t(No symbol) [0x0x7ff773e9907d]\nE           \t(No symbol) [0x0x7ff773ea5fe8]\nE           \tGetHandleVerifier [0x0x7ff77411f2b7+942423]\nE           \tGetHandleVerifier [0x0x7ff774128261+979201]\nE           \t(No symbol) [0x0x7ff773f9c3f1]\nE           \t(No symbol) [0x0x7ff773f94da4]\nE           \t(No symbol) [0x0x7ff773f94ef3]\nE           \t(No symbol) [0x0x7ff773f87056]\nE           \tBaseThreadInitThunk [0x0x7fff1474259d+29]\nE           \tRtlUserThreadStart [0x0x7fff14b4af38+40]\n\nkeywords\\webkeys.py:243: AssertionError\n\nDuring handling of the above exception, another exception occurred:\n\nself = <test_web_2.Test_Web object at 0x000001CD1F23C830>\ncase = [['', '', 'Open page', 'refresh', '', '', ...], ['', '', 'Click Add button', 'click', 'add_btn', '', ...], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '', ...]]\n\n    @allure.story(f'#{ddt.s_idx} {ddt.story}')\n    @pytest.mark.parametrize('case', ddt.testsuite)\n    def test_suite(self, case):\n        \"\"\"\n        测试用例集，执行函数\n        每次参数化执行一条用例\n        :param case: 整条用例的步骤\n        \"\"\"\n        # print(case)\n        # 所以步骤的第一行的第二个单元格就是title\n        allure.dynamic.title(case[0][1])\n        # 因为不执行，所以也不写入\n        ddt.writer.row += 1\n    \n        # 剩下的都是步骤，都是需要执行的\n        case = case[1:]\n    \n        # 记录跑了多少行\n        run_rows = 0\n    \n        try:\n            # 使用try执行用例，一旦用例执行报错，就停止，并开始截图\n            for c in case:\n                # 每跑一行run_rows + 1\n                run_rows += 1\n    \n                # 先获取参数，再反射执行\n                # 获取参数，是一行里面4~6这三个元素\n                params = [str(p) for p in c[3:7]]\n                # 对参数从右往左找，找最后一个不为空的，然后把所有空的全部截掉\n                # 兼容都是空的情况\n                index = -1\n                for i in range(3, -1, -1):\n                    if len(params[i]) > 0:\n                        index = i\n                        break\n    \n                params = params[0:index + 1]\n    \n                # 这里反射执行\n                try:\n                # with allure.step(c[2]):\n                #     # 记录关键字执行的结果\n                #     res = self.run_step(params)\n                    with allure.step(f\"{c[2]} (参数: {params})\"):  # 步骤描述添加参数\n                        res = self.run_step(params)\n                    # 如果能执行到这里，就说明关键字执行是成功的\n                    ddt.writer.write(ddt.writer.row, 7, 'PASS', 3)\n                    ddt.writer.write(ddt.writer.row, 8, str(res))\n                    ddt.writer.row += 1\n                except AssertionError as e:\n                    # 步骤失败：标记Allure步骤为失败并附加错误信息\n                    allure.dynamic.description(f\"步骤失败: {str(e)}\")  # 动态更新步骤描述\n                    allure.attach(str(e), \"错误详情\", allure.attachment_type.TEXT)  # 附加文本信息\n                    # 写入Excel失败结果\n                    ddt.writer.write(ddt.writer.row, 7, 'FAIL', 2)\n                    ddt.writer.write(ddt.writer.row, 8, str(e))  # 写入具体错误信息\n                    ddt.writer.row += 1\n                    # 跳过后续步骤，直接标记用例失败\n                    ddt.writer.row += len(case) - run_rows  # 跳过未执行的步骤\n                    logger.exception(e)\n                    if ddt.obj.driver:\n                        allure.attach(ddt.obj.driver.get_screenshot_as_png(), '失败截图', allure.attachment_type.PNG)\n>                   pytest.fail(f\"步骤执行失败: {str(e)}\")\nE                   Failed: 步骤执行失败: TimeoutException: Message: \nE                   Stacktrace:\nE                   \tGetHandleVerifier [0x0x7ff77403e7c5+22117]\nE                   \t(No symbol) [0x0x7ff773f8ee40]\nE                   \tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\nE                   \t(No symbol) [0x0x7ff773da928b]\nE                   \t(No symbol) [0x0x7ff773da957b]\nE                   \t(No symbol) [0x0x7ff773de9b47]\nE                   \t(No symbol) [0x0x7ff773dca82f]\nE                   \t(No symbol) [0x0x7ff773d9f68d]\nE                   \t(No symbol) [0x0x7ff773de762f]\nE                   \t(No symbol) [0x0x7ff773dca553]\nE                   \t(No symbol) [0x0x7ff773d9eb86]\nE                   \t(No symbol) [0x0x7ff773d9de11]\nE                   \t(No symbol) [0x0x7ff773d9e9b3]\nE                   \t(No symbol) [0x0x7ff773e9907d]\nE                   \t(No symbol) [0x0x7ff773ea5fe8]\nE                   \tGetHandleVerifier [0x0x7ff77411f2b7+942423]\nE                   \tGetHandleVerifier [0x0x7ff774128261+979201]\nE                   \t(No symbol) [0x0x7ff773f9c3f1]\nE                   \t(No symbol) [0x0x7ff773f94da4]\nE                   \t(No symbol) [0x0x7ff773f94ef3]\nE                   \t(No symbol) [0x0x7ff773f87056]\nE                   \tBaseThreadInitThunk [0x0x7fff1474259d+29]\nE                   \tRtlUserThreadStart [0x0x7fff14b4af38+40]\n\nddt\\test_web_2.py:99: Failed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "步骤失败: TimeoutException: Message: \nStacktrace:\n\tGetHandleVerifier [0x0x7ff77403e7c5+22117]\n\t(No symbol) [0x0x7ff773f8ee40]\n\tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\n\t(No symbol) [0x0x7ff773da928b]\n\t(No symbol) [0x0x7ff773da957b]\n\t(No symbol) [0x0x7ff773de9b47]\n\t(No symbol) [0x0x7ff773dca82f]\n\t(No symbol) [0x0x7ff773d9f68d]\n\t(No symbol) [0x0x7ff773de762f]\n\t(No symbol) [0x0x7ff773dca553]\n\t(No symbol) [0x0x7ff773d9eb86]\n\t(No symbol) [0x0x7ff773d9de11]\n\t(No symbol) [0x0x7ff773d9e9b3]\n\t(No symbol) [0x0x7ff773e9907d]\n\t(No symbol) [0x0x7ff773ea5fe8]\n\tGetHandleVerifier [0x0x7ff77411f2b7+942423]\n\tGetHandleVerifier [0x0x7ff774128261+979201]\n\t(No symbol) [0x0x7ff773f9c3f1]\n\t(No symbol) [0x0x7ff773f94da4]\n\t(No symbol) [0x0x7ff773f94ef3]\n\t(No symbol) [0x0x7ff773f87056]\n\tBaseThreadInitThunk [0x0x7fff1474259d+29]\n\tRtlUserThreadStart [0x0x7fff14b4af38+40]\n",
+    "status" : "failed",
+    "statusMessage" : "Failed: 步骤执行失败: TimeoutException: Message: \nStacktrace:\n\tGetHandleVerifier [0x0x7ff77403e7c5+22117]\n\t(No symbol) [0x0x7ff773f8ee40]\n\tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\n\t(No symbol) [0x0x7ff773da928b]\n\t(No symbol) [0x0x7ff773da957b]\n\t(No symbol) [0x0x7ff773de9b47]\n\t(No symbol) [0x0x7ff773dca82f]\n\t(No symbol) [0x0x7ff773d9f68d]\n\t(No symbol) [0x0x7ff773de762f]\n\t(No symbol) [0x0x7ff773dca553]\n\t(No symbol) [0x0x7ff773d9eb86]\n\t(No symbol) [0x0x7ff773d9de11]\n\t(No symbol) [0x0x7ff773d9e9b3]\n\t(No symbol) [0x0x7ff773e9907d]\n\t(No symbol) [0x0x7ff773ea5fe8]\n\tGetHandleVerifier [0x0x7ff77411f2b7+942423]\n\tGetHandleVerifier [0x0x7ff774128261+979201]\n\t(No symbol) [0x0x7ff773f9c3f1]\n\t(No symbol) [0x0x7ff773f94da4]\n\t(No symbol) [0x0x7ff773f94ef3]\n\t(No symbol) [0x0x7ff773f87056]\n\tBaseThreadInitThunk [0x0x7fff1474259d+29]\n\tRtlUserThreadStart [0x0x7fff14b4af38+40]",
+    "statusTrace" : "self = <keywords.webkeys.Web object at 0x000001CD7BC57230>\nlo = \"//div[@id='row2']/input\", timeout = ''\n\n    def wait_for_element(self, lo: str = '', timeout: str = \"\"):\n        \"\"\"\n        显式等待元素可见\n        :param lo: 定位表达式（xpath/id）\n        :param timeout: 超时时间（秒）\n        :return: 元素可见返回True，否则抛TimeoutException\n        \"\"\"\n        try:\n            t = float(timeout) if timeout else 1\n        except ValueError:\n            # 如果转失败，就说明输入的不是一个数字\n            # 默认就按等待1s\n            t = 1\n        if lo.startswith('/'):\n            locator = (By.XPATH, lo)\n        else:\n            locator = (By.ID, lo)\n        try:\n            # 等待元素可见\n>           WebDriverWait(self.driver, t).until(\n                EC.visibility_of_element_located(locator)\n            )\n\nkeywords\\webkeys.py:239: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"9fda19d65507dd3fb95bc57ed64f40dd\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x000001CD1F20FCE0>\nmessage = ''\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Wait until the method returns a value that is not False.\n    \n        Calls the method provided with the driver as an argument until the\n        return value does not evaluate to ``False``.\n    \n        Parameters:\n        -----------\n        method: callable(WebDriver)\n            - A callable object that takes a WebDriver instance as an argument.\n    \n        message: str\n            - Optional message for :exc:`TimeoutException`\n    \n        Return:\n        -------\n        object: T\n            - The result of the last call to `method`\n    \n        Raises:\n        -------\n        TimeoutException\n            - If 'method' does not return a truthy value within the WebDriverWait\n            object's timeout\n    \n        Example:\n        --------\n        >>> from selenium.webdriver.common.by import By\n        >>> from selenium.webdriver.support.ui import WebDriverWait\n        >>> from selenium.webdriver.support import expected_conditions as EC\n    \n        # Wait until an element is visible on the page\n        >>> wait = WebDriverWait(driver, 10)\n        >>> element = wait.until(EC.visibility_of_element_located((By.ID, \"exampleId\")))\n        >>> print(element.text)\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       \tGetHandleVerifier [0x0x7ff77403e7c5+22117]\nE       \t(No symbol) [0x0x7ff773f8ee40]\nE       \tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\nE       \t(No symbol) [0x0x7ff773da928b]\nE       \t(No symbol) [0x0x7ff773da957b]\nE       \t(No symbol) [0x0x7ff773de9b47]\nE       \t(No symbol) [0x0x7ff773dca82f]\nE       \t(No symbol) [0x0x7ff773d9f68d]\nE       \t(No symbol) [0x0x7ff773de762f]\nE       \t(No symbol) [0x0x7ff773dca553]\nE       \t(No symbol) [0x0x7ff773d9eb86]\nE       \t(No symbol) [0x0x7ff773d9de11]\nE       \t(No symbol) [0x0x7ff773d9e9b3]\nE       \t(No symbol) [0x0x7ff773e9907d]\nE       \t(No symbol) [0x0x7ff773ea5fe8]\nE       \tGetHandleVerifier [0x0x7ff77411f2b7+942423]\nE       \tGetHandleVerifier [0x0x7ff774128261+979201]\nE       \t(No symbol) [0x0x7ff773f9c3f1]\nE       \t(No symbol) [0x0x7ff773f94da4]\nE       \t(No symbol) [0x0x7ff773f94ef3]\nE       \t(No symbol) [0x0x7ff773f87056]\nE       \tBaseThreadInitThunk [0x0x7fff1474259d+29]\nE       \tRtlUserThreadStart [0x0x7fff14b4af38+40]\n\nD:\\Python313\\Lib\\site-packages\\selenium\\webdriver\\support\\wait.py:138: TimeoutException\n\nThe above exception was the direct cause of the following exception:\n\nself = <test_web_2.Test_Web object at 0x000001CD1F23C830>\ncase = [['', '', 'Open page', 'refresh', '', '', ...], ['', '', 'Click Add button', 'click', 'add_btn', '', ...], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '', ...]]\n\n    @allure.story(f'#{ddt.s_idx} {ddt.story}')\n    @pytest.mark.parametrize('case', ddt.testsuite)\n    def test_suite(self, case):\n        \"\"\"\n        测试用例集，执行函数\n        每次参数化执行一条用例\n        :param case: 整条用例的步骤\n        \"\"\"\n        # print(case)\n        # 所以步骤的第一行的第二个单元格就是title\n        allure.dynamic.title(case[0][1])\n        # 因为不执行，所以也不写入\n        ddt.writer.row += 1\n    \n        # 剩下的都是步骤，都是需要执行的\n        case = case[1:]\n    \n        # 记录跑了多少行\n        run_rows = 0\n    \n        try:\n            # 使用try执行用例，一旦用例执行报错，就停止，并开始截图\n            for c in case:\n                # 每跑一行run_rows + 1\n                run_rows += 1\n    \n                # 先获取参数，再反射执行\n                # 获取参数，是一行里面4~6这三个元素\n                params = [str(p) for p in c[3:7]]\n                # 对参数从右往左找，找最后一个不为空的，然后把所有空的全部截掉\n                # 兼容都是空的情况\n                index = -1\n                for i in range(3, -1, -1):\n                    if len(params[i]) > 0:\n                        index = i\n                        break\n    \n                params = params[0:index + 1]\n    \n                # 这里反射执行\n                try:\n                # with allure.step(c[2]):\n                #     # 记录关键字执行的结果\n                #     res = self.run_step(params)\n                    with allure.step(f\"{c[2]} (参数: {params})\"):  # 步骤描述添加参数\n>                       res = self.run_step(params)\n\nddt\\test_web_2.py:81: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nddt\\test_web_2.py:34: in run_step\n    return func(*args[1:])\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <keywords.webkeys.Web object at 0x000001CD7BC57230>\nlo = \"//div[@id='row2']/input\", timeout = ''\n\n    def wait_for_element(self, lo: str = '', timeout: str = \"\"):\n        \"\"\"\n        显式等待元素可见\n        :param lo: 定位表达式（xpath/id）\n        :param timeout: 超时时间（秒）\n        :return: 元素可见返回True，否则抛TimeoutException\n        \"\"\"\n        try:\n            t = float(timeout) if timeout else 1\n        except ValueError:\n            # 如果转失败，就说明输入的不是一个数字\n            # 默认就按等待1s\n            t = 1\n        if lo.startswith('/'):\n            locator = (By.XPATH, lo)\n        else:\n            locator = (By.ID, lo)\n        try:\n            # 等待元素可见\n            WebDriverWait(self.driver, t).until(\n                EC.visibility_of_element_located(locator)\n            )\n        except TimeoutException as e:\n>           raise AssertionError(f\"TimeoutException: {str(e)}\") from e\nE           AssertionError: TimeoutException: Message: \nE           Stacktrace:\nE           \tGetHandleVerifier [0x0x7ff77403e7c5+22117]\nE           \t(No symbol) [0x0x7ff773f8ee40]\nE           \tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\nE           \t(No symbol) [0x0x7ff773da928b]\nE           \t(No symbol) [0x0x7ff773da957b]\nE           \t(No symbol) [0x0x7ff773de9b47]\nE           \t(No symbol) [0x0x7ff773dca82f]\nE           \t(No symbol) [0x0x7ff773d9f68d]\nE           \t(No symbol) [0x0x7ff773de762f]\nE           \t(No symbol) [0x0x7ff773dca553]\nE           \t(No symbol) [0x0x7ff773d9eb86]\nE           \t(No symbol) [0x0x7ff773d9de11]\nE           \t(No symbol) [0x0x7ff773d9e9b3]\nE           \t(No symbol) [0x0x7ff773e9907d]\nE           \t(No symbol) [0x0x7ff773ea5fe8]\nE           \tGetHandleVerifier [0x0x7ff77411f2b7+942423]\nE           \tGetHandleVerifier [0x0x7ff774128261+979201]\nE           \t(No symbol) [0x0x7ff773f9c3f1]\nE           \t(No symbol) [0x0x7ff773f94da4]\nE           \t(No symbol) [0x0x7ff773f94ef3]\nE           \t(No symbol) [0x0x7ff773f87056]\nE           \tBaseThreadInitThunk [0x0x7fff1474259d+29]\nE           \tRtlUserThreadStart [0x0x7fff14b4af38+40]\n\nkeywords\\webkeys.py:243: AssertionError\n\nDuring handling of the above exception, another exception occurred:\n\nself = <test_web_2.Test_Web object at 0x000001CD1F23C830>\ncase = [['', '', 'Open page', 'refresh', '', '', ...], ['', '', 'Click Add button', 'click', 'add_btn', '', ...], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '', ...]]\n\n    @allure.story(f'#{ddt.s_idx} {ddt.story}')\n    @pytest.mark.parametrize('case', ddt.testsuite)\n    def test_suite(self, case):\n        \"\"\"\n        测试用例集，执行函数\n        每次参数化执行一条用例\n        :param case: 整条用例的步骤\n        \"\"\"\n        # print(case)\n        # 所以步骤的第一行的第二个单元格就是title\n        allure.dynamic.title(case[0][1])\n        # 因为不执行，所以也不写入\n        ddt.writer.row += 1\n    \n        # 剩下的都是步骤，都是需要执行的\n        case = case[1:]\n    \n        # 记录跑了多少行\n        run_rows = 0\n    \n        try:\n            # 使用try执行用例，一旦用例执行报错，就停止，并开始截图\n            for c in case:\n                # 每跑一行run_rows + 1\n                run_rows += 1\n    \n                # 先获取参数，再反射执行\n                # 获取参数，是一行里面4~6这三个元素\n                params = [str(p) for p in c[3:7]]\n                # 对参数从右往左找，找最后一个不为空的，然后把所有空的全部截掉\n                # 兼容都是空的情况\n                index = -1\n                for i in range(3, -1, -1):\n                    if len(params[i]) > 0:\n                        index = i\n                        break\n    \n                params = params[0:index + 1]\n    \n                # 这里反射执行\n                try:\n                # with allure.step(c[2]):\n                #     # 记录关键字执行的结果\n                #     res = self.run_step(params)\n                    with allure.step(f\"{c[2]} (参数: {params})\"):  # 步骤描述添加参数\n                        res = self.run_step(params)\n                    # 如果能执行到这里，就说明关键字执行是成功的\n                    ddt.writer.write(ddt.writer.row, 7, 'PASS', 3)\n                    ddt.writer.write(ddt.writer.row, 8, str(res))\n                    ddt.writer.row += 1\n                except AssertionError as e:\n                    # 步骤失败：标记Allure步骤为失败并附加错误信息\n                    allure.dynamic.description(f\"步骤失败: {str(e)}\")  # 动态更新步骤描述\n                    allure.attach(str(e), \"错误详情\", allure.attachment_type.TEXT)  # 附加文本信息\n                    # 写入Excel失败结果\n                    ddt.writer.write(ddt.writer.row, 7, 'FAIL', 2)\n                    ddt.writer.write(ddt.writer.row, 8, str(e))  # 写入具体错误信息\n                    ddt.writer.row += 1\n                    # 跳过后续步骤，直接标记用例失败\n                    ddt.writer.row += len(case) - run_rows  # 跳过未执行的步骤\n                    logger.exception(e)\n                    if ddt.obj.driver:\n                        allure.attach(ddt.obj.driver.get_screenshot_as_png(), '失败截图', allure.attachment_type.PNG)\n>                   pytest.fail(f\"步骤执行失败: {str(e)}\")\nE                   Failed: 步骤执行失败: TimeoutException: Message: \nE                   Stacktrace:\nE                   \tGetHandleVerifier [0x0x7ff77403e7c5+22117]\nE                   \t(No symbol) [0x0x7ff773f8ee40]\nE                   \tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\nE                   \t(No symbol) [0x0x7ff773da928b]\nE                   \t(No symbol) [0x0x7ff773da957b]\nE                   \t(No symbol) [0x0x7ff773de9b47]\nE                   \t(No symbol) [0x0x7ff773dca82f]\nE                   \t(No symbol) [0x0x7ff773d9f68d]\nE                   \t(No symbol) [0x0x7ff773de762f]\nE                   \t(No symbol) [0x0x7ff773dca553]\nE                   \t(No symbol) [0x0x7ff773d9eb86]\nE                   \t(No symbol) [0x0x7ff773d9de11]\nE                   \t(No symbol) [0x0x7ff773d9e9b3]\nE                   \t(No symbol) [0x0x7ff773e9907d]\nE                   \t(No symbol) [0x0x7ff773ea5fe8]\nE                   \tGetHandleVerifier [0x0x7ff77411f2b7+942423]\nE                   \tGetHandleVerifier [0x0x7ff774128261+979201]\nE                   \t(No symbol) [0x0x7ff773f9c3f1]\nE                   \t(No symbol) [0x0x7ff773f94da4]\nE                   \t(No symbol) [0x0x7ff773f94ef3]\nE                   \t(No symbol) [0x0x7ff773f87056]\nE                   \tBaseThreadInitThunk [0x0x7fff1474259d+29]\nE                   \tRtlUserThreadStart [0x0x7fff14b4af38+40]\n\nddt\\test_web_2.py:99: Failed",
+    "steps" : [ {
+      "name" : "Open page (参数: ['refresh'])",
+      "time" : {
+        "start" : 1755419033922,
+        "stop" : 1755419034506,
+        "duration" : 584
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755419033922,
+          "stop" : 1755419034506,
+          "duration" : 584
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "e194567c8a4aeb46",
+          "name" : "步骤[refresh]截图",
+          "source" : "e194567c8a4aeb46.png",
+          "type" : "image/png",
+          "size" : 81316
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['refresh']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Click Add button (参数: ['click', 'add_btn'])",
+      "time" : {
+        "start" : 1755419034507,
+        "stop" : 1755419034741,
+        "duration" : 234
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755419034507,
+          "stop" : 1755419034741,
+          "duration" : 234
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "8db0020dec882bbc",
+          "name" : "步骤[click]截图",
+          "source" : "8db0020dec882bbc.png",
+          "type" : "image/png",
+          "size" : 83414
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', 'add_btn']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Wait for the second row to load (参数: ['wait_for_element', \"//div[@id='row2']/input\"])",
+      "time" : {
+        "start" : 1755419034741,
+        "stop" : 1755419038980,
+        "duration" : 4239
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: TimeoutException: Message: \nStacktrace:\n\tGetHandleVerifier [0x0x7ff77403e7c5+22117]\n\t(No symbol) [0x0x7ff773f8ee40]\n\tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\n\t(No symbol) [0x0x7ff773da928b]\n\t(No symbol) [0x0x7ff773da957b]\n\t(No symbol) [0x0x7ff773de9b47]\n\t(No symbol) [0x0x7ff773dca82f]\n\t(No symbol) [0x0x7ff773d9f68d]\n\t(No symbol) [0x0x7ff773de762f]\n\t(No symbol) [0x0x7ff773dca553]\n\t(No symbol) [0x0x7ff773d9eb86]\n\t(No symbol) [0x0x7ff773d9de11]\n\t(No symbol) [0x0x7ff773d9e9b3]\n\t(No symbol) [0x0x7ff773e9907d]\n\t(No symbol) [0x0x7ff773ea5fe8]\n\tGetHandleVerifier [0x0x7ff77411f2b7+942423]\n\tGetHandleVerifier [0x0x7ff774128261+979201]\n\t(No symbol) [0x0x7ff773f9c3f1]\n\t(No symbol) [0x0x7ff773f94da4]\n\t(No symbol) [0x0x7ff773f94ef3]\n\t(No symbol) [0x0x7ff773f87056]\n\tBaseThreadInitThunk [0x0x7fff1474259d+29]\n\tRtlUserThreadStart [0x0x7fff14b4af38+40]\n\n",
+      "statusTrace" : "  File \"D:\\PythonStoreHouse\\auto_test_quiz\\ddt\\test_web_2.py\", line 81, in test_suite\n    res = self.run_step(params)\n  File \"D:\\Python313\\Lib\\site-packages\\allure_commons\\_allure.py\", line 202, in impl\n    return func(*a, **kw)\n  File \"D:\\PythonStoreHouse\\auto_test_quiz\\ddt\\test_web_2.py\", line 34, in run_step\n    return func(*args[1:])\n  File \"D:\\PythonStoreHouse\\auto_test_quiz\\keywords\\webkeys.py\", line 243, in wait_for_element\n    raise AssertionError(f\"TimeoutException: {str(e)}\") from e\n",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755419034741,
+          "stop" : 1755419038979,
+          "duration" : 4238
+        },
+        "status" : "failed",
+        "statusMessage" : "AssertionError: TimeoutException: Message: \nStacktrace:\n\tGetHandleVerifier [0x0x7ff77403e7c5+22117]\n\t(No symbol) [0x0x7ff773f8ee40]\n\tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\n\t(No symbol) [0x0x7ff773da928b]\n\t(No symbol) [0x0x7ff773da957b]\n\t(No symbol) [0x0x7ff773de9b47]\n\t(No symbol) [0x0x7ff773dca82f]\n\t(No symbol) [0x0x7ff773d9f68d]\n\t(No symbol) [0x0x7ff773de762f]\n\t(No symbol) [0x0x7ff773dca553]\n\t(No symbol) [0x0x7ff773d9eb86]\n\t(No symbol) [0x0x7ff773d9de11]\n\t(No symbol) [0x0x7ff773d9e9b3]\n\t(No symbol) [0x0x7ff773e9907d]\n\t(No symbol) [0x0x7ff773ea5fe8]\n\tGetHandleVerifier [0x0x7ff77411f2b7+942423]\n\tGetHandleVerifier [0x0x7ff774128261+979201]\n\t(No symbol) [0x0x7ff773f9c3f1]\n\t(No symbol) [0x0x7ff773f94da4]\n\t(No symbol) [0x0x7ff773f94ef3]\n\t(No symbol) [0x0x7ff773f87056]\n\tBaseThreadInitThunk [0x0x7fff1474259d+29]\n\tRtlUserThreadStart [0x0x7fff14b4af38+40]\n\n",
+        "statusTrace" : "  File \"D:\\Python313\\Lib\\site-packages\\allure_commons\\_allure.py\", line 202, in impl\n    return func(*a, **kw)\n  File \"D:\\PythonStoreHouse\\auto_test_quiz\\ddt\\test_web_2.py\", line 34, in run_step\n    return func(*args[1:])\n  File \"D:\\PythonStoreHouse\\auto_test_quiz\\keywords\\webkeys.py\", line 243, in wait_for_element\n    raise AssertionError(f\"TimeoutException: {str(e)}\") from e\n",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "7effcdb8dedb24c6",
+          "name" : "步骤[wait_for_element]截图",
+          "source" : "7effcdb8dedb24c6.png",
+          "type" : "image/png",
+          "size" : 81110
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['wait_for_element', \"//div[@id='row2']/input\"]"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "30adfcee709f0ea8",
+      "name" : "错误详情",
+      "source" : "30adfcee709f0ea8.txt",
+      "type" : "text/plain",
+      "size" : 849
+    }, {
+      "uid" : "41031e77a1ab82ff",
+      "name" : "失败截图",
+      "source" : "41031e77a1ab82ff.png",
+      "type" : "image/png",
+      "size" : 81296
+    }, {
+      "uid" : "a161da71c2f4124f",
+      "name" : "log",
+      "source" : "a161da71c2f4124f.txt",
+      "type" : "text/plain",
+      "size" : 3751
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 6,
+    "attachmentsCount" : 6,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "#2 Test Exceptions"
+  }, {
+    "name" : "feature",
+    "value" : "#1 practice test automation"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ddt"
+  }, {
+    "name" : "suite",
+    "value" : "test_web_2"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Web"
+  }, {
+    "name" : "host",
+    "value" : "Lydia"
+  }, {
+    "name" : "thread",
+    "value" : "28168-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "ddt.test_web_2"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "[['', 'TimeoutException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '', '', '', '']]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "6f6d505811a48136",
+      "status" : "failed",
+      "statusDetails" : "Failed: 步骤执行失败: 【刷新失败】浏览器未打开，请先执行open_browser步骤",
+      "time" : {
+        "start" : 1755418975131,
+        "stop" : 1755418975133,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "a8d6ac26619064ea",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: MicrosoftEdge=139.0.3405.86)\nStacktrace:\n\tGetHandleVerifier [0x0x7ff702e9e785+22117]\n\t(No symbol) [0x0x7ff702deee00]\n\tGetHandleVerifier [0x0x7ff703124c2c+2669324]\n\t(No symbol) [0x0x7ff702b9d29f]\n\t(No symbol) [0x0x7ff702c2fbf4]\n\t(No symbol) [0x0x7ff702c46f3a]\n\t(No symbol) [0x0x7ff702c2a553]\n\t(No symbol) [0x0x7ff702bfeb86]\n\t(No symbol) [0x0x7ff702bfde11]\n\t(No symbol) [0x0x7ff702bfe9b3]\n\t(No symbol) [0x0x7ff702cf907d]\n\t(No symbol) [0x0x7ff702d05fe8]\n\tGetHandleVerifier [0x0x7ff702f7f277+942423]\n\tGetHandleVerifier [0x0x7ff702f88221+979201]\n\t(No symbol) [0x0x7ff702dfc3b1]\n\t(No symbol) [0x0x7ff702df4d64]\n\t(No symbol) [0x0x7ff702df4eb3]\n\t(No symbol) [0x0x7ff702de7016]\n\tBaseThreadInitThunk [0x0x7fff1474259d+29]\n\tRtlUserThreadStart [0x0x7fff14b4af38+40]",
+      "time" : {
+        "start" : 1755418823247,
+        "stop" : 1755418823252,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "afb641699a5cb33c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1755418764959,
+        "stop" : 1755418770861,
+        "duration" : 5902
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "7bc3f9645ec6e42f.json",
+  "parameterValues" : [ "[['', 'TimeoutException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '', '', '', '']]" ]
+}

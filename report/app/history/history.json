@@ -1,0 +1,60 @@
+{
+  "67a533bc830e0436d61f28a85c66e523" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "282d11092414ec61",
+      "status" : "failed",
+      "statusDetails" : "Failed: 步骤执行失败: 文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector",
+      "time" : {
+        "start" : 1755416803689,
+        "stop" : 1755416807769,
+        "duration" : 4080
+      }
+    } ]
+  },
+  "c7eacfb13effeec410b80d9ebc8c6a89" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "847f1877c05d57ca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1755416800450,
+        "stop" : 1755416803635,
+        "duration" : 3185
+      }
+    } ]
+  },
+  "62effd8bea3675dd065a1e948a5f26f9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "cbd99834dbfa4dc0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1755416778687,
+        "stop" : 1755416800447,
+        "duration" : 21760
+      }
+    } ]
+  }
+}

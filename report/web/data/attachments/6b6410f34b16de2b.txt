@@ -1,0 +1,12 @@
+ERROR    root:test_web_2.py:116 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "D:\PythonStoreHouse\auto_test_quiz\ddt\test_web_2.py", line 81, in test_suite
+    res = self.run_step(params)
+  File "D:\Python313\Lib\site-packages\allure_commons\_allure.py", line 202, in impl
+    return func(*a, **kw)
+  File "D:\PythonStoreHouse\auto_test_quiz\ddt\test_web_2.py", line 34, in run_step
+    return func(*args[1:])
+  File "D:\PythonStoreHouse\auto_test_quiz\keywords\webkeys.py", line 83, in geturl
+    self.driver.get(url)
+    ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'

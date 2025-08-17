@@ -1,0 +1,1 @@
+文本断言失败！预期: hello Word, 实际: This is a demo for Appium Inspector

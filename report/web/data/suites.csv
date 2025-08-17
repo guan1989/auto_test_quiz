@@ -1,0 +1,74 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Aug 17 16:23:19 CST 2025","Sun Aug 17 16:23:28 CST 2025","8179","ddt","test_web_1","Test_Web","","","Positive LogIn test","
+测试用例集，执行函数
+每次参数化执行一条用例
+:param case: 整条用例的步骤
+"
+"failed","Sun Aug 17 16:23:52 CST 2025","Sun Aug 17 16:23:53 CST 2025","1309","ddt","test_web_2","Test_Web","","","StaleElementReferenceException","
+测试用例集，执行函数
+每次参数化执行一条用例
+:param case: 整条用例的步骤
+"
+"failed","Sun Aug 17 16:23:51 CST 2025","Sun Aug 17 16:23:52 CST 2025","1460","ddt","test_web_2","Test_Web","","","InvalidElementStateException","
+测试用例集，执行函数
+每次参数化执行一条用例
+:param case: 整条用例的步骤
+"
+"failed","Sun Aug 17 16:23:33 CST 2025","Sun Aug 17 16:23:39 CST 2025","6195","ddt","test_web_2","Test_Web","","","NoSuchElementException","步骤失败: [NoSuchElement] 元素定位失败: //div[@id='row2']/input"
+"failed","Sun Aug 17 16:23:40 CST 2025","Sun Aug 17 16:23:51 CST 2025","10803","ddt","test_web_2","Test_Web","","","ElementNotInteractableException","步骤失败: [ElementNotInteractable] 元素不可交互: $Save"
+"passed","Sun Aug 17 16:23:28 CST 2025","Sun Aug 17 16:23:30 CST 2025","2743","ddt","test_web_1","Test_Web","","","Negative username test","
+测试用例集，执行函数
+每次参数化执行一条用例
+:param case: 整条用例的步骤
+"
+"passed","Sun Aug 17 16:02:35 CST 2025","Sun Aug 17 16:02:41 CST 2025","5822","ddt","test_web_2","Test_Web","","","TimeoutException","
+测试用例集，执行函数
+每次参数化执行一条用例
+:param case: 整条用例的步骤
+"
+"passed","Sun Aug 17 16:23:30 CST 2025","Sun Aug 17 16:23:33 CST 2025","2716","ddt","test_web_1","Test_Web","","","Negative password test","
+测试用例集，执行函数
+每次参数化执行一条用例
+:param case: 整条用例的步骤
+"
+"passed","Sun Aug 17 16:23:59 CST 2025","Sun Aug 17 16:24:17 CST 2025","17838","ddt","test_web_3","Test_Web","","","Positive LogIn test","
+测试用例集，执行函数
+每次参数化执行一条用例
+:param case: 整条用例的步骤
+"
+"failed","Sun Aug 17 16:23:53 CST 2025","Sun Aug 17 16:23:59 CST 2025","5231","ddt","test_web_2","Test_Web","","","TimeoutException","步骤失败: TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff77403e7c5+22117]
+	(No symbol) [0x0x7ff773f8ee40]
+	GetHandleVerifier [0x0x7ff7742c4c6c+2669324]
+	(No symbol) [0x0x7ff773da928b]
+	(No symbol) [0x0x7ff773da957b]
+	(No symbol) [0x0x7ff773de9b47]
+	(No symbol) [0x0x7ff773dca82f]
+	(No symbol) [0x0x7ff773d9f68d]
+	(No symbol) [0x0x7ff773de762f]
+	(No symbol) [0x0x7ff773dca553]
+	(No symbol) [0x0x7ff773d9eb86]
+	(No symbol) [0x0x7ff773d9de11]
+	(No symbol) [0x0x7ff773d9e9b3]
+	(No symbol) [0x0x7ff773e9907d]
+	(No symbol) [0x0x7ff773ea5fe8]
+	GetHandleVerifier [0x0x7ff77411f2b7+942423]
+	GetHandleVerifier [0x0x7ff774128261+979201]
+	(No symbol) [0x0x7ff773f9c3f1]
+	(No symbol) [0x0x7ff773f94da4]
+	(No symbol) [0x0x7ff773f94ef3]
+	(No symbol) [0x0x7ff773f87056]
+	BaseThreadInitThunk [0x0x7fff1474259d+29]
+	RtlUserThreadStart [0x0x7fff14b4af38+40]
+"
+"passed","Sun Aug 17 16:21:50 CST 2025","Sun Aug 17 16:22:54 CST 2025","64384","","","","","","Positive LogIn test","
+测试用例集，执行函数
+每次参数化执行一条用例
+:param case: 整条用例的步骤
+"
+"passed","Sun Aug 17 15:53:17 CST 2025","Sun Aug 17 15:53:23 CST 2025","5866","ddt","test_web_2","Test_Web","","","TimeoutException","
+测试用例集，执行函数
+每次参数化执行一条用例
+:param case: 整条用例的步骤
+"

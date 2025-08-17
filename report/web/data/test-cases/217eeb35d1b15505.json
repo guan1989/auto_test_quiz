@@ -1,0 +1,462 @@
+{
+  "uid" : "217eeb35d1b15505",
+  "name" : "Positive LogIn test",
+  "fullName" : "ddt.test_web_1.Test_Web#test_suite",
+  "historyId" : "7fcbb6911ddca0513f300abcd68a4736",
+  "time" : {
+    "start" : 1755418999951,
+    "stop" : 1755419008130,
+    "duration" : 8179
+  },
+  "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+  "descriptionHtml" : "<p>测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open browser (参数: ['open_browser', 'edge'])",
+      "time" : {
+        "start" : 1755418999952,
+        "stop" : 1755419001510,
+        "duration" : 1558
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755418999952,
+          "stop" : 1755419001510,
+          "duration" : 1558
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['open_browser', 'edge']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Get url (参数: ['geturl', 'https://practicetestautomation.com/practice/'])",
+      "time" : {
+        "start" : 1755419001510,
+        "stop" : 1755419005145,
+        "duration" : 3635
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755419001510,
+          "stop" : 1755419005145,
+          "duration" : 3635
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "69e231a4fbb6afc0",
+          "name" : "步骤[geturl]截图",
+          "source" : "69e231a4fbb6afc0.png",
+          "type" : "image/png",
+          "size" : 12799
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['geturl', 'https://practicetestautomation.com/practice/']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Open page (参数: ['click', 'link_testTest Login Page'])",
+      "time" : {
+        "start" : 1755419005145,
+        "stop" : 1755419006006,
+        "duration" : 861
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755419005145,
+          "stop" : 1755419006006,
+          "duration" : 861
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "ddce7daa7b944205",
+          "name" : "步骤[click]截图",
+          "source" : "ddce7daa7b944205.png",
+          "type" : "image/png",
+          "size" : 49858
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', 'link_testTest Login Page']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Type username (参数: ['input', 'username', 'student'])",
+      "time" : {
+        "start" : 1755419006006,
+        "stop" : 1755419006233,
+        "duration" : 227
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755419006006,
+          "stop" : 1755419006233,
+          "duration" : 227
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "9cf6287e40a4c563",
+          "name" : "步骤[input]截图",
+          "source" : "9cf6287e40a4c563.png",
+          "type" : "image/png",
+          "size" : 80503
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['input', 'username', 'student']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Type password (参数: ['input', 'password', 'Password123'])",
+      "time" : {
+        "start" : 1755419006233,
+        "stop" : 1755419006508,
+        "duration" : 275
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755419006234,
+          "stop" : 1755419006508,
+          "duration" : 274
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "b2bbbca0f6143f8f",
+          "name" : "步骤[input]截图",
+          "source" : "b2bbbca0f6143f8f.png",
+          "type" : "image/png",
+          "size" : 81241
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['input', 'password', 'Password123']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Push Submit button (参数: ['click', 'submit'])",
+      "time" : {
+        "start" : 1755419006508,
+        "stop" : 1755419007608,
+        "duration" : 1100
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755419006509,
+          "stop" : 1755419007608,
+          "duration" : 1099
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "c0194de62fef98b9",
+          "name" : "步骤[click]截图",
+          "source" : "c0194de62fef98b9.png",
+          "type" : "image/png",
+          "size" : 82059
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', 'submit']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Verify new page URL (参数: ['assert_url', 'practicetestautomation.com/logged-in-successfully/'])",
+      "time" : {
+        "start" : 1755419007608,
+        "stop" : 1755419007777,
+        "duration" : 169
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755419007608,
+          "stop" : 1755419007777,
+          "duration" : 169
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "1598534d8047b83",
+          "name" : "步骤[assert_url]截图",
+          "source" : "1598534d8047b83.png",
+          "type" : "image/png",
+          "size" : 42981
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['assert_url', 'practicetestautomation.com/logged-in-successfully/']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Verify new page contains expected text (参数: ['assert_text', \"//h1[@class='post-title']\", 'Logged In Successfully'])",
+      "time" : {
+        "start" : 1755419007777,
+        "stop" : 1755419007955,
+        "duration" : 178
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755419007778,
+          "stop" : 1755419007955,
+          "duration" : 177
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "d9eee0bbc3b728c0",
+          "name" : "步骤[assert_text]截图",
+          "source" : "d9eee0bbc3b728c0.png",
+          "type" : "image/png",
+          "size" : 42981
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['assert_text', \"//h1[@class='post-title']\", 'Logged In Successfully']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Verify button Log out (参数: ['assert_button', \"//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']\", 'Log out'])",
+      "time" : {
+        "start" : 1755419007955,
+        "stop" : 1755419008130,
+        "duration" : 175
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755419007955,
+          "stop" : 1755419008130,
+          "duration" : 175
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "15f14de5606f3a5c",
+          "name" : "步骤[assert_button]截图",
+          "source" : "15f14de5606f3a5c.png",
+          "type" : "image/png",
+          "size" : 43323
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['assert_button', \"//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']\", 'Log out']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "a409a9cc8d0ce2e",
+      "name" : "log",
+      "source" : "a409a9cc8d0ce2e.txt",
+      "type" : "text/plain",
+      "size" : 180
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 18,
+    "attachmentsCount" : 9,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "#1 practice test automation"
+  }, {
+    "name" : "story",
+    "value" : "#1 Test_Login"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ddt"
+  }, {
+    "name" : "suite",
+    "value" : "test_web_1"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Web"
+  }, {
+    "name" : "host",
+    "value" : "Lydia"
+  }, {
+    "name" : "thread",
+    "value" : "28168-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "ddt.test_web_1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Open browser', 'open_browser', 'edge', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify new page URL', 'assert_url', 'practicetestautomation.com/logged-in-successfully/', '', '', '', ''], ['', '', 'Verify new page contains expected text', 'assert_text', \"//h1[@class='post-title']\", 'Logged In Successfully', '', '', ''], ['', '', 'Verify button Log out', 'assert_button', \"//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']\", 'Log out', '', '', '']]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "d30f596528ad7b2b",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: MicrosoftEdge=139.0.3405.86)\nStacktrace:\n\tGetHandleVerifier [0x0x7ff702e9e785+22117]\n\t(No symbol) [0x0x7ff702deee00]\n\tGetHandleVerifier [0x0x7ff703124c2c+2669324]\n\t(No symbol) [0x0x7ff702b9d29f]\n\t(No symbol) [0x0x7ff702c2fbf4]\n\t(No symbol) [0x0x7ff702c46f3a]\n\t(No symbol) [0x0x7ff702c2a553]\n\t(No symbol) [0x0x7ff702bfeb86]\n\t(No symbol) [0x0x7ff702bfde11]\n\t(No symbol) [0x0x7ff702bfe9b3]\n\t(No symbol) [0x0x7ff702cf907d]\n\t(No symbol) [0x0x7ff702d05fe8]\n\tGetHandleVerifier [0x0x7ff702f7f277+942423]\n\tGetHandleVerifier [0x0x7ff702f88221+979201]\n\t(No symbol) [0x0x7ff702dfc3b1]\n\t(No symbol) [0x0x7ff702df4d64]\n\t(No symbol) [0x0x7ff702df4eb3]\n\t(No symbol) [0x0x7ff702de7016]\n\tBaseThreadInitThunk [0x0x7fff1474259d+29]\n\tRtlUserThreadStart [0x0x7fff14b4af38+40]",
+      "time" : {
+        "start" : 1755418819540,
+        "stop" : 1755418822430,
+        "duration" : 2890
+      }
+    }, {
+      "uid" : "3f4e492605387935",
+      "status" : "passed",
+      "time" : {
+        "start" : 1755418698886,
+        "stop" : 1755418715107,
+        "duration" : 16221
+      }
+    }, {
+      "uid" : "cd0b2353f6b03b75",
+      "status" : "passed",
+      "time" : {
+        "start" : 1755417712022,
+        "stop" : 1755417722759,
+        "duration" : 10737
+      }
+    }, {
+      "uid" : "81a53b19335a50d8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1755417153699,
+        "stop" : 1755417164584,
+        "duration" : 10885
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "217eeb35d1b15505.json",
+  "parameterValues" : [ "[['', 'Positive LogIn test', '', ' ', '', '', '', '', ''], ['', '', 'Open browser', 'open_browser', 'edge', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Login Page', '', '', '', ''], ['', '', 'Type username', 'input', 'username', 'student', '', '', ''], ['', '', 'Type password', 'input', 'password', 'Password123', '', '', ''], ['', '', 'Push\\xa0Submit\\xa0button', 'click', 'submit', '', '', '', ''], ['', '', 'Verify new page URL', 'assert_url', 'practicetestautomation.com/logged-in-successfully/', '', '', '', ''], ['', '', 'Verify new page contains expected text', 'assert_text', \"//h1[@class='post-title']\", 'Logged In Successfully', '', '', ''], ['', '', 'Verify button Log out', 'assert_button', \"//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']\", 'Log out', '', '', '']]" ]
+}

@@ -1,0 +1,216 @@
+{
+  "43cba881bc4e54ed7c73b6e05eddf416" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "316f932afaf75001",
+      "status" : "failed",
+      "statusDetails" : "Failed: 步骤执行失败: [ElementNotInteractable] 元素不可交互: $Save",
+      "time" : {
+        "start" : 1755419020225,
+        "stop" : 1755419031028,
+        "duration" : 10803
+      }
+    } ]
+  },
+  "e655d3d3d66aaff1d73002951abd751c" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5e3fa5f32f158e6d",
+      "status" : "failed",
+      "statusDetails" : "Failed: Message: invalid element state: Element is not currently interactable and may not be manipulated\n  (Session info: MicrosoftEdge=139.0.3405.86)",
+      "time" : {
+        "start" : 1755419031077,
+        "stop" : 1755419032537,
+        "duration" : 1460
+      }
+    } ]
+  },
+  "b0e190eaac4a357a761747a0c3ff65ba" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "99ef7cef1c0a99bc",
+      "status" : "failed",
+      "statusDetails" : "Failed: Message: stale element reference: stale element not found in the current frame\n  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception",
+      "time" : {
+        "start" : 1755419032574,
+        "stop" : 1755419033883,
+        "duration" : 1309
+      }
+    } ]
+  },
+  "3bc315de2aad724073ff1d24b9e9ccf6" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5e5394bac64ab87b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1755417197406,
+        "stop" : 1755417203272,
+        "duration" : 5866
+      }
+    } ]
+  },
+  "dd0f18a1676274b11b31d2cca223cdaa" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6da994b7c0cb176c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1755419010880,
+        "stop" : 1755419013596,
+        "duration" : 2716
+      }
+    } ]
+  },
+  "0bd05efde401a44b189b4d511f6aa355" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7bc3f9645ec6e42f",
+      "status" : "failed",
+      "statusDetails" : "Failed: 步骤执行失败: TimeoutException: Message: \nStacktrace:\n\tGetHandleVerifier [0x0x7ff77403e7c5+22117]\n\t(No symbol) [0x0x7ff773f8ee40]\n\tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\n\t(No symbol) [0x0x7ff773da928b]\n\t(No symbol) [0x0x7ff773da957b]\n\t(No symbol) [0x0x7ff773de9b47]\n\t(No symbol) [0x0x7ff773dca82f]\n\t(No symbol) [0x0x7ff773d9f68d]\n\t(No symbol) [0x0x7ff773de762f]\n\t(No symbol) [0x0x7ff773dca553]\n\t(No symbol) [0x0x7ff773d9eb86]\n\t(No symbol) [0x0x7ff773d9de11]\n\t(No symbol) [0x0x7ff773d9e9b3]\n\t(No symbol) [0x0x7ff773e9907d]\n\t(No symbol) [0x0x7ff773ea5fe8]\n\tGetHandleVerifier [0x0x7ff77411f2b7+942423]\n\tGetHandleVerifier [0x0x7ff774128261+979201]\n\t(No symbol) [0x0x7ff773f9c3f1]\n\t(No symbol) [0x0x7ff773f94da4]\n\t(No symbol) [0x0x7ff773f94ef3]\n\t(No symbol) [0x0x7ff773f87056]\n\tBaseThreadInitThunk [0x0x7fff1474259d+29]\n\tRtlUserThreadStart [0x0x7fff14b4af38+40]",
+      "time" : {
+        "start" : 1755419033922,
+        "stop" : 1755419039153,
+        "duration" : 5231
+      }
+    } ]
+  },
+  "bf43a448d9d81a96114841206f3e41a7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "97188a458058a1b8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1755419008134,
+        "stop" : 1755419010877,
+        "duration" : 2743
+      }
+    } ]
+  },
+  "df7c76b69014160f1bbb62208136c80a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "91600f83b8aafbc0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1755419039488,
+        "stop" : 1755419057326,
+        "duration" : 17838
+      }
+    } ]
+  },
+  "c00af877a18af65348c90bd011236296" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5d2b911425410c29",
+      "status" : "passed",
+      "time" : {
+        "start" : 1755417755289,
+        "stop" : 1755417761111,
+        "duration" : 5822
+      }
+    } ]
+  },
+  "7fcbb6911ddca0513f300abcd68a4736" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "217eeb35d1b15505",
+      "status" : "passed",
+      "time" : {
+        "start" : 1755418999951,
+        "stop" : 1755419008130,
+        "duration" : 8179
+      }
+    } ]
+  },
+  "873bbbf643986513521508c0e918f73e" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a2980ee98ea34d44",
+      "status" : "failed",
+      "statusDetails" : "Failed: 步骤执行失败: [NoSuchElement] 元素定位失败: //div[@id='row2']/input",
+      "time" : {
+        "start" : 1755419013647,
+        "stop" : 1755419019842,
+        "duration" : 6195
+      }
+    } ]
+  }
+}

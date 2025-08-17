@@ -1,0 +1,267 @@
+{
+  "uid" : "cbd99834dbfa4dc0",
+  "name" : "Click Next",
+  "fullName" : "ddt.test_app_1.Test_App#test_suite",
+  "historyId" : "62effd8bea3675dd065a1e948a5f26f9",
+  "time" : {
+    "start" : 1755416778687,
+    "stop" : 1755416800447,
+    "duration" : 21760
+  },
+  "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+  "descriptionHtml" : "<p>测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n测试用例集，执行函数\n每次参数化执行一条用例\n:param case: 整条用例的步骤\n",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open Appium",
+      "time" : {
+        "start" : 1755416778687,
+        "stop" : 1755416783887,
+        "duration" : 5200
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755416778687,
+          "stop" : 1755416783887,
+          "duration" : 5200
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['run_appium']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Run APP",
+      "time" : {
+        "start" : 1755416783887,
+        "stop" : 1755416795787,
+        "duration" : 11900
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755416783887,
+          "stop" : 1755416795787,
+          "duration" : 11900
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['run_app', '{\\n  \"platformName\": \"Android\",\\n  \"deviceName\": \"3607f24a\",\\n  \"appPackage\": \"cn.ianzhang.android\",\\n  \"appActivity\": \".MainActivity\",\\n  \"noReset\": \"true\"\\n}']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Click First",
+      "time" : {
+        "start" : 1755416795787,
+        "stop" : 1755416797250,
+        "duration" : 1463
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755416795787,
+          "stop" : 1755416797249,
+          "duration" : 1462
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "47fd77971da10891",
+          "name" : "步骤[click]截图",
+          "source" : "47fd77971da10891.png",
+          "type" : "image/png",
+          "size" : 54218
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', \"//*[@resource-id='cn.ianzhang.android:id/button_first']\"]"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    }, {
+      "name" : "Click Second",
+      "time" : {
+        "start" : 1755416797250,
+        "stop" : 1755416798863,
+        "duration" : 1613
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755416797250,
+          "stop" : 1755416798863,
+          "duration" : 1613
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "bc6d149a313fc3b7",
+          "name" : "步骤[click]截图",
+          "source" : "bc6d149a313fc3b7.png",
+          "type" : "image/png",
+          "size" : 57482
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['click', \"//*[@resource-id='cn.ianzhang.android:id/button_second']\"]"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    }, {
+      "name" : "Assert Hello lan",
+      "time" : {
+        "start" : 1755416798864,
+        "stop" : 1755416800446,
+        "duration" : 1582
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "run_step",
+        "time" : {
+          "start" : 1755416798864,
+          "stop" : 1755416800446,
+          "duration" : 1582
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "6c285e50dfbff06c",
+          "name" : "步骤[assert_text]截图",
+          "source" : "6c285e50dfbff06c.png",
+          "type" : "image/png",
+          "size" : 54218
+        } ],
+        "parameters" : [ {
+          "name" : "args",
+          "value" : "['assert_text', \"//*[@resource-id='cn.ianzhang.android:id/textview_first']\", 'Hello Ian']"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    } ],
+    "attachments" : [ {
+      "uid" : "7f90f4f4824c88b1",
+      "name" : "log",
+      "source" : "7f90f4f4824c88b1.txt",
+      "type" : "text/plain",
+      "size" : 195
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 10,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 4
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "#1 APPdemo"
+  }, {
+    "name" : "story",
+    "value" : "#1 Click_button"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ddt"
+  }, {
+    "name" : "suite",
+    "value" : "test_app_1"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_App"
+  }, {
+    "name" : "host",
+    "value" : "Lydia"
+  }, {
+    "name" : "thread",
+    "value" : "28616-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "ddt.test_app_1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "[['', 'Click Next', '', ' ', '', '', '', '', ''], ['', '', 'Open Appium', 'run_appium', '', '', '', '', ''], ['', '', 'Run APP', 'run_app', '{\\n  \"platformName\": \"Android\",\\n  \"deviceName\": \"3607f24a\",\\n  \"appPackage\": \"cn.ianzhang.android\",\\n  \"appActivity\": \".MainActivity\",\\n  \"noReset\": \"true\"\\n}', '', '', '', ''], ['', '', 'Click First', 'click', \"//*[@resource-id='cn.ianzhang.android:id/button_first']\", '', '', '', ''], ['', '', 'Click Second', 'click', \"//*[@resource-id='cn.ianzhang.android:id/button_second']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/textview_first']\", 'Hello Ian', '', '', '']]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cbd99834dbfa4dc0.json",
+  "parameterValues" : [ "[['', 'Click Next', '', ' ', '', '', '', '', ''], ['', '', 'Open Appium', 'run_appium', '', '', '', '', ''], ['', '', 'Run APP', 'run_app', '{\\n  \"platformName\": \"Android\",\\n  \"deviceName\": \"3607f24a\",\\n  \"appPackage\": \"cn.ianzhang.android\",\\n  \"appActivity\": \".MainActivity\",\\n  \"noReset\": \"true\"\\n}', '', '', '', ''], ['', '', 'Click First', 'click', \"//*[@resource-id='cn.ianzhang.android:id/button_first']\", '', '', '', ''], ['', '', 'Click Second', 'click', \"//*[@resource-id='cn.ianzhang.android:id/button_second']\", '', '', '', ''], ['', '', 'Assert Hello lan', 'assert_text', \"//*[@resource-id='cn.ianzhang.android:id/textview_first']\", 'Hello Ian', '', '', '']]" ]
+}

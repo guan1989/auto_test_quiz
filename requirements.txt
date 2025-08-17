@@ -1,12 +1,13 @@
 # This is a mirror image of Tsinghua University
 # -i https://pypi.tuna.tsinghua.edu.cn/simple
 
-selenium
-pytest
+selenium~=4.35.0
+pytest~=8.3.5
 allure-pytest
-pyyaml
-openpyxl
-Appium-Python-Client
+pyyaml~=6.0.2
+openpyxl~=3.1.5
+Appium-Python-Client~=5.1.1
 requests
 pymysql
 jsonpath
+allure-python-commons~=2.14.3

@@ -1,0 +1,94 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Failed: 步骤执行失败: [NoSuchElement] 元素定位失败: //div[@id='row2']/input",
+      "children" : [ {
+        "name" : "NoSuchElementException",
+        "uid" : "a2980ee98ea34d44",
+        "parentUid" : "994128f8df36f4df12d8295a577856e3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755419013647,
+          "stop" : 1755419019842,
+          "duration" : 6195
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'NoSuchElementException', '', '', '', '', '', '', ''], ['', '', 'Get url', 'geturl', 'https://practicetestautomation.com/practice/', '', '', '', ''], ['', '', 'Open page', 'click', 'link_testTest Exceptions', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Verify Row 2 input field is displayed', 'input', \"//div[@id='row2']/input\", 'Verify Row 2 input field is displayed', '', '', '']]" ]
+      } ],
+      "uid" : "994128f8df36f4df12d8295a577856e3"
+    }, {
+      "name" : "Failed: 步骤执行失败: [ElementNotInteractable] 元素不可交互: $Save",
+      "children" : [ {
+        "name" : "ElementNotInteractableException",
+        "uid" : "316f932afaf75001",
+        "parentUid" : "90d194c0ad03287704d40e00052bb0b8",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755419020225,
+          "stop" : 1755419031028,
+          "duration" : 10803
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'ElementNotInteractableException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '6', '', '', ''], ['', '', 'Push Save button', 'click', '$Save', '', '', '', ''], ['', '', 'Verify text saved', 'assert_text', 'confirmation', 'Row 2 was saved', '', '', '']]" ]
+      } ],
+      "uid" : "90d194c0ad03287704d40e00052bb0b8"
+    }, {
+      "name" : "Failed: Message: invalid element state: Element is not currently interactable and may not be manipulated\n  (Session info: MicrosoftEdge=139.0.3405.86)",
+      "children" : [ {
+        "name" : "InvalidElementStateException",
+        "uid" : "5e3fa5f32f158e6d",
+        "parentUid" : "1d48b573a23fa64484641b6848d71033",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755419031077,
+          "stop" : 1755419032537,
+          "duration" : 1460
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'InvalidElementStateException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Clear input field', 'clear', \"//div[@id='row1']/input\", '', '', '', '']]" ]
+      } ],
+      "uid" : "1d48b573a23fa64484641b6848d71033"
+    }, {
+      "name" : "Failed: Message: stale element reference: stale element not found in the current frame\n  (Session info: MicrosoftEdge=139.0.3405.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception",
+      "children" : [ {
+        "name" : "StaleElementReferenceException",
+        "uid" : "99ef7cef1c0a99bc",
+        "parentUid" : "8903f1807640c00d1271abc4596714ae",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755419032574,
+          "stop" : 1755419033883,
+          "duration" : 1309
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'StaleElementReferenceException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Find the instructions text element', 'save_element', 'instructions', 'instructions', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Use the instructions text element', 'use_element', 'instructions', '', '', '', '']]" ]
+      } ],
+      "uid" : "8903f1807640c00d1271abc4596714ae"
+    }, {
+      "name" : "Failed: 步骤执行失败: TimeoutException: Message: \nStacktrace:\n\tGetHandleVerifier [0x0x7ff77403e7c5+22117]\n\t(No symbol) [0x0x7ff773f8ee40]\n\tGetHandleVerifier [0x0x7ff7742c4c6c+2669324]\n\t(No symbol) [0x0x7ff773da928b]\n\t(No symbol) [0x0x7ff773da957b]\n\t(No symbol) [0x0x7ff773de9b47]\n\t(No symbol) [0x0x7ff773dca82f]\n\t(No symbol) [0x0x7ff773d9f68d]\n\t(No symbol) [0x0x7ff773de762f]\n\t(No symbol) [0x0x7ff773dca553]\n\t(No symbol) [0x0x7ff773d9eb86]\n\t(No symbol) [0x0x7ff773d9de11]\n\t(No symbol) [0x0x7ff773d9e9b3]\n\t(No symbol) [0x0x7ff773e9907d]\n\t(No symbol) [0x0x7ff773ea5fe8]\n\tGetHandleVerifier [0x0x7ff77411f2b7+942423]\n\tGetHandleVerifier [0x0x7ff774128261+979201]\n\t(No symbol) [0x0x7ff773f9c3f1]\n\t(No symbol) [0x0x7ff773f94da4]\n\t(No symbol) [0x0x7ff773f94ef3]\n\t(No symbol) [0x0x7ff773f87056]\n\tBaseThreadInitThunk [0x0x7fff1474259d+29]\n\tRtlUserThreadStart [0x0x7fff14b4af38+40]",
+      "children" : [ {
+        "name" : "TimeoutException",
+        "uid" : "7bc3f9645ec6e42f",
+        "parentUid" : "b4c783ef0693e4e831ffc38102f01e5e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1755419033922,
+          "stop" : 1755419039153,
+          "duration" : 5231
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[['', 'TimeoutException', '', '', '', '', '', '', ''], ['', '', 'Open page', 'refresh', '', '', '', '', ''], ['', '', 'Click Add button', 'click', 'add_btn', '', '', '', ''], ['', '', 'Wait for the second row to load', 'wait_for_element', \"//div[@id='row2']/input\", '', '', '', '']]" ]
+      } ],
+      "uid" : "b4c783ef0693e4e831ffc38102f01e5e"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}
